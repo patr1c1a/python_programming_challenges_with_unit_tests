@@ -17,10 +17,3 @@ suite.addTests(loader.loadTestsFromModule(tests.tests_listas))
 suite.addTests(loader.loadTestsFromModule(tests.tests_diccionarios))
 runner = unittest.TextTestRunner(verbosity=2)
 result = runner.run(suite)
-
-
-
-## EJECUTA TODOS LOS ARCHIVOS tests_* QUE ENCUENTRA
-# start_dir = r"D:\Dropbox\PDC\unittests\tests"
-# suite = unittest.TestLoader().discover(start_dir)
-# unittest.TextTestRunner().run(suite)
