@@ -95,6 +95,14 @@ práctica.
 También pueden utilizarse los casos de prueba para resolver los desafíos mediante "desarrollo guiado por pruebas" (en
 inglés, "Test-Driven-Development" o "TDD"), de manera que las pruebas guíen el desarrollo de los algoritmos.
 
+
+### Requerimientos
+
+Solo se requiere Python 3, el cual incluye la biblioteca unittests.
+
+El proyecto fue probado con Python 3.9, aunque es probable que funcione con otras versiones de Python 3.x.
+
+
 ---
 # ENGLISH
 
@@ -187,3 +195,10 @@ suggestion.
 
 In addition, test cases can be used to solve the challenges in a Test-Driven-Development ("TDD") fashion, by using unit 
 tests to guide development.
+
+
+### Requirements
+
+Only Python 3 is needed, which includes the unittests library.
+
+The project has been tested under Python 3.9, although it will probably run with other Python 3.x variants.
