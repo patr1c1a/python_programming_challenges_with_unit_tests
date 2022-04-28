@@ -32,9 +32,9 @@ bases. Pero también pueden resolverse en otras formas, siempre que los tests pa
 Python 3 deberá estar instalado en el sistema.
 
 Asumiendo que usarás la versión en español, primero ingresa en la carpeta **ESP**. Ésta contiene dos carpetas: **src** y
-**tests**. La carpeta **src** contiene archivos relacionados a cada tema (de los mencionados arriba) y en cada archivo 
-se encuentran varias funciones con el cuerpo vacío, que deberás completar con tu código. La carpeta **tests** incluye 
-las pruebas unitarias y su contenido no debe ser modificado.
+**tests**. La carpeta [**src**](/ESP/src) contiene archivos relacionados a cada tema (de los mencionados arriba) y en
+cada archivo se encuentran varias funciones con el cuerpo vacío, que deberás completar con tu código. La carpeta
+[**tests**](/ESP/tests) incluye las pruebas unitarias y su contenido no debe ser modificado.
 
 Para probar tu código, corre el archivo **ejecutar_tests.py**, el cual mostrará el resultado en consola. Es posible usar
 un IDE para ejecutarlo o bien hacerlo desde línea de comandos. Para esto último, primero cambia al directorio ("CD") a 
@@ -48,12 +48,13 @@ Es posible obviar la ejecución de alguna categoría de tests, comentando (con u
 el archivo **ejecutar_tests.py**. La línea a comentar se verá como esta: 
 `suite.addTests(loader.loadTestsFromModule(tests.archivo_a_obviar))`.
 
-Dentro de la carpeta **ESP** se encuentra un archivo llamado **soluciones_propuestas.md** que muestra código con posibles
-resoluciones a cada uno de los ejercicios. De ninguna manera esto implica que sean las únicas soluciones ni tampoco las
-más eficientes. Es solo información a modo de ejemplo, que podría utilizarse como punto de partida en caso de no poder
-resolver alguno de los desafíos. El archivo está escrito con `markdown` de manera de poder ocultar el código y dejar
-visible únicamente la consigna, para poder seleccionar cuál de las funciones se desea ver. Se recomienda visualizar este
-archivo en un programa que interprete `markdown` (como un navegador web).
+Dentro de la carpeta **ESP** también se encuentra un archivo llamado
+[**soluciones_propuestas.md**](/ESP/soluciones_propuestas.md) que muestra código con posibles resoluciones a cada uno de
+os ejercicios. De ninguna manera esto implica que sean las únicas soluciones ni tampoco las más eficientes. Es solo
+información a modo de ejemplo, que podría utilizarse como punto de partida en caso de no poder resolver alguno de los
+desafíos. El archivo está escrito con [markdown](https://es.wikipedia.org/wiki/Markdown) de manera de poder ocultar el código y dejar visible únicamente la
+consigna, para poder seleccionar cuál de las funciones se desea ver. Se recomienda visualizar este archivo en un
+programa que interprete `markdown` (por ejemplo, un navegador web).
 
 
 ### Cómo escribir el código
@@ -142,9 +143,9 @@ solved in other ways too, as long as the tests pass successfully.
 Python 3 needs to be installed.
 
 Assuming you'll be using the English version of the project, first go into the **ENG** folder. In there, there are two 
-folders: **src** and **tests**. The **src** folder contains files related to a specific topic (from the topics mentioned 
-above), with functions with a blank body (this is where you'll add your code). The **tests** folder contains unit tests 
-and should not be modified at all.
+folders: **src** and **tests**. The [**src**](/ENG/src) folder contains files related to a specific topic (from the
+topics mentioned above), with functions with a blank body (this is where you'll add your code). The
+[**tests**](/ENG/tests) folder contains unit tests and should not be modified at all.
 
 To test your code, execute the **run_tests.py** file, which will output the results to the console. You can use an IDE 
 to run the code or just run it from command line. To do the latter, first change directory to the project's ENG folder 
@@ -158,12 +159,12 @@ You can skip a test category from executing by commenting out (using a leading #
 **run_tests.py** file. The line that needs to be commented will look like this: 
 `suite.addTests(loader.loadTestsFromModule(tests.file_to_skip))`.
 
-The **ENG** folder contains a file called `proposed_solutions.md` which includes code that might be a solution for each
-one of the exercises. This doesn't imply those are the only or even the most efficient solutions. It's just example code
-that could be useful as a starting point in case you cannot solve any of the challenges. The file was created with
-`markdown` so that the code can be hidden from view, leaving only the function documentation visible, so you can select
-which function code you wish to see. This file should be opened with a program that renders `markdown` (a web browser,
-for example).
+The **ENG** folder also contains a file called [**proposed_solutions.md**](/ENG/proposed_solutions.md) which includes
+code that might be a solution for each one of the exercises. This doesn't imply those are the only or even the most
+efficient solutions. It's just example code that could be useful as a starting point in case you cannot solve any of the
+challenges. The file was created with [markdown](https://en.wikipedia.org/wiki/Markdown) so that the code can be hidden
+from view, leaving only the function documentation visible, so you can select which function code you wish to see. This
+file should be opened with a program that renders `markdown` (a web browser, for example).
 
 
 ### How to write the code

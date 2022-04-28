@@ -1736,7 +1736,7 @@ def diagonal_sum(matrix):
         [4,5,6],
         [7,8,9]]
         and this returns 15, since 1+5+9=15).
-    -Parqmeter:
+    -Parameter:
         matrix (list; elements: lists containing numeric elements): list with nested lists forming a matrix of n columns
         and n rows.
     -Returns:
