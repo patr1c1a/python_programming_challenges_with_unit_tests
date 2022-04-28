@@ -48,6 +48,13 @@ Es posible obviar la ejecución de alguna categoría de tests, comentando (con u
 el archivo **ejecutar_tests.py**. La línea a comentar se verá como esta: 
 `suite.addTests(loader.loadTestsFromModule(tests.archivo_a_obviar))`.
 
+Dentro de la carpeta **ESP** se encuentra un archivo llamado **soluciones_propuestas.md** que muestra código con posibles
+resoluciones a cada uno de los ejercicios. De ninguna manera esto implica que sean las únicas soluciones ni tampoco las
+más eficientes. Es solo información a modo de ejemplo, que podría utilizarse como punto de partida en caso de no poder
+resolver alguno de los desafíos. El archivo está escrito con `markdown` de manera de poder ocultar el código y dejar
+visible únicamente la consigna, para poder seleccionar cuál de las funciones se desea ver. Se recomienda visualizar este
+archivo en un programa que interprete `markdown` (como un navegador web).
+
 
 ### Cómo escribir el código
 
@@ -150,6 +157,13 @@ to get the tests to pass (they will show an "ok" result), one by one.
 You can skip a test category from executing by commenting out (using a leading #) the related line in the 
 **run_tests.py** file. The line that needs to be commented will look like this: 
 `suite.addTests(loader.loadTestsFromModule(tests.file_to_skip))`.
+
+The **ENG** folder contains a file called `proposed_solutions.md` which includes code that might be a solution for each
+one of the exercises. This doesn't imply those are the only or even the most efficient solutions. It's just example code
+that could be useful as a starting point in case you cannot solve any of the challenges. The file was created with
+`markdown` so that the code can be hidden from view, leaving only the function documentation visible, so you can select
+which function code you wish to see. This file should be opened with a program that renders `markdown` (a web browser,
+for example).
 
 
 ### How to write the code
