@@ -4,8 +4,7 @@ Este archivo contiene posibles soluciones para cada uno de los ejercicios. De ni
 únicas soluciones ni tampoco las más eficientes. Es solo información a modo de ejemplo, que podría utilizarse como punto
 de partida en caso de no poder resolver alguno de los desafíos.
 
-Seleccionar una categoría dependiendo del tema en el que estás trabajando, y luego dar click en la función para expandir
-y ver el codigo.
+Seleccionar la categoría del ejercicio y luego dar click sobre la función para que se muestre el código.
 
 
 * [Números](#numeros)
