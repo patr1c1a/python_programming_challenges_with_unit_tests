@@ -8,7 +8,7 @@ inicial, usando Python 3.
 
 Los ejercicios se enfocan en desarrollar habilidades algorítmicas y de razonamiento lógico así como aprender a trabajar
 con las bases de la programación y los tipos de datos fundamentales. No se centra en aprender los detalles del lenguaje
-Python. Es por ello que se alienta a que desarrolles tus propias soluciones en lugar de utilizar algunas herramientas
+Python. Es por ello que se alienta a que desarrolles tus propias soluciones evitando utilizar algunas herramientas
 que provee el lenguaje.
 
 Los desafíos se dividen en temas para ayudarte a practicar ciertos tipos y estructuras de datos, pero eso no excluye
@@ -120,7 +120,7 @@ This is a project you can use to practise programming challenges (or exercises) 
 
 Exercises are mainly intended to help develop algorithmic and logical reasoning skills as well as learn how to work with
 programming fundamentals. It doesn't focus on learning the perks of the Python language. That's why in most cases you're
-encouraged to build your own solution instead of using some pre-made solutions that Python offers.
+encouraged to build your own solution without using some pre-made solutions that Python offers.
 
 Challenges are divided into topics to help you practise with specific data types and structures, but that doesn't mean 
 there can't be other possible solutions (that might even be more efficient).
