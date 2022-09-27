@@ -434,7 +434,7 @@ class TestsFuncionesDiccionarios(unittest.TestCase):
         for prueba, (a, b) in pruebas.items():
             with self.subTest(prueba = prueba):
                 self.assertEqual(a, b, prueba)
-        
+
 
     def test_eliminar_socio(self):
         pruebas = {
@@ -536,7 +536,6 @@ class TestsFuncionesDiccionarios(unittest.TestCase):
             with self.subTest(prueba = prueba):
                 self.assertEqual(a, b, prueba)
 
-
     def test_numero_telefonico(self):
         pruebas = {
             'Argumento usado: "(325)444-TEST"': [
@@ -577,34 +576,34 @@ class TestsFuncionesDiccionarios(unittest.TestCase):
                 self.assertEqual(a, b, prueba)
 
 
-    def test_cadena_isomorfica(self):
+    def test_cadenas_isomorficas(self):
         pruebas = {
             'Argumentos usados: "papel", "vivaz"': [
-                cadena_isomorfica("papel", "vivaz"), 
+                cadenas_isomorficas("papel", "vivaz"),
                 True
             ],
             'Argumentos usados: "papel", "yoyos"': [
-                cadena_isomorfica("papel", "yoyos"), 
+                cadenas_isomorficas("papel", "yoyos"),
                 False
             ],
             'Argumentos usados: "abcd", "efgh"': [
-                cadena_isomorfica("abcd", "efgh"), 
+                cadenas_isomorficas("abcd", "efgh"),
                 True
             ],
             'Argumentos usados: "aaa", "bbb"': [
-                cadena_isomorfica("aaa", "bbb"), 
+                cadenas_isomorficas("aaa", "bbb"),
                 True
             ],
             'Argumentos usados: "abb", "baa"': [
-                cadena_isomorfica("abb", "baa"), 
+                cadenas_isomorficas("abb", "baa"),
                 True
             ],
             'Argumentos usados: "badc", "baba"': [
-                cadena_isomorfica("badc", "baba"), 
+                cadenas_isomorficas("badc", "baba"),
                 False
             ],
             'Argumentos usados: "z", "z"': [
-                cadena_isomorfica("z", "z"), 
+                cadenas_isomorficas("z", "z"),
                 True
             ]
         }

@@ -316,7 +316,7 @@ def numero_telefonico(telefono):
     pass
 
 
-def cadena_isomorfica(cadena1, cadena2):
+def cadenas_isomorficas(cadena1, cadena2):
     """
     Dadas dos cadenas de texto, define si son isomórficas o no. Dos cadenas, a y b, son isomórficas si puede
     reemplazarse cada carácter de a para obtener b. Todas las ocurrencias de un carácter deben ser reemplazadas

@@ -2347,7 +2347,7 @@ def numero_telefonico(telefono):
 <details>
     <summary>
         <pre>
-def cadena_isomorfica(cadena1, cadena2):
+def cadenas_isomorficas(cadena1, cadena2):
     """
     Dadas dos cadenas de texto, define si son isomórficas o no. Dos cadenas, a y b, son isomórficas si puede
     reemplazarse cada carácter de a para obtener b. Todas las ocurrencias de un carácter deben ser reemplazadas
@@ -2355,9 +2355,9 @@ def cadena_isomorfica(cadena1, cadena2):
     pero sí es válido que un carácter se reemplace a sí mismo. Se asume que ambas cadenas tienen igual longitud y están
     compuestas por caracteres ascii válidos.
     Ejemplos:
-        cadena_isomorfica("papel", "vivaz") -> True
+        cadenas_isomorficas("papel", "vivaz") -> True
         (Pues pueden hacerse los reemplazos 'p'='v'; 'a'='i'; 'p'='v'; 'e'='a'; 'l'='z').
-        cadena_isomorfica("papel", "yoyos") -> False
+        cadenas_isomorficas("papel", "yoyos") -> False
         (Pues pueden hacerse los reemplazos 'p'='y'; 'a'='o'; 'p'='y'; pero al intentar reemplazar 'e'='o' sucede que
         la 'o' ya era reemplazo de la letra 'a').
     -Parámetros:
