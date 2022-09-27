@@ -3,7 +3,7 @@
 #############################
 
 import unittest
-from src.strings import *
+from ESP.src.strings import *
 
 
 class TestsFuncionesStrings(unittest.TestCase):

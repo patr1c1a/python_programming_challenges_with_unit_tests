@@ -3,7 +3,7 @@
 #############################
 
 import unittest
-from src.diccionarios import *
+from ESP.src.diccionarios import *
 
 
 class TestsFuncionesDiccionarios(unittest.TestCase):
