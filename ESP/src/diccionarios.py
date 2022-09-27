@@ -174,6 +174,7 @@ def mayor_valor(ocurrencias):
     """
     Dado un diccionario con valores únicos de tipo numérico positivos, retorna cuál es la clave que corresponde al
     mayor valor. Si el diccionario está vacío, retorna string vacío. Cada valor solo ocurre una vez en el diccionario.
+    Sugerencia: evitar el método max().
     Ejemplo:
         mayor_valor({"a":1, "e":7, "i":4, "o":9, "u":3}) -> "o"
     -Parámetro:

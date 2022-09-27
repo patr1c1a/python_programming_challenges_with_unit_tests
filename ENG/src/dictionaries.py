@@ -171,6 +171,7 @@ def highest_value(occurrences):
     """
     Given a dictionary with positive int values that are unique, returns the key associated to the highest value. If the
     dictionary is empty, it returns an empty string.
+    Suggestion: avoid using max().
     Example:
         highest_value({"a": 1, "e": 7, "i": 4, "o": 9, "u": 3}) -> "o"
     -Parameter:
