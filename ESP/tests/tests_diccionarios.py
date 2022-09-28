@@ -597,3 +597,34 @@ class TestsFuncionesDiccionarios(unittest.TestCase):
         for prueba, (a, b) in pruebas.items():
             with self.subTest(prueba=prueba):
                 self.assertEqual(a, b, prueba)
+
+    def test_patron_de_palabras(self):
+        pruebas = {
+            'Argumentos usados: "xyyx", "casa mar mar casa"': [
+                patron_de_palabras("xyyx", "casa mar mar casa"),
+                True
+            ],
+            'Argumentos usados: "xyyx", "casa mar mar cerro"': [
+                patron_de_palabras("xyyx", "casa mar mar cerro"),
+                False
+            ],
+            'Argumentos usados: "xxxxx", "perro"': [
+                patron_de_palabras("xxxxx", "perro"),
+                False
+            ],
+            'Argumentos usados: "", "perro"': [
+                patron_de_palabras("", "perro"),
+                False
+            ],
+            'Argumentos usados: "xyxy", ""': [
+                patron_de_palabras("xyxy", ""),
+                False
+            ],
+            'Argumentos usados: "", ""': [
+                patron_de_palabras("", ""),
+                False
+            ]
+        }
+        for prueba, (a, b) in pruebas.items():
+            with self.subTest(prueba=prueba):
+                self.assertEqual(a, b, prueba)
