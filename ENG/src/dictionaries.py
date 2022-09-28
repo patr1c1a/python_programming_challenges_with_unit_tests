@@ -207,8 +207,8 @@ def sowing_season(vegetables, month):
 def register_payment(members, number):
     """
     Given a dictionary with information about members of a club, and a member number, modifies the dictionary to
-    indicate that their membership fees are up to date. The keys in the dictionary represent member numbers while values
-    are lists with member information: [name, phone, fee status (True if fees are up to date, False if not)].
+    indicate that their membership fees are up-to-date. The keys in the dictionary represent member numbers while values
+    are lists with member information: [name, phone, fee status (True if fees are up-to-date, False if not)].
     Example:
         register_payment({423: ["Darlene Johnson", 4523114, True],
                           289: ["Anna Brown", 6345112, False],
@@ -232,7 +232,7 @@ def late_payments(members):
     """
     Given a dictionary with information about members of a club, returns how many of them are late with their membership
     fee payments. The keys in the dictionary represent member numbers while values are lists with member information:
-    [name, phone, fee status (True if fees are up to date, False if not)].
+    [name, phone, fee status (True if fees are up-to-date, False if not)].
     Example:
         late_payments({423: ["Darlene Johnson", 4523114, True],
                        289: ["Anna Brown", 6345112, False],
@@ -251,7 +251,7 @@ def delete_member(members, member_name):
     """
     Given a dictionary with information about members of a club and a member name, it deletes the member from the
     dictionary. The keys in the dictionary represent member numbers while values are lists with member information:
-    [name, phone, fee status (True if fees are up to date, False if not)]. If the given name does not match any member,
+    [name, phone, fee status (True if fees are up-to-date, False if not)]. If the given name does not match any member,
     the dictionary is not modified.
     Example:
         delete_member({423: ["Darlene Johnson", 4523114, True],
