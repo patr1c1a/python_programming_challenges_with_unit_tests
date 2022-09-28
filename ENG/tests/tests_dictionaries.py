@@ -599,3 +599,34 @@ class TestsSetDictionaryFunctions(unittest.TestCase):
         for test_case, (a, b) in test_cases.items():
             with self.subTest(test_case=test_case):
                 self.assertEqual(a, b, test_case)
+
+    def test_word_pattern(self):
+        test_cases = {
+            'Arguments used: "xyyx", "home sea sea home"': [
+                word_pattern("xyyx", "home sea sea home"),
+                True
+            ],
+            'Arguments used: "xyyx", "home sea sea hill"': [
+                word_pattern("xyyx", "home sea sea hill"),
+                False
+            ],
+            'Arguments used: "xxxxx", "dog"': [
+                word_pattern("xxxxx", "dog"),
+                False
+            ],
+            'Arguments used: "", "dog"': [
+                word_pattern("", "dog"),
+                False
+            ],
+            'Arguments used: "xyxy", ""': [
+                word_pattern("xyxy", ""),
+                False
+            ],
+            'Arguments used: "", ""': [
+                word_pattern("", ""),
+                False
+            ],
+        }
+        for test_case, (a, b) in test_cases.items():
+            with self.subTest(test_case=test_case):
+                self.assertEqual(a, b, test_case)
