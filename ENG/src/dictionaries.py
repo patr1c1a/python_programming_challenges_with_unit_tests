@@ -352,6 +352,6 @@ def word_pattern(pattern, words):
         words (str): a string with words, which will be separated by a single space. There will be no leading or
         trailing spaces in the string. Words will only contain lower case letters and the ' ' character.
     -Returns:
-        (bool) True if the words in the string follow the given pattern. False if they don't.
+        (bool) True if the words in the string follow the given pattern. False if they don't or any string is empty.
     """
     pass

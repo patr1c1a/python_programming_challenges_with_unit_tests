@@ -356,6 +356,7 @@ def patron_de_palabras(patron, palabras):
         palabras (str): cadena con palabras. Las palabras estarán separadas por un único espacio y no habrá espacios al
         inicio ni al final de la cadena. palabras contendrá solo letras minúsculas y el carácter ' '.
     -Valor retornado:
-        (bool) True si las palabras de la cadena siguen el patrón dado. False en caso contrario.
+        (bool) True si las palabras de la cadena siguen el patrón dado. False en caso contrario o si alguno de los
+        strings es vacío.
     """
     pass
