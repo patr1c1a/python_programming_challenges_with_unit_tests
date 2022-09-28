@@ -348,9 +348,9 @@ def word_pattern(pattern, words):
         word_pattern("xyyx", "home sea sea hill") -> False
         (Since 'x' cannot be matched both to 'home' and 'hill' at the same time).
     -Parameters:
-        patter (str): a pattern that only contains lower case letters.
+        pattern (str): a pattern that only contains lower case letters.
         words (str): a string with words, which will be separated by a single space. There will be no leading or
-        trailing spaces in the string. words will only contain lower case letters and the ' ' character.
+        trailing spaces in the string. Words will only contain lower case letters and the ' ' character.
     -Returns:
         (bool) True if the words in the string follow the given pattern. False if they don't.
     """
