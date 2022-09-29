@@ -2376,3 +2376,43 @@ def isomorphic_strings(string1, string2):
     return True
     </pre>
 </details>
+
+
+<details>
+    <summary>
+        <pre>
+def word_pattern(pattern, words):
+    """
+    Given a pattern and a string containing words, decides if the words follow the pattern, so that there is a bijection
+    between a letter in the pattern and a word in the string. We say the string "follows" the pattern if every letter in
+    the pattern can be replaced with a word from the string, and every letter is replaced with just one word. Each word
+    in the string must have a replacement letter in the pattern and each letter in the pattern must replace a word in
+    the string.
+    Examples:
+        word_pattern("xyyx", "home sea sea home") -> True
+        (Since we can match 'x'='home'; 'y'='sea').
+        word_pattern("xyyx", "home sea sea hill") -> False
+        (Since 'x' cannot be matched both to 'home' and 'hill' at the same time).
+    -Parameters:
+        pattern (str): a pattern that only contains lower case letters.
+        words (str): a string with words, which will be separated by a single space. There will be no leading or
+        trailing spaces in the string. Words will only contain lower case letters and the ' ' character.
+    -Returns:
+        (bool) True if the words in the string follow the given pattern. False if they don't or any string is empty.
+    """
+        </pre>
+    </summary>
+    <pre>
+    pattern_matching = {}
+    words_list = words.split()
+    if len(pattern) != len(words_list) or len(pattern) == 0 or len(words_list) == 0:
+        return False
+    for i in range(len(pattern)):
+        if pattern[i] not in pattern_matching:
+            pattern_matching[pattern[i]] = words_list[i]
+        else:
+            if pattern_matching[pattern[i]] != words_list[i]:
+                return False
+    return True
+    </pre>
+</details>
