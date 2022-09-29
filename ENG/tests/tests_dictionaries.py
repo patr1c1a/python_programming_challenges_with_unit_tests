@@ -614,6 +614,22 @@ class TestsSetDictionaryFunctions(unittest.TestCase):
                 word_pattern("xxxxx", "dog"),
                 False
             ],
+            'Arguments used: "x", "home home home home"': [
+                word_pattern("x", "home home home home"),
+                False
+            ],
+            'Arguments used: "xxx", "home home home"': [
+                word_pattern("xxx", "home home home"),
+                True
+            ],
+            'Arguments used: "xy", "home sea"': [
+                word_pattern("xy", "home sea"),
+                True
+            ],
+            'Arguments used: "x", "home"': [
+                word_pattern("x", "home"),
+                True
+            ],
             'Arguments used: "", "dog"': [
                 word_pattern("", "dog"),
                 False
