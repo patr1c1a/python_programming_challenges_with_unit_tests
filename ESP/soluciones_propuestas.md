@@ -2385,3 +2385,44 @@ def cadenas_isomorficas(cadena1, cadena2):
     return True
     </pre>
 </details>
+
+
+<details>
+    <summary>
+        <pre>
+def patron_de_palabras(patron, palabras):
+    """
+    Dado un patrón y una cadena de texto compuesta por palabras, indica si la cadena sigue el patrón, de manera que
+    haya una biyección entre cada letra del patrón y cada palabra de la cadena. Se considera que la cadena "sigue" el
+    patrón si cada letra del mismo puede reemplazarse con una palabra de la cadena y una misma letra del patrón no
+    reemplaza a dos palabras diferentes. Cada palabra de la cadena debe tener una letra correspondiente en el
+    patrón y cada letra del patrón debe corresponder a una palabra.
+    Ejemplos:
+        patron_de_palabras("xyyx", "casa mar mar casa") -> True
+        (Pues puede asociarse 'x'='casa'; 'y'='mar').
+        patron_de_palabras("xyyx", "casa mar mar cerro") -> False
+        (Pues 'x' no puede asociarse al mismo tiempo con 'casa' y con 'cerro').
+    -Parámetros:
+        patron (str): patrón a verificar. Solo contiene letras minúsculas.
+        palabras (str): cadena con palabras. Las palabras estarán separadas por un único espacio y no habrá espacios al
+        inicio ni al final de la cadena. palabras contendrá solo letras minúsculas y el carácter ' '.
+    -Valor retornado:
+        (bool) True si las palabras de la cadena siguen el patrón dado. False en caso contrario o si alguno de los
+        strings es vacío.
+    """
+        </pre>
+    </summary>
+    <pre>
+    pattern_matching = {}
+    lista_de_palabras = palabras.split()
+    if len(patron) != len(lista_de_palabras) or len(patron) == 0 or len(lista_de_palabras) == 0:
+        return False
+    for i in range(len(patron)):
+        if patron[i] not in pattern_matching:
+            pattern_matching[patron[i]] = lista_de_palabras[i]
+        else:
+            if pattern_matching[patron[i]] != lista_de_palabras[i]:
+                return False
+    return True
+    </pre>
+</details>
