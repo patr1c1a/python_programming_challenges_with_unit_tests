@@ -612,6 +612,22 @@ class TestsFuncionesDiccionarios(unittest.TestCase):
                 patron_de_palabras("xxxxx", "perro"),
                 False
             ],
+            'Argumentos usados: "x", "casa casa casa casa"': [
+                patron_de_palabras("x", "casa casa casa casa"),
+                False
+            ],
+            'Argumentos usados: "xxx", "casa casa casa"': [
+                patron_de_palabras("xxx", "casa casa casa"),
+                True
+            ],
+            'Argumentos usados: "xy", "casa mar"': [
+                patron_de_palabras("xy", "casa mar"),
+                True
+            ],
+            'Argumentos usados: "x", "casa"': [
+                patron_de_palabras("x", "casa"),
+                True
+            ],
             'Argumentos usados: "", "perro"': [
                 patron_de_palabras("", "perro"),
                 False
