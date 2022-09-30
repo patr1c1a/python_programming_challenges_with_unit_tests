@@ -141,6 +141,10 @@ class TestsFuncionesListas(unittest.TestCase):
                 sumar_indice(numeros=[1, 2, 3, 4, 5, 6]),
                 [1, 3, 5, 7, 9, 11]
             ],
+            'Argumento usado: numeros=[-6, 4, -2.8, 0]': [
+                sumar_indice(numeros=[-6, 4, -2.8, 0]),
+                [-6, 5, 0.8, 3]
+            ],
             'Argumento usado: numeros=[0, 0, 0]': [
                 sumar_indice(numeros=[0, 0, 0]),
                 [0, 1, 2]
