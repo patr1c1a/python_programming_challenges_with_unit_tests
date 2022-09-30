@@ -22,7 +22,7 @@ def cantidad_par_caracteres(cadena1, cadena2):
 def contar_ocurrencias(cadena, caracter):
     """
     Cuenta la cantidad de veces que un carácter aparece en una cadena.
-    Sugerencia: evitar el método count().
+    Sugerencia: evitar el uso de count().
     Ejemplo:
         contar_ocurrencias(cadena="Esto es una frase", caracter="s") -> 3
     -Parámetros:
@@ -38,7 +38,7 @@ def contar_vocales_totales(cadena):
     """
     Cuenta la cantidad de vocales (incluyendo repeticiones) que hay en una cadena, teniendo en cuenta mayúsculas como
     minúsculas. Las vocales del idioma español son: a, e, i, o, u.
-    Sugerencia: evitar el método count().
+    Sugerencia: evitar el uso de count().
     Ejemplo:
         contar_vocales_totales(cadena="Esto es una frase") -> 7
     -Parámetro:
@@ -54,7 +54,7 @@ def contar_vocales_unicas(cadena):
     Cuenta la cantidad de vocales que hay en una cadena.
     Las vocales del idioma español son: a, e, i, o, u.
     Cada vocal debe contarse una única vez, indistintamente en su forma mayúscula o minúscula.
-    Sugerencia: evitar el método count().
+    Sugerencia: evitar el uso de count().
     Ejemplo:
         contar_vocales_unicas(cadena="Esto Es Una Frase") -> 4
     -Parámetro:
@@ -68,7 +68,7 @@ def contar_vocales_unicas(cadena):
 def reemplazar_caracter_con_asterisco(cadena, caracter):
     """
     Reemplaza por '*' a todas las ocurrencias del carácter indicado.
-    Sugerencia: evitar el método replace().
+    Sugerencia: evitar el uso de replace().
     Ejemplos:
         reemplazar_caracter_con_asterisco(cadena="esto es una frase", caracter="a") -> "esto es un* fr*se"
     -Parámetros:
@@ -164,7 +164,7 @@ def es_palindromo(cadena):
     Se incluyen todos los caracteres, sean o no letras.
     Las letras acentuadas se consideran como caracteres diferentes de sus contrapartes no acentuadas.
     La cadena vacía no se considera palíndromo.
-    Sugerencia: evitar las rebanadas con paso negativo y la función reversed().
+    Sugerencia: evitar las rebanadas con paso negativo y el uso de reversed().
     Ejemplos:
         es_palindromo(cadena="abba") -> True
         es_palindromo(cadena="baéceab") -> False
@@ -233,7 +233,7 @@ def invertir_palabras(cadena):
     Separador de palabras: un único espacio.
     La cadena no contendrá espacios al principio ni al final. Puede contener símbolos o dígitos y en ese caso se
     considerarán de la misma forma que las letras.
-    Sugerencia: evitar usar el método split().
+    Sugerencia: evitar el uso de split().
     Ejemplo:
         invertir_palabras(cadena="Esto es una frase.") -> "otsE se anu .esarf"
     -Parámetros:

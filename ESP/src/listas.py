@@ -222,7 +222,7 @@ def suma_cada_n(numeros, n):
     n puede ser mayor que la longitud de la lista y no necesariamente es un múltiplo de esta longitud.
     n no puede ser 0.
     Si n es mayor que la longitud de la lista, retorna 0.
-    Sugerencia: evitar la función sum().
+    Sugerencia: evitar el uso de sum().
     Ejemplo:
         suma_cada_n(numeros=[5, 2, 1, 6, 4, 9, 3, 7, 8], n=3) -> 18
         (Pues 1+9+8=18).
@@ -341,7 +341,7 @@ def buscar_destino(boletos, ciudades, numero_boleto):
     lista con datos de ciudades (de cada una se tiene el nombre de ciudad y país donde está ubicada). Además, recibe un
     número de boleto. De acuerdo el número de boleto ubicará la ciudad destino y, de acuerdo a la ciudad destino,
     retornará el país al que pertenece. Si el número de boleto no se encuentra en la lista, retornará None.
-    Sugerencia: utilizar la función buscar_pais() desarrollada anteriormente.
+    Sugerencia: utilizar la función buscar_pais() definida anteriormente.
     Ejemplo:
         buscar_destino(boletos=[(100, "Buenos Aires"), (110, "Madrid"), (120, "Glasgow")],
                        ciudades=[("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), ("Liverpool", "Inglaterra"),

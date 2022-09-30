@@ -97,7 +97,7 @@ def dias_en_mes(mes, anio):
     """
     Calcula la cantidad de días que tiene un mes determinado, en un año determinado (para el caso de que se trate de
     febrero en un año bisiesto).
-    Sugerencia: utilizar la función es_bisiesto() desarrollada anteriormente.
+    Sugerencia: utilizar la función es_bisiesto() definida anteriormente.
     Ejemplo:
         dias_en_mes(mes=11, anio=1981) -> 30
     -Parámetros:
@@ -236,7 +236,7 @@ def obtener_mes(dia_consecutivo, anio):
     """
     Obtiene el número de mes correspondiente, dada la cantidad de días transcurridos desde el 1 de enero de un año en
     particular (teniendo en cuenta la posibilidad de que sea bisiesto).
-    Sugerencia: utilizar la función dias_en_mes() desarrollada anteriormente.
+    Sugerencia: utilizar la función dias_en_mes() definida anteriormente.
     Ejemplo:
         obtener_mes(dia_consecutivo=200, anio=1969) -> 7
         (el día consecutivo número 60 en un año bisiesto representa el 29 de febrero, mientras que en un año no bisiesto
@@ -255,7 +255,7 @@ def es_disarium(numero):
     Evalúa si un número es un número "disarium". Un número es considerado "disarium" si la suma de sus dígitos, cada
     uno elevado a su respectiva posición dentro del número (empezando con la posición 1 desde la izquierda), es igual
     al número dado.
-    Sugerencia: utilizar la función contar_digitos() desarrollada anteriormente.
+    Sugerencia: utilizar la función contar_digitos() definida anteriormente.
     Ejemplo:
         es_disarium(numero=518) -> True
         (518 es un número disarium, ya que 5**1=5, 1**2=1, 8**3=512, y 5+1+512=518).

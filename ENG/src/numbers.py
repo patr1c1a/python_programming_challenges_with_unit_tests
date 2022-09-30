@@ -21,7 +21,7 @@ def smallest(number1, number2):
 def absolute_value(number):
     """
     Returns the absolute value of a number.
-    Suggestion: avoid using the abs() method.
+    Suggestion: avoid using abs().
     Examples:
         absolute_value(3) -> 3
         absolute_value(-10) -> 10
@@ -236,7 +236,7 @@ def get_month(consecutive_day, year):
     """
     Finds the month number, given the number of days gone by since January 1st in a particular year (taking into
     account that it could be a leap year).
-    Suggestion: use function days_in_month() found above.
+    Suggestion: use function days_in_month() defined above.
     Example:
         get_month(200, 1969) -> 7
         (the 60th consecutive day in a leap year represents February 29, while in a non-leap
@@ -255,7 +255,7 @@ def is_disarium(number):
     Finds if a number is a "disarium" number.
     A disarium number is a number in which the sum of the digits to the power of their respective position (starting
     from position 1 on the left), is equal to the number itself.
-    Suggestion: use function digit_count() found above.
+    Suggestion: use function digit_count() defined above.
     Example:
         is_disarium(518) -> True
         (518 is a disarium number, since 5**1=5, 1**2=1, 8**3=512, and 5+1+512=518).
