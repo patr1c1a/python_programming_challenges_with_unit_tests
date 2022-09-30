@@ -1842,7 +1842,7 @@ def hallar_repetidos(strings1, strings2):
     Dadas dos listas de strings, retorna cuáles de esos strings están incluidos en ambas listas.
     Sugerencia: evitar iterar por las listas para lograr el cometido.
     Ejemplo:
-        hallar_repetidos(["abc", "cde", "abc", "fff"], ["cde", "aaa"]) -> {"cde"}
+        hallar_repetidos(strings1=["abc", "cde", "abc", "fff"], strings2=["cde", "aaa"]) -> {"cde"}
     -Parámetros:
         strings1 (list; elementos: str): lista con strings a procesar.
         strings2 (list; elementos: str): lista con strings a procesar.
@@ -1867,8 +1867,8 @@ def solo_una_mascota(perros, gatos):
     perro o únicamente gato, pero no ambos.
     Sugerencia: evitar iterar por las listas para lograr el cometido.
     Ejemplo:
-         solo_una_mascota(["Lucrecia Borges", "Juan Sebastián Balsa", "Cristóbal Colombraro"],
-                          ["Juan Sebastián Balsa", "Juan Jacobo Russo", "Ana Bologna", "Cristóbal Colombraro"])
+         solo_una_mascota(perros=["Lucrecia Borges", "Juan Sebastián Balsa", "Cristóbal Colombraro"],
+                          gatos=["Juan Sebastián Balsa", "Juan Jacobo Russo", "Ana Bologna", "Cristóbal Colombraro"])
         -> {"Lucrecia Borges", "Juan Jacobo Russo", "Ana Bologna"}
     -Parámetros:
         perros (list; elementos: str): lista con los nombres de dueños de perros.
@@ -1893,7 +1893,7 @@ def elementos_unicos(tuplas):
     Dada una cantidad indeterminada de tuplas que contienen números, retorna una tupla que combine todas las
     anteriores, pero donde cada número aparece una única vez (sin duplicados).
     Ejemplo:
-        elementos_unicos([(1,2,3), (2,2,2,2), (3,4,5), (1,3,5,7,9)]) -> (1,2,3,4,5,7,9)
+        elementos_unicos(tuplas=[(1,2,3), (2,2,2,2), (3,4,5), (1,3,5,7,9)]) -> (1,2,3,4,5,7,9)
     -Parámetro:
         tuplas (list; elementos: tuple, con elementos int): lista conteniendo tuplas de números.
     -Valor retornado:
@@ -1921,7 +1921,7 @@ def listar_apellidos(alumnos):
     único string, separados por un espacio. Cada alumno puede tener más de un nombre pero solo un apellido, en la
     forma: "nombre(s) apellido".
     Ejemplo:
-        listar_apellidos(["Lara Ruiz", "Esteban Raúl Perez", "Francina Soto", "Lucas Perez"])
+        listar_apellidos(alumnos=["Lara Ruiz", "Esteban Raúl Perez", "Francina Soto", "Lucas Perez"])
         -> {"Ruiz", "Perez", "Soto"}
     -Parámetro:
         alumnos (list; elementos: str): lista de alumnos.
@@ -1950,11 +1950,11 @@ def domicilios_facturacion(ventas):
     retorna los domicilios de cada cliente al cual se le debe enviar una factura de compra. Cada cliente puede haber
     hecho más de una compra en el mes, por lo que cada domicilio debe aparecer una sola vez.
     Ejemplo:
-        domicilios_facturacion([("Nuria Costa", 5, 12780.78, "Calle Las Flores 355"),
-                                (Jorge Russo", 7, 699, "Mirasol 218"),
-                                ("Nuria Costa", 7, 532.90, "Calle Las Flores 355"),
-                                ("Julián Rodriguez", 12, 5715.99, "La Mancha 761"),
-                                ("Jorge Russo", 15, 958, "Mirasol 218")])
+        domicilios_facturacion(ventas=[("Nuria Costa", 5, 12780.78, "Calle Las Flores 355"),
+                                       (Jorge Russo", 7, 699, "Mirasol 218"),
+                                       ("Nuria Costa", 7, 532.90, "Calle Las Flores 355"),
+                                       ("Julián Rodriguez", 12, 5715.99, "La Mancha 761"),
+                                       ("Jorge Russo", 15, 958, "Mirasol 218")])
         -> {'Calle Las Flores 355', 'Mirasol 218', 'La Mancha 761'}
     -Parámetro:
         (list; elementos: tuple, con elementos heterogéneos) ventas: lista con tuplas representando cada una de las
@@ -1982,9 +1982,9 @@ def agregar_pelicula(peliculas, pelicula):
     los nuevos datos. Los datos que se almacenan de cada película son: nombre, director, año de estreno. El diccionario
     usa el nombre de cada película como claves y una lista con el resto de datos como valor.
     Ejemplo:
-        agregar_pelicula({"Joker": ["Todd Phillips", 2019],
-                          "Avatar": ["James Cameron", 2009]},
-                         ("Lord of the rings: The two towers", "Peter Jackson", 2002))
+        agregar_pelicula(peliculas={"Joker": ["Todd Phillips", 2019],
+                                    "Avatar": ["James Cameron", 2009]},
+                         pelicula=("Lord of the rings: The two towers", "Peter Jackson", 2002))
         -> {"Joker": ["Todd Phillips", 2019],
             "Avatar": ["James Cameron", 2009],
             "Lord of the rings: The two towers": ["Peter Jackson", 2002]}
@@ -2015,10 +2015,10 @@ def mas_votados(votos, curso):
     repeticiones. El diccionario tiene como claves los números de los cursos y como valores listas de strings con cada
     voto. Si el número de curso dado no se encuentra en el diccionario, retorna un conjunto vacío.
     Ejemplo:
-        mas_votados({1:["juan", "juan", "lorena", "juan", "lorena", "paula"],
-                     2:["romina", "marcos", "guadalupe", "guadalupe"],
-                     3:["lucas", "abril", "lucas", "abril", "abril", "serena", "abril"]},
-                    3)
+        mas_votados(votos={1:["juan", "juan", "lorena", "juan", "lorena", "paula"],
+                           2:["romina", "marcos", "guadalupe", "guadalupe"],
+                           3:["lucas", "abril", "lucas", "abril", "abril", "serena", "abril"]},
+                    curso=3)
         -> {"lucas", "abril", "serena"}
     -Parámetros:
         votos (dict; clave: int; valor: list, con elementos str): diccionario con los votos de cada curso, donde las
@@ -2041,12 +2041,13 @@ def mas_votados(votos, curso):
 <details>
     <summary>
         <pre>
-def ocurrencias_digitos(digitos):
+def ocurrencias_digitos(digitos=digitos):
     """
     Dada una lista que contiene dígitos numéricos, informa la cantidad de ocurrencias de cada dígito, indicando el
     valor 0 para los dígitos (entre el 0 y el 9) que no se encuentran en la lista.
+    Sugerencia: evitar el uso de collections.Counter().
     Ejemplo:
-        ocurrencias_digitos([8, 9, 0, 4, 2, 2, 4, 1, 8, 2]) -> {0:1, 1:1, 2:3, 3:0, 4:2, 5:0, 6:0, 7:0, 8:2, 9:1}
+        ocurrencias_digitos(digitos=[8, 9, 0, 4, 2, 2, 4, 1, 8, 2]) -> {0:1, 1:1, 2:3, 3:0, 4:2, 5:0, 6:0, 7:0, 8:2, 9:1}
     -Parámetro:
         digitos (list; elementos: int): lista cuyos elementos son dígitos numéricos (entre el 0 y el 9).
     -Valor retornado:
@@ -2074,10 +2075,9 @@ def contar_ocurrencias(listas):
     Dada una tupla que contiene listas de caracteres, cuenta la cantidad de ocurrencias de cada carácter en todas las
     listas.
     Ejemplo:
-        contar_ocurrencias(
-                           (["i", "%", "u"],
-                            ["^", "%", "^", "s", "i", "i", "u"],
-                            ["a", "u"]))
+        contar_ocurrencias(listas=(["i", "%", "u"],
+                                   ["^", "%", "^", "s", "i", "i", "u"],
+                                   ["a", "u"]))
         -> {'i':3, '%':2, 'u':3, 's':1, '^':2, 'a':1}
     -Parámetro:
         listas (tuple; elementos: list, con elementos str): tupla conteniendo listas cuyos elementos son caracteres
@@ -2107,8 +2107,9 @@ def mayor_valor(ocurrencias):
     """
     Dado un diccionario con valores únicos de tipo numérico positivos, retorna cuál es la clave que corresponde al
     mayor valor. Si el diccionario está vacío, retorna string vacío. Cada valor solo ocurre una vez en el diccionario.
+    Sugerencia: evitar el uso de max().
     Ejemplo:
-        mayor_valor({"a":1, "e":7, "i":4, "o":9, "u":3}) -> "o"
+        mayor_valor(ocurrencias={"a":1, "e":7, "i":4, "o":9, "u":3}) -> "o"
     -Parámetro:
         ocurrencias (dict; clave: str; valor: int): diccionario cuyas claves son letras y los valores son las
         ocurrencias de cada una. Solo existe un único valor mayor que todos.
@@ -2137,10 +2138,10 @@ def epoca_de_siembra(vegetales, mes):
     Dado un diccionario conteniendo los meses de siembra de diversos vegetales y el nombre de un mes, retorna qué
     vegetales pueden sembrarse en ese mes.
     Ejemplo:
-        epoca_de_siembra({"espinaca": ["febrero","marzo"],
-                          "ajo": ["febrero","marzo","abril"],
-                          "berenjena": ["julio","agosto","septiembre"]},
-                         "marzo")
+        epoca_de_siembra(vegetales={"espinaca": ["febrero","marzo"],
+                                    "ajo": ["febrero","marzo","abril"],
+                                    "berenjena": ["julio","agosto","septiembre"]},
+                         mes="marzo")
         -> ["espinaca", "ajo"]
     -Parámetros:
         vegetales (dict; clave: str; valor: list, con elementos str): diccionario donde las claves son los nombres de
@@ -2171,10 +2172,10 @@ def asentar_pago(socios, numero):
     socio y, como valores, listas con los datos del socio: [nombre, teléfono, estado de pagos (True si están al día,
     False en caso contrario)].
     Ejemplo:
-        asentar_pago({423:["Juana Saavedra", 4523114, True],
-                      289:["Estela Gimenez", 6345112, False],
-                      657:["Lautaro Ruiz", 4767992, False]},
-                     289)
+        asentar_pago(socios={423:["Juana Saavedra", 4523114, True],
+                             289:["Estela Gimenez", 6345112, False],
+                             657:["Lautaro Ruiz", 4767992, False]},
+                     numero=289)
         -> {423:["Juana Saavedra", 4523114, True],
             289:["Estela Gimenez", 6345112, True],
             657:["Lautaro Ruiz", 4767992, False]}
@@ -2205,9 +2206,9 @@ def socios_morosos(socios):
     social. El diccionario tiene como claves los números de socio y, como valores, listas con los datos de ese socio:
     [nombre, teléfono, estado de pagos (True si están al día, False en caso contrario)].
     Ejemplo:
-        socios_morosos({423:["Juana Saavedra", 4523114, True],
-                        289:["Estela Gimenez", 6345112, False],
-                        657:["Lautaro Ruiz", 4767992, False]}) 
+        socios_morosos(socios={423:["Juana Saavedra", 4523114, True],
+                               289:["Estela Gimenez", 6345112, False],
+                               657:["Lautaro Ruiz", 4767992, False]}) 
         -> 2
     -Parámetro:
         socios (dict; clave: int; valor: list, con 3 elementos: str, int, bool): diccionario con los datos de los
@@ -2237,9 +2238,10 @@ def eliminar_socio(socios, nombre_socio):
     teléfono, estado de pagos (True si están al día, False en caso contrario)]. Si el nombre dado no corresponde a
     ningún socio, el diccionario no se modifica. 
     Ejemplo:
-        eliminar_socio({423:["Juana Saavedra", 4523114, True],
-                        289:["Estela Gimenez", 6345112, False],
-                        657:["Lautaro Ruiz", 4767992, False]}, "Estela Gimenez")
+        eliminar_socio(socios={423:["Juana Saavedra", 4523114, True],
+                               289:["Estela Gimenez", 6345112, False],
+                               657:["Lautaro Ruiz", 4767992, False]},
+                       nombre_socio="Estela Gimenez")
         -> {423:["Juana Saavedra", 4523114, True], 657:["Lautaro Ruiz", 4767992, False]}
     -Parámetros:
         socios (dict; clave: int; valor: list, con 3 elementos: str, int, bool): diccionario con los datos de los
@@ -2278,7 +2280,7 @@ def romano_a_arabigo(romano):
     X delante de L o C significa restar 10.
     C delante de D o M significa restar 100.
     Ejemplo:
-        romano_a_arabigo("MCMLXXIV") -> 1974
+        romano_a_arabigo(romano="MCMLXXIV") -> 1974
     -Parámetro:
         romano (str): número romano a convertir. En mayúsculas. Es un número romano válido. Su equivalente en arábigo
         está entre 1 y 3999.
@@ -2319,7 +2321,7 @@ def numero_telefonico(telefono):
     T, U, V = 8
     W, X, Y, Z = 10
     Ejemplo:
-        numero_telefonico("(325)444-TEST") -> "(325)444-8378"
+        numero_telefonico(telefono="(325)444-TEST") -> "(325)444-8378"
     -Parámetro:
         telefono (str): un número telefónico que puede contener letras mayúsculas, números, guiones y paréntesis.
     -Valor retornado:
@@ -2355,9 +2357,9 @@ def cadenas_isomorficas(cadena1, cadena2):
     pero sí es válido que un carácter se reemplace a sí mismo. Se asume que ambas cadenas tienen igual longitud y están
     compuestas por caracteres ascii válidos.
     Ejemplos:
-        cadenas_isomorficas("papel", "vivaz") -> True
+        cadenas_isomorficas(cadena1="papel", cadena2="vivaz") -> True
         (Pues pueden hacerse los reemplazos 'p'='v'; 'a'='i'; 'p'='v'; 'e'='a'; 'l'='z').
-        cadenas_isomorficas("papel", "yoyos") -> False
+        cadenas_isomorficas(cadena1="papel", cadena2="yoyos") -> False
         (Pues pueden hacerse los reemplazos 'p'='y'; 'a'='o'; 'p'='y'; pero al intentar reemplazar 'e'='o' sucede que
         la 'o' ya era reemplazo de la letra 'a').
     -Parámetros:
@@ -2398,9 +2400,9 @@ def patron_de_palabras(patron, palabras):
     reemplaza a dos palabras diferentes. Cada palabra de la cadena debe tener una letra correspondiente en el
     patrón y cada letra del patrón debe corresponder a una palabra.
     Ejemplos:
-        patron_de_palabras("xyyx", "casa mar mar casa") -> True
+        patron_de_palabras(patron="xyyx", palabras="casa mar mar casa") -> True
         (Pues puede asociarse 'x'='casa'; 'y'='mar').
-        patron_de_palabras("xyyx", "casa mar mar cerro") -> False
+        patron_de_palabras(patron="xyyx", palabras="casa mar mar cerro") -> False
         (Pues 'x' no puede asociarse al mismo tiempo con 'casa' y con 'cerro').
     -Parámetros:
         patron (str): patrón a verificar. Solo contiene letras minúsculas.
