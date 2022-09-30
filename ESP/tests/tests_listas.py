@@ -596,8 +596,8 @@ class TestsFuncionesListas(unittest.TestCase):
                                         ("Liverpool", "Inglaterra"),
                                         ("Madrid", "España")],
                                ciudades=[(100, "Montevideo"),
-                                      (110, "Madrid"),
-                                      (120, "Glasgow")],
+                                         (110, "Madrid"),
+                                         (120, "Glasgow")],
                                numero_boleto=100),
                 None
             ],
