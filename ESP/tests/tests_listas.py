@@ -10,20 +10,20 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_productoria_numeros(self):
         pruebas = {
-            'Argumento usado: [1, 2, 3, 4]': [
-                productoria_numeros([1, 2, 3, 4]),
+            'Argumento usado: numeros=[1, 2, 3, 4]': [
+                productoria_numeros(numeros=[1, 2, 3, 4]),
                 24
             ],
-            'Argumento usado: [0, 3, 7, 9]': [
-                productoria_numeros([0, 3, 7, 9]),
+            'Argumento usado: numeros=[0, 3, 7, 9]': [
+                productoria_numeros(numeros=[0, 3, 7, 9]),
                 0
             ],
-            'Argumento usado: []': [
-                productoria_numeros([]),
+            'Argumento usado: numeros=[]': [
+                productoria_numeros(numeros=[]),
                 None
             ],
-            'Argumento usado: [1, 1, 1]': [
-                productoria_numeros([1, 1, 1]),
+            'Argumento usado: numeros=[1, 1, 1]': [
+                productoria_numeros(numeros=[1, 1, 1]),
                 1
             ]
         }
@@ -33,24 +33,24 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_mayor_elemento(self):
         pruebas = {
-            'Argumento usado: ["x", "y", "z"]': [
-                mayor_elemento(["x", "y", "z"]),
+            'Argumento usado: strings=["x", "y", "z"]': [
+                mayor_elemento(strings=["x", "y", "z"]),
                 "z"
             ],
-            'Argumento usado: ["z", "y", "x"]': [
-                mayor_elemento(["z", "y", "z"]),
+            'Argumento usado: strings=["z", "y", "x"]': [
+                mayor_elemento(strings=["z", "y", "z"]),
                 "z"
             ],
-            'Argumento usado: ["abc", "cba", "cab", "bca"]': [
-                mayor_elemento(["abc", "cba", "cab", "bca"]),
+            'Argumento usado: strings=["abc", "cba", "cab", "bca"]': [
+                mayor_elemento(strings=["abc", "cba", "cab", "bca"]),
                 "cba"
             ],
-            'Argumento usado: ["abc", "abc", "abc"]': [
-                mayor_elemento(["abc", "abc", "abc"]),
+            'Argumento usado: strings=["abc", "abc", "abc"]': [
+                mayor_elemento(strings=["abc", "abc", "abc"]),
                 "abc"
             ],
-            'Argumento usado: []': [
-                mayor_elemento([]),
+            'Argumento usado: strings=[]': [
+                mayor_elemento(strings=[]),
                 None
             ]
         }
@@ -60,24 +60,24 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_mayor_ganancia(self):
         pruebas = {
-            'Argumento usado: [70, 53, 15, 23, 41, 30]': [
-                mayor_ganancia([70, 53, 15, 23, 41, 30]),
+            'Argumento usado: precios=[70, 53, 15, 23, 41, 30]': [
+                mayor_ganancia(precios=[70, 53, 15, 23, 41, 30]),
                 55
             ],
-            'Argumento usado: [5, 5, 5, 5, 5]': [
-                mayor_ganancia([5, 5, 5, 5, 5]),
+            'Argumento usado: precios=[5, 5, 5, 5, 5]': [
+                mayor_ganancia(precios=[5, 5, 5, 5, 5]),
                 0
             ],
-            'Argumento usado: [15.6, 12.8, 4, 2.5, 19]': [
-                mayor_ganancia([15.6, 12.8, 4, 2.5, 19]),
+            'Argumento usado: precios=[15.6, 12.8, 4, 2.5, 19]': [
+                mayor_ganancia(precios=[15.6, 12.8, 4, 2.5, 19]),
                 16.5
             ],
-            'Argumento usado: [12, 21]': [
-                mayor_ganancia([12, 21]),
+            'Argumento usado: precios=[12, 21]': [
+                mayor_ganancia(precios=[12, 21]),
                 9
             ],
-            'Argumento usado: [21, 12]': [
-                mayor_ganancia([21, 12]),
+            'Argumento usado: precios=[21, 12]': [
+                mayor_ganancia(precios=[21, 12]),
                 9
             ]
         }
@@ -87,16 +87,16 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_elementos_unicos(self):
         pruebas = {
-            'Argumento usado: [3, False, "a", 1, 1, 2, 2, False, 4]': [
-                elementos_unicos([3, False, "a", 1, 1, 2, 4, False, 4]),
+            'Argumento usado: puede_tener_duplicados=[3, False, "a", 1, 1, 2, 2, False, 4]': [
+                elementos_unicos(puede_tener_duplicados=[3, False, "a", 1, 1, 2, 4, False, 4]),
                 [3, "a", 2]
             ],
-            'Argumento usado: [1, 1, 1]': [
-                elementos_unicos([1, 1, 1]),
+            'Argumento usado: puede_tener_duplicados=[1, 1, 1]': [
+                elementos_unicos(puede_tener_duplicados=[1, 1, 1]),
                 []
             ],
-            'Argumento usado: ["hola", True, 5.1]': [
-                elementos_unicos(["hola", True, 5.1]),
+            'Argumento usado: puede_tener_duplicados=["hola", True, 5.1]': [
+                elementos_unicos(puede_tener_duplicados=["hola", True, 5.1]),
                 ["hola", True, 5.1]
             ],
             'Argumento usado: []':
@@ -110,24 +110,24 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_porcentaje_pares_impares(self):
         pruebas = {
-            'Argumento usado: [-5, 3, 2, -4, 7]': [
-                porcentaje_pares_impares([-5, 3, 2, -4, 7]),
+            'Argumento usado: numeros=[-5, 3, 2, -4, 7]': [
+                porcentaje_pares_impares(numeros=[-5, 3, 2, -4, 7]),
                 (40.0, 60.0)
             ],
-            'Argumento usado: [1, 1, 1, 1]': [
-                porcentaje_pares_impares([1, 1, 1, 1]),
+            'Argumento usado: numeros=[1, 1, 1, 1]': [
+                porcentaje_pares_impares(numeros=[1, 1, 1, 1]),
                 (0.0, 100.0)
             ],
-            'Argumento usado: [1, 5]': [
-                porcentaje_pares_impares([1, 5]),
+            'Argumento usado: numeros=[1, 5]': [
+                porcentaje_pares_impares(numeros=[1, 5]),
                 (0.0, 100.0)
             ],
-            'Argumento usado: [2, 4]': [
-                porcentaje_pares_impares([2, 4]),
+            'Argumento usado: numeros=[2, 4]': [
+                porcentaje_pares_impares(numeros=[2, 4]),
                 (100.0, 0.0)
             ],
-            'Argumento usado: [1, 2, 3, 4]': [
-                porcentaje_pares_impares([1, 2, 3, 4]),
+            'Argumento usado: numeros=[1, 2, 3, 4]': [
+                porcentaje_pares_impares(numeros=[1, 2, 3, 4]),
                 (50.0, 50.0)
             ]
         }
@@ -137,16 +137,16 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_sumar_indice(self):
         pruebas = {
-            'Argumento usado: [1, 2, 3, 4, 5, 6]': [
-                sumar_indice([1, 2, 3, 4, 5, 6]),
+            'Argumento usado: numeros=[1, 2, 3, 4, 5, 6]': [
+                sumar_indice(numeros=[1, 2, 3, 4, 5, 6]),
                 [1, 3, 5, 7, 9, 11]
             ],
-            'Argumento usado: [0, 0, 0]': [
-                sumar_indice([0, 0, 0]),
+            'Argumento usado: numeros=[0, 0, 0]': [
+                sumar_indice(numeros=[0, 0, 0]),
                 [0, 1, 2]
             ],
-            'Argumento usado: []': [
-                sumar_indice([]),
+            'Argumento usado: numeros=[]': [
+                sumar_indice(numeros=[]),
                 []
             ]
         }
@@ -156,24 +156,24 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_sumas_parciales(self):
         pruebas = {
-            'Argumento usado: [4, 6, 10, 7]': [
-                sumas_parciales([4, 6, 10, 7]),
+            'Argumento usado: numeros=[4, 6, 10, 7]': [
+                sumas_parciales(numeros=[4, 6, 10, 7]),
                 [4, 10, 20, 27]
             ],
-            'Argumento usado: [1, 1, 1, 1, 1]': [
-                sumas_parciales([1, 1, 1, 1, 1]),
+            'Argumento usado: numeros=[1, 1, 1, 1, 1]': [
+                sumas_parciales(numeros=[1, 1, 1, 1, 1]),
                 [1, 2, 3, 4, 5]
             ],
-            'Argumento usado: [1, 2, 3, 4]': [
-                sumas_parciales([1, 2, 3, 4]),
+            'Argumento usado: numeros=[1, 2, 3, 4]': [
+                sumas_parciales(numeros=[1, 2, 3, 4]),
                 [1, 3, 6, 10]
             ],
-            'Argumento usado: []': [
-                sumas_parciales([]),
+            'Argumento usado: numeros=[]': [
+                sumas_parciales(numeros=[]),
                 []
             ],
-            'Argumento usado: [5, 0, 0, 0, 0]': [
-                sumas_parciales([5, 0, 0, 0, 0]),
+            'Argumento usado: numeros=[5, 0, 0, 0, 0]': [
+                sumas_parciales(numeros=[5, 0, 0, 0, 0]),
                 [5, 5, 5, 5, 5]
             ]
         }
@@ -183,28 +183,28 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_numeros_faltantes(self):
         pruebas = {
-            'Argumento usado: [5, 0, 2, 9, 8, 12, 9]': [
-                numeros_faltantes([5, 0, 2, 9, 8, 12, 9]),
+            'Argumento usado: numeros=[5, 0, 2, 9, 8, 12, 9]': [
+                numeros_faltantes(numeros=[5, 0, 2, 9, 8, 12, 9]),
                 [1, 3, 4, 6]
             ],
-            'Argumento usado: [3, 7, 15, 3, 9]': [
-                numeros_faltantes([3, 7, 15, 3, 9]),
+            'Argumento usado: numeros=[3, 7, 15, 3, 9]': [
+                numeros_faltantes(numeros=[3, 7, 15, 3, 9]),
                 [0, 1, 2, 4]
             ],
-            'Argumento usado: [1, 2, 3, 4]': [
-                numeros_faltantes([1, 2, 3, 4]),
+            'Argumento usado: numeros=[1, 2, 3, 4]': [
+                numeros_faltantes(numeros=[1, 2, 3, 4]),
                 [0]
             ],
-            'Argumento usado: [0, 1, 2, 3]': [
-                numeros_faltantes([0, 1, 2, 3]),
+            'Argumento usado: numeros=[0, 1, 2, 3]': [
+                numeros_faltantes(numeros=[0, 1, 2, 3]),
                 []
             ],
-            'Argumento usado: [5]': [
-                numeros_faltantes([5]),
+            'Argumento usado: numeros=[5]': [
+                numeros_faltantes(numeros=[5]),
                 [0]
             ],
-            'Argumento usado: []': [
-                numeros_faltantes([]),
+            'Argumento usado: numeros=[]': [
+                numeros_faltantes(numeros=[]),
                 []
             ],
         }
@@ -214,20 +214,20 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_cuantos_numeros_menores(self):
         pruebas = {
-            'Argumento usado: [6, 3, 3, 4, 2]': [
-                cuantos_numeros_menores([6, 3, 3, 4, 2]),
+            'Argumento usado: numeros=[6, 3, 3, 4, 2]': [
+                cuantos_numeros_menores(numeros=[6, 3, 3, 4, 2]),
                 [4, 1, 1, 3, 0]
             ],
-            'Argumento usado: [3, 3, 3, 3]': [
-                cuantos_numeros_menores([3, 3, 3, 3]),
+            'Argumento usado: numeros=[3, 3, 3, 3]': [
+                cuantos_numeros_menores(numeros=[3, 3, 3, 3]),
                 [0, 0, 0, 0]
             ],
-            'Argumento usado: []': [
-                cuantos_numeros_menores([]),
+            'Argumento usado: numeros=[]': [
+                cuantos_numeros_menores(numeros=[]),
                 []
             ],
-            'Argumento usado: [1]': [
-                cuantos_numeros_menores([1]),
+            'Argumento usado: numeros=[1]': [
+                cuantos_numeros_menores(numeros=[1]),
                 [0]
             ]
         }
@@ -237,28 +237,28 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_dos_maximos(self):
         pruebas = {
-            'Argumento usado: [5, 3, 6, 2, 8]': [
-                dos_maximos([5, 3, 6, 2, 8]),
+            'Argumento usado: numeros=[5, 3, 6, 2, 8]': [
+                dos_maximos(numeros=[5, 3, 6, 2, 8]),
                 (8, 6)
             ],
-            'Argumento usado: [6, 8, 3, 5, 2]': [
-                dos_maximos([6, 8, 3, 5, 2]),
+            'Argumento usado: numeros=[6, 8, 3, 5, 2]': [
+                dos_maximos(numeros=[6, 8, 3, 5, 2]),
                 (8, 6)
             ],
-            'Argumento usado: [5, 3, 2, 8, 6]': [
-                dos_maximos([5, 3, 2, 8, 6]),
+            'Argumento usado: numeros=[5, 3, 2, 8, 6]': [
+                dos_maximos(numeros=[5, 3, 2, 8, 6]),
                 (8, 6)
             ],
-            'Argumento usado: [5, 5, 5, 5]': [
-                dos_maximos([5, 5, 5, 5]),
+            'Argumento usado: numeros=[5, 5, 5, 5]': [
+                dos_maximos(numeros=[5, 5, 5, 5]),
                 (5, 5)
             ],
-            'Argumento usado: [1.3, -4, 2.5, 7, -2.2]': [
-                dos_maximos([1.3, -4, 2.5, 7, -2.2]),
+            'Argumento usado: numeros=[1.3, -4, 2.5, 7, -2.2]': [
+                dos_maximos(numeros=[1.3, -4, 2.5, 7, -2.2]),
                 (7, 2.5)
             ],
-            'Argumento usado: [1, 2]': [
-                dos_maximos([1, 2]),
+            'Argumento usado: numeros=[1, 2]': [
+                dos_maximos(numeros=[1, 2]),
                 (2, 1)
             ]
         }
@@ -268,28 +268,28 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_jugada_uno(self):
         pruebas = {
-            'Argumentos usados: ["rojo 2", "azul 5", "verde 1"], "rojo 3': [
-                jugada_uno(["rojo 2", "azul 5", "verde 1"], "rojo 3"),
+            'Argumentos usados: mano=["rojo 2", "azul 5", "verde 1"], carta_descubierta="rojo 3': [
+                jugada_uno(mano=["rojo 2", "azul 5", "verde 1"], carta_descubierta="rojo 3"),
                 True
             ],
-            'Argumentos usados: ["rojo 2", "azul 5", "verde 1"], "amarillo 3': [
-                jugada_uno(["rojo 2", "azul 5", "verde 1"], "amarillo 3"),
+            'Argumentos usados: mano=["rojo 2", "azul 5", "verde 1"], carta_descubierta="amarillo 3': [
+                jugada_uno(mano=["rojo 2", "azul 5", "verde 1"], carta_descubierta="amarillo 3"),
                 False
             ],
-            'Argumentos usados: ["verde 4"], "amarillo 4': [
-                jugada_uno(["verde 4"], "amarillo 4"),
+            'Argumentos usados: mano=["verde 4"], carta_descubierta="amarillo 4': [
+                jugada_uno(mano=["verde 4"], carta_descubierta="amarillo 4"),
                 True
             ],
-            'Argumentos usados: ["verde 1"], "verde 6': [
-                jugada_uno(["verde 1"], "verde 6"),
+            'Argumentos usados: mano=["verde 1"], carta_descubierta="verde 6': [
+                jugada_uno(mano=["verde 1"], carta_descubierta="verde 6"),
                 True
             ],
-            'Argumentos usados: ["verde 1"], "azul 5"': [
-                jugada_uno(["verde 1"], "azul 5"),
+            'Argumentos usados: mano=["verde 1"], carta_descubierta="azul 5"': [
+                jugada_uno(mano=["verde 1"], carta_descubierta="azul 5"),
                 False
             ],
-            'Argumentos usados: [], "azul 5"': [
-                jugada_uno([], "azul 5"),
+            'Argumentos usados: mano=[], carta_descubierta="azul 5"': [
+                jugada_uno(mano=[], carta_descubierta="azul 5"),
                 False
             ],
         }
@@ -299,28 +299,28 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_eliminar_ocurrencias_extra(self):
         pruebas = {
-            'Argumentos usados: [1, 2, 3, 2, 3, 3], 1': [
-                descartar_ocurrencias_extra([1, 2, 3, 2, 3, 3], 1),
+            'Argumentos usados: numeros=[1, 2, 3, 2, 3, 3], n=1': [
+                descartar_ocurrencias_extra(numeros=[1, 2, 3, 2, 3, 3], n=1),
                 [1, 2, 3]
             ],
-            'Argumentos usados: [1, 2, 3, 2, 3, 3], 3': [
-                descartar_ocurrencias_extra([1, 2, 3, 2, 3, 3], 3),
+            'Argumentos usados: numeros=[1, 2, 3, 2, 3, 3], n=3': [
+                descartar_ocurrencias_extra(numeros=[1, 2, 3, 2, 3, 3], n=3),
                 [1, 2, 3, 2, 3, 3]
             ],
-            'Argumentos usados: [7, 4, 5, 4, 4, 7, 8, 4, 5], 2': [
-                descartar_ocurrencias_extra([7, 4, 5, 4, 4, 7, 8, 4, 5], 2),
+            'Argumentos usados: numeros=[7, 4, 5, 4, 4, 7, 8, 4, 5], n=2': [
+                descartar_ocurrencias_extra(numeros=[7, 4, 5, 4, 4, 7, 8, 4, 5], n=2),
                 [7, 4, 5, 4, 7, 8, 5]
             ],
-            'Argumentos usados: [1, 1, 1, 1, 1, 1], 0': [
-                descartar_ocurrencias_extra([1, 1, 1, 1, 1, 1], 0),
+            'Argumentos usados: numeros=[1, 1, 1, 1, 1, 1], n=0': [
+                descartar_ocurrencias_extra(numeros=[1, 1, 1, 1, 1, 1], n=0),
                 []
             ],
-            'Argumentos usados: ["a", "a", "a"], 1': [
-                descartar_ocurrencias_extra(["a", "a", "a"], 1),
+            'Argumentos usados: numeros=["a", "a", "a"], n=1': [
+                descartar_ocurrencias_extra(numeros=["a", "a", "a"], n=1),
                 ["a"]
             ],
-            'Argumentos usados: [], 1': [
-                descartar_ocurrencias_extra([], 1),
+            'Argumentos usados: numeros=[], n=1': [
+                descartar_ocurrencias_extra(numeros=[], n=1),
                 []
             ]
         }
@@ -330,40 +330,40 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_es_desplazamiento(self):
         pruebas = {
-            'Argumentos usados: [1, 2, 3, 4], [3, 4, 1, 2], 2': [
-                es_desplazamiento([1, 2, 3, 4], [3, 4, 1, 2], 2),
+            'Argumentos usados: numeros1=[1, 2, 3, 4], numeros2=[3, 4, 1, 2], n=2': [
+                es_desplazamiento(numeros1=[1, 2, 3, 4], numeros2=[3, 4, 1, 2], n=2),
                 True
             ],
-            'Argumentos usados: [1, 2], [3, 4], 1': [
-                es_desplazamiento([1, 2], [3, 4], 1),
+            'Argumentos usados: numeros1=[1, 2], numeros2=[3, 4], n=1': [
+                es_desplazamiento(numeros1=[1, 2], numeros2=[3, 4], n=1),
                 False
             ],
-            'Argumentos usados: [1, 2, 3, 4], [1, 2, 3, 4], 0': [
-                es_desplazamiento([1, 2, 3, 4], [1, 2, 3, 4], 0),
+            'Argumentos usados: numeros1=[1, 2, 3, 4], numeros2=[1, 2, 3, 4], n=0': [
+                es_desplazamiento(numeros1=[1, 2, 3, 4], numeros2=[1, 2, 3, 4], n=0),
                 True
             ],
-            'Argumentos usados: [6.2, 8, -3, 1, 2.4], [1, 2.4, -3, 8, 6.2], 5': [
-                es_desplazamiento([6.2, 8, -3, 1, 2.4], [1, 2.4, -3, 8, 6.2], 5),
+            'Argumentos usados: numeros1=[6.2, 8, -3, 1, 2.4], numeros2=[1, 2.4, -3, 8, 6.2], n=5': [
+                es_desplazamiento(numeros1=[6.2, 8, -3, 1, 2.4], numeros2=[1, 2.4, -3, 8, 6.2], n=5),
                 False
             ],
-            'Argumentos usados: [6.2, 8, -3, 1, 2.4], [6.2, 8, -3, 1, 2.4], 5': [
-                es_desplazamiento([6.2, 8, -3, 1, 2.4], [6.2, 8, -3, 1, 2.4], 5),
+            'Argumentos usados: numeros1=[6.2, 8, -3, 1, 2.4], numeros2=[6.2, 8, -3, 1, 2.4], n=5': [
+                es_desplazamiento(numeros1=[6.2, 8, -3, 1, 2.4], numeros2=[6.2, 8, -3, 1, 2.4], n=5),
                 True
             ],
-            'Argumentos usados: [4, 4], [4, 4], 3': [
-                es_desplazamiento([4, 4], [4, 4], 3),
+            'Argumentos usados: numeros1=[4, 4], numeros2=[4, 4], n=3': [
+                es_desplazamiento(numeros1=[4, 4], numeros2=[4, 4], n=3),
                 True
             ],
-            'Argumentos usados: [7, 1.1, 0, -8, 9.15], [9.15, 7, 1.1, 0, 3], 1': [
-                es_desplazamiento([7, 1.1, 0, -8, 9.15], [9.15, 7, 1.1, 0, 3], 1),
+            'Argumentos usados: numeros1=[7, 1.1, 0, -8, 9.15], numeros2=[9.15, 7, 1.1, 0, 3], n=1': [
+                es_desplazamiento(numeros1=[7, 1.1, 0, -8, 9.15], numeros2=[9.15, 7, 1.1, 0, 3], n=1),
                 False
             ],
-            'Argumentos usados: [-2], [-2], 6': [
-                es_desplazamiento([-2], [-2], 6),
+            'Argumentos usados: numeros1=[-2], numeros2=[-2], n=6': [
+                es_desplazamiento(numeros1=[-2], numeros2=[-2], n=6),
                 True
             ],
-            'Argumentos usados: [], [], 2': [
-                es_desplazamiento([], [], 2),
+            'Argumentos usados: numeros1=[], numeros2=[], n=2': [
+                es_desplazamiento(numeros1=[], numeros2=[], n=2),
                 True
             ]
         }
@@ -373,24 +373,24 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_suma_cada_n(self):
         pruebas = {
-            'Argumentos usados: [5, 2, 1, 6, 4, 9, 3, 7, 8], 3': [
-                suma_cada_n([5, 2, 1, 6, 4, 9, 3, 7, 8], 3),
+            'Argumentos usados: numeros=[5, 2, 1, 6, 4, 9, 3, 7, 8], n=3': [
+                suma_cada_n(numeros=[5, 2, 1, 6, 4, 9, 3, 7, 8], n=3),
                 18
             ],
-            'Argumentos usados: [1.5, 2, -3, 4], 5': [
-                suma_cada_n([1.5, 2, -3, 4], 5),
+            'Argumentos usados: numeros=[1.5, 2, -3, 4], n=5': [
+                suma_cada_n(numeros=[1.5, 2, -3, 4], n=5),
                 0
             ],
-            'Argumentos usados: [1, 2, 3, -4], 1': [
-                suma_cada_n([1, 2, 3, -4], 1),
+            'Argumentos usados: numeros=[1, 2, 3, -4], n=1': [
+                suma_cada_n(numeros=[1, 2, 3, -4], n=1),
                 2
             ],
-            'Argumentos usados: [6, 1, 2, 3, 7, 9, 4, 8], 6': [
-                suma_cada_n([6, 1, 2, 3, 7, 9, 4, 8], 6),
+            'Argumentos usados: numeros=[6, 1, 2, 3, 7, 9, 4, 8], n=6': [
+                suma_cada_n(numeros=[6, 1, 2, 3, 7, 9, 4, 8], n=6),
                 9
             ],
-            'Argumentos usados: [9, -2, 3.5, -6.2, 1], 2': [
-                suma_cada_n([9, -2, 3.5, -6.2, 1], 2),
+            'Argumentos usados: numeros=[9, -2, 3.5, -6.2, 1], n=2': [
+                suma_cada_n(numeros=[9, -2, 3.5, -6.2, 1], n=2),
                 -8.2
             ]
         }
@@ -400,28 +400,28 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_desplazar_ceros(self):
         pruebas = {
-            'Argumento usado: [5, 8, 0, 3, 0, 0, 4]': [
-                desplazar_ceros([5, 8, 0, 3, 0, 0, 4]),
+            'Argumento usado: numeros=[5, 8, 0, 3, 0, 0, 4]': [
+                desplazar_ceros(numeros=[5, 8, 0, 3, 0, 0, 4]),
                 [5, 8, 3, 4, 0, 0, 0]
             ],
-            'Argumento usado: [1, 2, 3, 0, 0, 0]': [
-                desplazar_ceros([1, 2, 3, 0, 0, 0]),
+            'Argumento usado: numeros=[1, 2, 3, 0, 0, 0]': [
+                desplazar_ceros(numeros=[1, 2, 3, 0, 0, 0]),
                 [1, 2, 3, 0, 0, 0]
             ],
-            'Argumento usado: [0, 0, 0, 0]': [
-                desplazar_ceros([0, 0, 0, 0]),
+            'Argumento usado: numeros=[0, 0, 0, 0]': [
+                desplazar_ceros(numeros=[0, 0, 0, 0]),
                 [0, 0, 0, 0]
             ],
-            'Argumento usado: [1, 2, 3, 4]': [
-                desplazar_ceros([1, 2, 3, 4]),
+            'Argumento usado: numeros=[1, 2, 3, 4]': [
+                desplazar_ceros(numeros=[1, 2, 3, 4]),
                 [1, 2, 3, 4]
             ],
-            'Argumento usado: [0, 0, 0, 1, 2, 3]': [
-                desplazar_ceros([0, 0, 0, 1, 2, 3]),
+            'Argumento usado: numeros=[0, 0, 0, 1, 2, 3]': [
+                desplazar_ceros(numeros=[0, 0, 0, 1, 2, 3]),
                 [1, 2, 3, 0, 0, 0]
             ],
-            'Argumento usado: []': [
-                desplazar_ceros([]),
+            'Argumento usado: numeros=[]': [
+                desplazar_ceros(numeros=[]),
                 []
             ]
         }
@@ -431,24 +431,24 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_desanidar(self):
         pruebas = {
-            'Argumento usado: [[1, 0, 4], ["a", "b"], [True, False, True, True]]': [
-                desanidar([[1, 0, 4], ["a", "b"], [True, False, True, True]]),
+            'Argumento usado: listas=[[1, 0, 4], ["a", "b"], [True, False, True, True]]': [
+                desanidar(listas=[[1, 0, 4], ["a", "b"], [True, False, True, True]]),
                 [1, 0, 4, "a", "b", True, False, True, True]
             ],
-            'Argumento usado: [[], ["a", "b"]]': [
-                desanidar([[], ["a", "b"]]),
+            'Argumento usado: listas=[[], ["a", "b"]]': [
+                desanidar(listas=[[], ["a", "b"]]),
                 ["a", "b"]
             ],
-            'Argumento usado: [["a", "b"], []]': [
-                desanidar([["a", "b"], []]),
+            'Argumento usado: listas=[["a", "b"], []]': [
+                desanidar(listas=[["a", "b"], []]),
                 ["a", "b"]
             ],
-            'Argumento usado: [[1], [2], [3]]': [
-                desanidar([[1], [2], [3]]),
+            'Argumento usado: listas=[[1], [2], [3]]': [
+                desanidar(listas=[[1], [2], [3]]),
                 [1, 2, 3]
             ],
-            'Argumento usado: [[], [], []]': [
-                desanidar([[], [], []]),
+            'Argumento usado: listas=[[], [], []]': [
+                desanidar(listas=[[], [], []]),
                 []
             ]
         }
@@ -458,34 +458,35 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_cantidad_aprobados(self):
         pruebas = {
-            'Argumento usado: [["Mario Perez", 331, 6], ["Luisa Rey", 112, 3], ["Fernanda Torres", 256, 8], ["Martín '
-            'Sotomayor", 209, 7]]': [
-                cantidad_aprobados([["Mario Perez", 331, 6],
-                                    ["Luisa Rey", 112, 3],
-                                    ["Fernanda Torres", 256, 8],
-                                    ["Martín Sotomayor", 209, 7]]),
+            'Argumento usado: resultados_examen=[["Mario Perez", 331, 6], ["Luisa Rey", 112, 3], ["Fernanda Torres", '
+            '256, 8], ["Martín Sotomayor", 209, 7]]': [
+                cantidad_aprobados(resultados_examen=[["Mario Perez", 331, 6],
+                                                      ["Luisa Rey", 112, 3],
+                                                      ["Fernanda Torres", 256, 8],
+                                                      ["Martín Sotomayor", 209, 7]]),
                 3
             ],
-            'Argumento usado: [["Mario Perez", 331, 6], ["Luisa Rey", 112, 6], ["Fernanda Torres", 256, 6]]': [
-                cantidad_aprobados([["Mario Perez", 331, 6],
-                                    ["Luisa Rey", 112, 6],
-                                    ["Fernanda Torres", 256, 6]]),
+            'Argumento usado: resultados_examen=[["Mario Perez", 331, 6], ["Luisa Rey", 112, 6], '
+            '["Fernanda Torres", 256, 6]]': [
+                cantidad_aprobados(resultados_examen=[["Mario Perez", 331, 6],
+                                                      ["Luisa Rey", 112, 6],
+                                                      ["Fernanda Torres", 256, 6]]),
                 3
             ],
-            'Argumento usado: [["Mario Perez", 331, 1], ["Luisa Rey", 112, 5], ["Fernanda Torres", 256, 2], ["Martín '
-            'Sotomayor", 209, 4]]': [
-                cantidad_aprobados([["Mario Perez", 331, 1],
-                                    ["Luisa Rey", 112, 5],
-                                    ["Fernanda Torres", 256, 2],
-                                    ["Martín Sotomayor", 209, 4]]),
+            'Argumento usado: resultados_examen=[["Mario Perez", 331, 1], ["Luisa Rey", 112, 5], ["Fernanda Torres", '
+            '256, 2], ["Martín Sotomayor", 209, 4]]': [
+                cantidad_aprobados(resultados_examen=[["Mario Perez", 331, 1],
+                                                      ["Luisa Rey", 112, 5],
+                                                      ["Fernanda Torres", 256, 2],
+                                                      ["Martín Sotomayor", 209, 4]]),
                 0
             ],
-            'Argumento usado: [["Mario Perez", 331, 6]]': [
-                cantidad_aprobados([["Mario Perez", 331, 6]]),
+            'Argumento usado: resultados_examen=[["Mario Perez", 331, 6]]': [
+                cantidad_aprobados(resultados_examen=[["Mario Perez", 331, 6]]),
                 1
             ],
-            'Argumento usado: []': [
-                cantidad_aprobados([]),
+            'Argumento usado: resultados_examen=[]': [
+                cantidad_aprobados(resultados_examen=[]),
                 0
             ]
         }
@@ -495,20 +496,20 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_suma_diagonal(self):
         pruebas = {
-            'Argumento usado: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]': [
-                suma_diagonal([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
+            'Argumento usado: matriz=[[1, 2, 3], [4, 5, 6], [7, 8, 9]]': [
+                suma_diagonal(matriz=[[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
                 15
             ],
-            'Argumento usado: [[5, 3], [8, 0]]': [
-                suma_diagonal([[5, 3], [8, 0]]),
+            'Argumento usado: matriz=[[5, 3], [8, 0]]': [
+                suma_diagonal(matriz=[[5, 3], [8, 0]]),
                 5
             ],
-            'Argumento usado: []': [
-                suma_diagonal([]),
+            'Argumento usado: matriz=[]': [
+                suma_diagonal(matriz=[]),
                 0
             ],
-            'Argumento usado: [[4]]': [
-                suma_diagonal([[4]]),
+            'Argumento usado: matriz=[[4]]': [
+                suma_diagonal(matriz=[[4]]),
                 4
             ]
         }
@@ -518,28 +519,26 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_buscar_pais(self):
         pruebas = {
-            'Argumentos usados: [("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), ("Liverpool", "Inglaterra"), '
-            '("Madrid", "España")], "Glasgow"': [
-                buscar_pais([("Buenos Aires", "Argentina"),
-                             ("Glasgow", "Escocia"),
-                             ("Liverpool", "Inglaterra"),
-                             ("Madrid", "España")
-                             ],
-                            "Glasgow"),
+            'Argumentos usados: ciudades=[("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), '
+            '("Liverpool", "Inglaterra"), ("Madrid", "España")], nombre_ciudad="Glasgow"': [
+                buscar_pais(ciudades=[("Buenos Aires", "Argentina"),
+                                      ("Glasgow", "Escocia"),
+                                      ("Liverpool", "Inglaterra"),
+                                      ("Madrid", "España")],
+                            nombre_ciudad="Glasgow"),
                 "Escocia"
             ],
-            'Argumentos usados: [("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), ("Liverpool", "Inglaterra"), '
-            '("Madrid", "España")], "Montevideo"': [
-                buscar_pais([("Buenos Aires", "Argentina"),
-                             ("Glasgow", "Escocia"),
-                             ("Liverpool", "Inglaterra"),
-                             ("Madrid", "España")
-                             ],
-                            "Montevideo"),
+            'Argumentos usados: ciudades=[("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), '
+            '("Liverpool", "Inglaterra"), ("Madrid", "España")], nombre_ciudad="Montevideo"': [
+                buscar_pais(ciudades=[("Buenos Aires", "Argentina"),
+                                      ("Glasgow", "Escocia"),
+                                      ("Liverpool", "Inglaterra"),
+                                      ("Madrid", "España")],
+                            nombre_ciudad="Montevideo"),
                 None
             ],
-            'Argumentos usados: [], "Glasgow"': [
-                buscar_pais([], "Glasgow"),
+            'Argumentos usados: ciudades=[], nombre_ciudad="Glasgow"': [
+                buscar_pais(ciudades=[], nombre_ciudad="Glasgow"),
                 None
             ]
         }
@@ -549,83 +548,74 @@ class TestsFuncionesListas(unittest.TestCase):
 
     def test_buscar_destino(self):
         pruebas = {
-            'Argumentos usados: [(100, "Buenos Aires"), (110, "Madrid"), (120, "Glasgow")], '
-            '[("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), ("Liverpool", "Inglaterra"), ("Madrid", "España")],'
-            ' 100': [
-                buscar_destino(
-                    [(100, "Buenos Aires"),
-                     (110, "Madrid"),
-                     (120, "Glasgow")
-                     ],
-                    [("Buenos Aires", "Argentina"),
-                     ("Glasgow", "Escocia"),
-                     ("Liverpool", "Inglaterra"),
-                     ("Madrid", "España")
-                     ],
-                    100),
+            'Argumentos usados: boletos=[(100, "Buenos Aires"), (110, "Madrid"), (120, "Glasgow")], '
+            'ciudades=[("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), ("Liverpool", "Inglaterra"), '
+            '("Madrid", "España")], numero_boleto=100': [
+                buscar_destino(boletos=[(100, "Buenos Aires"),
+                                        (110, "Madrid"),
+                                        (120, "Glasgow")],
+                               ciudades=[("Buenos Aires", "Argentina"),
+                                         ("Glasgow", "Escocia"),
+                                         ("Liverpool", "Inglaterra"),
+                                         ("Madrid", "España")],
+                               numero_boleto=100),
                 "Argentina"
             ],
-            'Argumentos usados: [(100, "Buenos Aires"), (110, "Madrid"), (120, "Glasgow"), (130, "Madrid")], [("Buenos'
-            ' Aires", "Argentina"), ("Glasgow", "Escocia"), ("Liverpool", "Inglaterra"), ("Madrid", "España")], 130': [
-                buscar_destino(
-                    [(100, "Buenos Aires"),
-                     (110, "Madrid"),
-                     (120, "Glasgow"),
-                     (130, "Madrid")
-                     ],
-                    [("Buenos Aires", "Argentina"),
-                     ("Glasgow", "Escocia"),
-                     ("Liverpool", "Inglaterra"),
-                     ("Madrid", "España")
-                     ],
-                    130),
+            'Argumentos usados: boletos=[(100, "Buenos Aires"), (110, "Madrid"), (120, "Glasgow"), (130, "Madrid")], '
+            'ciudades=[("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), ("Liverpool", "Inglaterra"), '
+            '("Madrid", "España")], numero_boleto=130': [
+                buscar_destino(boletos=[(100, "Buenos Aires"),
+                                        (110, "Madrid"),
+                                        (120, "Glasgow"),
+                                        (130, "Madrid")],
+                               ciudades=[("Buenos Aires", "Argentina"),
+                                         ("Glasgow", "Escocia"),
+                                         ("Liverpool", "Inglaterra"),
+                                         ("Madrid", "España")],
+                               numero_boleto=130),
                 "España"
             ],
-            'Argumentos usados: [("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), ("Liverpool", "Inglaterra"), '
-            '("Madrid", "España")], [(100, "Buenos Aires"), (110, "Madrid"), (120, "Glasgow")], 140': [
-                buscar_destino(
-                    [("Buenos Aires", "Argentina"),
-                     ("Glasgow", "Escocia"),
-                     ("Liverpool", "Inglaterra"),
-                     ("Madrid", "España")
-                     ],
-                    [(100, "Buenos Aires"),
-                     (110, "Madrid"),
-                     (120, "Glasgow")
-                     ],
-                    140),
+            'Argumentos usados: boletos=[("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), '
+            '("Liverpool", "Inglaterra"), ("Madrid", "España")], ciudades=[(100, "Buenos Aires"), (110, "Madrid"), '
+            '(120, "Glasgow")], numero_boleto=140': [
+                buscar_destino(boletos=[("Buenos Aires", "Argentina"),
+                                        ("Glasgow", "Escocia"),
+                                        ("Liverpool", "Inglaterra"),
+                                        ("Madrid", "España")],
+                               ciudades=[(100, "Buenos Aires"),
+                                         (110, "Madrid"),
+                                         (120, "Glasgow")],
+                               numero_boleto=140),
                 None
             ],
-            'Argumentos usados: [("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), ("Liverpool", "Inglaterra"), '
-            '("Madrid", "España")], [(100, "Montevideo"), (110, "Madrid"), (120, "Glasgow")], 100': [
-                buscar_destino(
-                    [("Buenos Aires", "Argentina"),
-                     ("Glasgow", "Escocia"),
-                     ("Liverpool", "Inglaterra"),
-                     ("Madrid", "España")
-                     ],
-                    [(100, "Montevideo"),
-                     (110, "Madrid"),
-                     (120, "Glasgow")],
-                    100),
+            'Argumentos usados: boletos=[("Buenos Aires", "Argentina"), ("Glasgow", "Escocia"), '
+            '("Liverpool", "Inglaterra"), ("Madrid", "España")], ciudades=[(100, "Montevideo"), (110, "Madrid"), '
+            '(120, "Glasgow")], numero_boleto=100': [
+                buscar_destino(boletos=[("Buenos Aires", "Argentina"),
+                                        ("Glasgow", "Escocia"),
+                                        ("Liverpool", "Inglaterra"),
+                                        ("Madrid", "España")],
+                               ciudades=[(100, "Montevideo"),
+                                      (110, "Madrid"),
+                                      (120, "Glasgow")],
+                               numero_boleto=100),
                 None
             ],
-            'Argumentos usados: [("Buenos Aires", "Argentina"), ("Glasgow", "Escocia")], [], 100': [
-                buscar_destino([
-                    ("Buenos Aires", "Argentina"),
-                    ("Glasgow", "Escocia")
-                ],
-                    [],
-                    100),
+            'Argumentos usados: boletos=[("Buenos Aires", "Argentina"), ("Glasgow", "Escocia")], ciudades=[], '
+            'numero_boleto=100': [
+                buscar_destino(boletos=[("Buenos Aires", "Argentina"),
+                                        ("Glasgow", "Escocia")],
+                               ciudades=[],
+                               numero_boleto=100),
                 None
             ],
-            'Argumentos usados: [], [(100, "Buenos Aires"), (110, "Madrid"), (120, "Glasgow")], 100': [
-                buscar_destino([],
-                               [(100, "Buenos Aires"),
-                                (110, "Madrid"),
-                                (120, "Glasgow")
-                                ],
-                               100),
+            'Argumentos usados: boletos=[], ciudades=[(100, "Buenos Aires"), (110, "Madrid"), (120, "Glasgow")], '
+            'numero_boleto=100': [
+                buscar_destino(boletos=[],
+                               ciudades=[(100, "Buenos Aires"),
+                                         (110, "Madrid"),
+                                         (120, "Glasgow")],
+                               numero_boleto=100),
                 None
             ]
         }
