@@ -181,7 +181,7 @@ class TestsFuncionesDiccionarios(unittest.TestCase):
     def test_agregar_pelicula(self):
         pruebas = {
             'Argumentos usados: peliculas={"Joker": ["Todd Phillips", 2019], "Avatar": ["James Cameron", 2009]}, '
-            '("Lord of the rings: The two towers", "Peter Jackson", 2002)': [
+            'pelicula=("Lord of the rings: The two towers", "Peter Jackson", 2002)': [
                 agregar_pelicula(peliculas={"Joker": ["Todd Phillips", 2019],
                                             "Avatar": ["James Cameron", 2009]},
                                  pelicula=("Lord of the rings: The two towers", "Peter Jackson", 2002)),
