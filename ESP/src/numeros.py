@@ -7,8 +7,8 @@ def menor(numero1, numero2):
     """
     Retorna el menor de dos números.
     Ejemplos:
-        menor(3, 1) -> 1
-        menor(3, 3) -> 3
+        menor(numero1=3, numero2=1) -> 1
+        menor(numero1=3, numero2=3) -> 3
     -Parámetros:
         numero1 (numérico): uno de los números a procesar.
         numero2 (numérico): otro de los números a procesar.
@@ -22,8 +22,8 @@ def valor_absoluto(numero):
     """
     Retorna el valor absoluto de un número.
     Ejemplos:
-        valor_absoluto(3) -> 3
-        valor_absoluto(-10) -> 10
+        valor_absoluto(numero=3) -> 3
+        valor_absoluto(numero=-10) -> 10
     -Parámetro:
         numero (numérico): número cuyo valor absoluto se retornará.
     -Valor retornado:
@@ -36,8 +36,8 @@ def buscar_mes(fecha):
     """
     Dada una fecha completa (incluyendo día, mes y año), retorna el mes.
     Ejemplos:
-        buscar_mes(31122020) -> 12
-        buscar_mes(5091946) -> 9
+        buscar_mes(fecha=31122020) -> 12
+        buscar_mes(fecha=5091946) -> 9
     -Parámetros:
         fecha (int): fecha a procesar, con formato ddmmaaaa o dmmaaaa (donde las "d" indican los dígitos del día,
         las "m" indican los dígitos del mes y las "a" indican los dígitos del año). Positivo.
@@ -51,8 +51,8 @@ def sumar_multiplos(inferior, superior, n):
     """
     Suma los múltiplos de n que se encuentran en un intervalo cerrado de números enteros.
     Ejemplos:
-        sumar_multiplos(0, 30, 5) -> 105
-        sumar_multiplos(-30, 0, 5) -> -105
+        sumar_multiplos(inferior=0, superior=30, n=5) -> 105
+        sumar_multiplos(inferior=-30, superior=0, n=5) -> -105
     -Parámetros:
         inferior (int): límite inferior del intervalo. Menor o igual que superior.
         superior (int): límite superior del intervalo. Mayor o igual que inferior.
@@ -69,8 +69,8 @@ def es_capicua(numero):
     izquierda a derecha como de derecha a izquierda.
     Sugerencia: usar números únicamente, evitando otros tipos de datos.
     Ejemplos:
-        es_capicua(123321) -> True
-        es_capicua(1234) -> False
+        es_capicua(numero=123321) -> True
+        es_capicua(numero=1234) -> False
     -Parámetros:
         numero (int): número a evaluar. Positivo.
     -Valor retornado:
@@ -83,8 +83,8 @@ def es_bisiesto(anio):
     """
     Evalúa si un año es bisiesto según el calendario Gregoriano.
     Ejemplos:
-        es_bisiesto(2020) -> True
-        es_bisiesto(1800) -> False
+        es_bisiesto(anio=2020) -> True
+        es_bisiesto(anio=1800) -> False
     -Parámetro:
         anio (int): año a evaluar. Número positivo.
     -Valor retornado:
@@ -99,7 +99,7 @@ def dias_en_mes(mes, anio):
     febrero en un año bisiesto).
     Sugerencia: utilizar la función es_bisiesto() desarrollada anteriormente.
     Ejemplo:
-        dias_en_mes(11, 1981) -> 30
+        dias_en_mes(mes=11, anio=1981) -> 30
     -Parámetros:
         mes (int): número representando al mes. Entre 1 y 12.
         anio (int): número representando al año. Positivo.
@@ -113,7 +113,7 @@ def contar_digitos(numero):
     """
     Cuenta la cantidad de dígitos en un número.
     Ejemplo:
-        contar_digitos(120) -> 3
+        contar_digitos(numero=120) -> 3
     -Parámetro:
         numero (int): número cuyos dígitos se contarán. Positivo.
     -Valor retornado:
@@ -126,7 +126,7 @@ def suma_digitos_cuadrados(numero):
     """
     Calcula la suma de los cuadrados de cada uno de los dígitos de un número.
     Ejemplo:
-        suma_digitos_cuadrados(15) -> 26
+        suma_digitos_cuadrados(numero=15) -> 26
     -Parámetro:
         numero (int): número cuyos dígitos se procesarán. Positivo.
     -Valor retornado:
@@ -139,7 +139,7 @@ def porcentaje_digitos_pares(numero):
     """
     Calcula el porcentaje que representan los dígitos pares sobre el total de dígitos de un número.
     Ejemplo:
-        porcentaje_digitos_pares(5555666555) -> 30.0
+        porcentaje_digitos_pares(numero=5555666555) -> 30.0
     -Parámetro:
         numero (int): número cuyos dígitos se evaluarán. Positivo.
     -Valor retornado:
@@ -153,7 +153,7 @@ def es_pronico(numero):
     Evalúa si un número es un número "prónico". Un número es considerado "prónico" si es el producto de
     dos números naturales consecutivos.
     Ejemplo:
-        es_pronico(56) -> True
+        es_pronico(numero=56) -> True
         (56 puede expresarse como 7*8).
     -Parámetro:
         numero (int): número a evaluar. Mayor que 0.
@@ -167,7 +167,7 @@ def es_primo(numero):
     """
     Evalúa si un número es primo.
     Ejemplo:
-        es_primo(7) -> True
+        es_primo(numero=7) -> True
     -Parámetro:
         numero (int): número a evaluar. Positivo.
     -Valor retornado:
@@ -180,7 +180,7 @@ def factorial(numero):
     """
     Calcula el factorial de un número.
     Ejemplo:
-        factorial(4) -> 24
+        factorial(numero=4) -> 24
     -Parámetro:
         numero (int): número cuyo factorial se calculará. Positivo.
     -Valor retornado:
@@ -194,7 +194,7 @@ def suma_primeros_n_fibonacci(n):
     Calcula la sumatoria de los primeros n números de la sucesión de Fibonacci.
     Se considera que los dos primeros números en la sucesión son 0 y 1.
     Ejemplo:
-        suma_primeros_n_fibonacci(6) -> 12
+        suma_primeros_n_fibonacci(n=6) -> 12
     -Parámetros:
         n (int): cantidad de números Fibonacci a sumar. Mayor o igual que 2.
     -Valor retornado:
@@ -207,7 +207,7 @@ def mayor_divisor(numero):
     """
     Calcula el mayor divisor entero de un número, exceptuando al propio número.
     Ejemplo:
-        mayor_divisor(182) -> 91
+        mayor_divisor(numero=182) -> 91
     -Parámetros:
         numero (int): número cuyo mayor divisor se calculará. Positivo.
     -Valor retornado:
@@ -222,7 +222,7 @@ def mcd_euclides(m, n):
     Método de Euclides: al dividir m por n (números enteros), se obtiene un cociente q y un residuo r. Se ha demostrado
     que el máximo común divisor de m y n es el mismo que el de n y r. n no puede ser 0.
     Ejemplo:
-        mcd_euclides(60, 24) -> 12
+        mcd_euclides(m=60, n=24) -> 12
     -Parámetros:
         m (int): número positivo.
         n (int): número positivo distinto de cero.
@@ -238,9 +238,9 @@ def obtener_mes(dia_consecutivo, anio):
     particular (teniendo en cuenta la posibilidad de que sea bisiesto).
     Sugerencia: utilizar la función dias_en_mes() desarrollada anteriormente.
     Ejemplo:
-        obtener_mes(200, 1969) -> 7
-        (el día consecutivo número 60 en un año bisiesto representa el 29 de febrero,
-        mientras que en un año no bisiesto representa el 1 de marzo).
+        obtener_mes(dia_consecutivo=200, anio=1969) -> 7
+        (el día consecutivo número 60 en un año bisiesto representa el 29 de febrero, mientras que en un año no bisiesto
+         representa el 1 de marzo).
     -Parámetros:
         dia_consecutivo (int): número de días transcurridos desde el 1 de enero (entre 1 y 366). Positivo.
         anio (int): número de año (bisiesto o no). Positivo.
@@ -257,7 +257,7 @@ def es_disarium(numero):
     al número dado.
     Sugerencia: utilizar la función contar_digitos() desarrollada anteriormente.
     Ejemplo:
-        es_disarium(518) -> True
+        es_disarium(numero=518) -> True
         (518 es un número disarium, ya que 5**1=5, 1**2=1, 8**3=512, y 5+1+512=518).
     -Parámetro:
         numero (int): número cuyos dígitos se procesarán. Positivo.
@@ -273,7 +273,7 @@ def ordenar_monedas(cantidad):
     "escalera", donde cada escalón "n" debe estar formado por exactamente "n" monedas. El último escalón puede estar
     incompleto.
     Ejemplo:
-        ordenar_monedas(5) -> 2
+        ordenar_monedas(cantidad=5) -> 2
         (Con 5 monedas pueden formarse solo 2 escalones completos, ya que no hay suficientes para el tercero:
         ¤
         ¤ ¤
@@ -292,8 +292,8 @@ def cantidad_unos_solos(numero):
     Cuenta, de un número, la cantidad de dígitos 1 que no están seguidos de otro 1 consecutivo.
     Sugerencia: evitar convertir el número o sus dígitos a otros tipos de datos.
     Ejemplos:
-        cantidad_unos_solos(141211) -> 2
-        cantidad_unos_solos(11411211) -> 0
+        cantidad_unos_solos(numero=141211) -> 2
+        cantidad_unos_solos(numero=11411211) -> 0
     -Parámetro:
         numero (int): número cuyos dígitos se evaluarán. Positivo.
     -Valor retornado:
