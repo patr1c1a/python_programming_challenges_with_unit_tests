@@ -21,8 +21,8 @@ def smallest(number1, number2):
     """
     Returns the smallest between two numbers.
     Examples:
-        smallest(3, 1) -> 1
-        smallest(3, 3) -> 3
+        smallest(number1=3, number2=1) -> 1
+        smallest(number1=3, number2=3) -> 3
     -Parameters:
         number1 (numeric): one of the numbers to be processed.
         number2 (numeric): the other number to be processed.
@@ -48,8 +48,8 @@ def absolute_value(number):
     Returns the absolute value of a number.
     Suggestion: avoid using the abs() method.
     Examples:
-        absolute_value(3) -> 3
-        absolute_value(-10) -> 10
+        absolute_value(number=3) -> 3
+        absolute_value(number=-10) -> 10
     -Parameter:
         number (numeric): the number whose absolute value will be calculated.
     -Returns:
@@ -73,8 +73,8 @@ def extract_month(date):
     Given a date consisting of day, month and year, returns the month. Date will have the ddmmaaaa or dmmaaaa format,
     where "d" stands for day digits, "m" stands for month digits and "a" stands for year digits.
     Examples:
-        extract_month(31122020) -> 12
-        extract_month(5091946) -> 9
+        extract_month(date=31122020) -> 12
+        extract_month(date=5091946) -> 9
     -Parameters:
         date (int): valid date in a ddmmaaaa or dmmaaaa format. dd (or d) will be between 1 and 31. mm will be between
         1 and 12. Positive.
@@ -96,8 +96,8 @@ def add_multiples(lower, upper, n):
     """
     Adds up the multiples of n contained in a closed interval of integers.
     Examples:
-        add_multiples(0, 30, 5) -> 105
-        add_multiples(-30, 0, 5) -> -105
+        add_multiples(lower=0, upper=30, n=5) -> 105
+        add_multiples(lower=-30, upper=0, n=5) -> -105
     -Parameters:
         lower (int): lower bound of the interval. Lesser or equal to upper.
         upper (int): upper bound of the interval. Greater or equal to lower.
@@ -125,8 +125,8 @@ def is_palindromic_number(number):
     Decides if a number is a palindrome or not. A palindrome number remains the same when its digits are reversed.
     Suggestion: only work with numbers (avoid other data types).
     Examples:
-        is_palindromic_number(123321) -> True
-        is_palindromic_number(1234) -> False
+        is_palindromic_number(number=123321) -> True
+        is_palindromic_number(number=1234) -> False
     -Parameters:
         number (int): number to evaluate. Positive.
     -Returns:
@@ -153,8 +153,8 @@ def leap_year(year):
     """
     Decides if a given year is a leap year according to the Gregorian calendar.
     Examples:
-        leap_year(2020) -> True
-        leap_year(1800) -> False
+        leap_year(year=2020) -> True
+        leap_year(year=1800) -> False
     -Parameter:
         year (int): year to evaluate. Positive.
     -Returns:
@@ -182,7 +182,7 @@ def days_in_month(month, year):
     leap year must be considered).
     Suggestion: use the leap_year() function defined above.
     Example:
-        days_in_month(11, 1981) -> 30
+        days_in_month(month=11, year=1981) -> 30
     -Parameters:
         month (int): number representing the month. Between 1 and 12.
         year (int): number representing the year. Positive.
@@ -211,7 +211,7 @@ def digit_count(number):
     """
     Counts digits in a number.
     Example:
-        digit_count(120) -> 3
+        digit_count(number=120) -> 3
     -Parameter:
         number (int): number whose digits are being counted.
     -Returns:
@@ -238,7 +238,7 @@ def add_square_digits(number):
     """
     Finds the sum of squares of digits in a given number.
     Example:
-        add_square_digits(15) -> 26
+        add_square_digits(number=15) -> 26
     -Parameter:
         number (int): number where digits are being processed. Positive.
     -Returns:
@@ -264,7 +264,7 @@ def percentage_even_digits(number):
     """
     Finds the percentage of even digits over the total amount of digits in a given number.
     Example:
-        percentage_even_digits(5555666555) -> 30.0
+        percentage_even_digits(number=5555666555) -> 30.0
     -Parameter:
         number (int): number where digits are being processed. Positive.
     -Returns:
@@ -296,7 +296,7 @@ def is_pronic(number):
     """
     Decides if a number is "pronic". A number is considered "pronic" if it's the product of two consecutive integers.
     Example:
-        is_pronic(56) -> True
+        is_pronic(number=56) -> True
         (56 can be expressed as 7*8).
     -Parameter:
         numbero (int): number to evaluate. Greater than 0.
@@ -321,7 +321,7 @@ def is_prime(number):
     """
     Finds if a number is prime.
     Example:
-        is_prime(7) -> True
+        is_prime(number=7) -> True
     -Parameter:
         number (int): number to evaluate. Positive.
     -Returns:
@@ -347,7 +347,7 @@ def factorial(number):
     """
     Finds the factorial of a positive number.
     Example:
-        factorial(4) -> 24
+        factorial(number=4) -> 24
     -Parameter:
         number (int): number whose factorial will be calculated. Positive.
     -Returns:
@@ -373,7 +373,7 @@ def sum_first_n_fibonacci(n):
     Finds the sum of the first n terms in the Fibonacci sequence, considering the first two terms in the series are 0
     and 1.
     Example:
-        sum_first_n_fibonacci(6) -> 12
+        sum_first_n_fibonacci(n=6) -> 12
     -Parameters:
         n (int): how many Fibonacci terms will be summed. Greater or equal than 2.
     -Returns:
@@ -402,7 +402,7 @@ def greatest_divisor(number):
     """
     Finds the greatest integer divisor of a number (except for the number itself).
     Example:
-        greatest_divisor(182) -> 91
+        greatest_divisor(number=182) -> 91
     -Parameters:
         number (int): number whose divisor will be calculated. Positive.
     -Returns:
@@ -430,7 +430,7 @@ def euclidean_gcd(m, n):
     Euclidean algorithm: dividing m by n (both integer numbers), we get a quotient q and a remainder r. The greatest
     common divisor of m and n is the same as for n and r. n can't be 0.
     Example:
-        euclidean_gcd(60, 24) -> 12
+        euclidean_gcd(m=60, n=24) -> 12
     -Parameters:
         m (int): positive number.
         n (int): positive number, greater than 0.
@@ -458,7 +458,7 @@ def get_month(consecutive_day, year):
     account that it could be a leap year).
     Suggestion: use function days_in_month() found above.
     Example:
-        get_month(200, 1969) -> 7
+        get_month(consecutive_day=200, year=1969) -> 7
         (the 60th consecutive day in a leap year represents February 29, while in a non-leap
         year it will be March 1st).
     -Parameters:
@@ -490,7 +490,7 @@ def is_disarium(number):
     from position 1 on the left), is equal to the number itself.
     Suggestion: use function digit_count() found above.
     Example:
-        is_disarium(518) -> True
+        is_disarium(number=518) -> True
         (518 is a disarium number, since 5**1=5, 1**2=1, 8**3=512, and 5+1+512=518).
     -Parameter:
         number (int): number whose digits will be evaluated. Positive.
@@ -521,7 +521,7 @@ def arrange_coins(amount):
     Finds how many rows can be "built" using a given amount of coins that will be arranged in a "staircase" way, where
     every "n"th row must contain exactly "n" coins. The last row of the staircase can be incomplete.
     Example:
-        arrange_coins(5) -> 2
+        arrange_coins(amount=5) -> 2
         (With 5 coins we can build only 2 full rows, since there are not enough coins for the third row:
         ¤
         ¤ ¤
@@ -552,8 +552,8 @@ def single_ones(number):
     Finds how many "ones" in a number are not followed by another consecutive "one".
     Suggestion: avoid converting the number or its digits into a diferent data type.
     Example:
-        single_ones(141211) -> 2
-        single_ones(11411211) -> 0
+        single_ones(number=141211) -> 2
+        single_ones(number=11411211) -> 0
     -Parameter:
         number (int): number whose digits will be evaluated. Positive.
     -Returns:
@@ -593,8 +593,8 @@ def has_even_amount_chars(s1, s2):
     """
     Decides if both strings have an even amount of characters.
     Examples:
-        even_amount_chars("aaaa", "aaaa") -> True
-        even_amount_chars("aaa", "aaaa") -> False
+        even_amount_chars(s1="aaaa", s2="aaaa") -> True
+        even_amount_chars(s1="aaa", s2="aaaa") -> False
     -Parameters:
         s1 (str): one of the strings to evaluate.
         s2 (str): the other string to evaluate.
@@ -618,7 +618,7 @@ def count_occurrences(s, character):
     Finds how many times a character occurs in a given string, case sensitive.
     Suggestion: avoid using count().
     Example:
-        occurrence_count("This is an example sentence", "s") -> 3
+        occurrence_count(s="This is an example sentence", character="s") -> 3
     -Parameters:
         s (str): string where character occurrences will be evaluated.
         character: character whose occurrences will be counted.
@@ -646,7 +646,7 @@ def count_vowels(s):
     Vowels in the English language are: a, e, i, o, u.
     Suggestion: avoid using count().
     Example:
-        count_vowels("This is an Example Sentence") -> 9
+        count_vowels(s="This is an Example Sentence") -> 9
     -Parameter:
         s (str): string whose vowels will be counted.
     -Returns:
@@ -674,7 +674,7 @@ def count_unique_vowels(s):
     Each vowel must be accounted for only once, be it upper or lowe case.
     Suggestion: avoid using count().
     Example:
-        count_unique_vowels("This is an Example Sentence") -> 3
+        count_unique_vowels(s="This is an Example Sentence") -> 3
     -Parameter:
         s (str): string whose vowels will be counted.
     -Returns:
@@ -701,7 +701,7 @@ def replace_character_w_asterisk(s, character):
     Replaces every occurrence of the character with '*'.
     Suggestion: avoid using replace().
     Examples:
-        replace_character_w_asterisk("this is an example sentence", "e") -> "this is an *xampl* s*nt*nc*"
+        replace_character_w_asterisk(s="this is an example sentence", character="e") -> "this is an *xampl* s*nt*nc*"
     -Parameters:
         s (str): string where replacements will take place.
         character (str): character to be replaced with '*'.
@@ -730,7 +730,7 @@ def reverse_string(s):
     Reverses characters in a given string.
     Suggestion: avoid using slices with a negative step.
     Example:
-        reverse_string("This is an example sentence!") -> "!ecnetnes elpmaxe na si sihT"
+        reverse_string(s="This is an example sentence!") -> "!ecnetnes elpmaxe na si sihT"
     -Parameter:
         s (str): string that will be reversed.
     -Returns:
@@ -757,7 +757,7 @@ def replace_symbols(s, new_character):
     Replaces every symbol in a given string with the given character.
     Symbol: every character that is not a letter, a digit or a space.
     Example:
-        replace_symbols("--This is 1 example sentence and we'll replace the @ symbol", "@")
+        replace_symbols(s="--This is 1 example sentence and we'll replace the @ symbol", new_character="@")
         -> "@@This is 1 example sentence and we@ll replace the @ symbol"
     -Parameters:
         s (str): string where replacements will take place.
@@ -787,8 +787,8 @@ def percentage_numerical_digits(s):
     Returns the percentage of numerical digit characters over the total number of characters in a given string.
     Only the number is returned, without the % symbol and with no rounding (in case the number is not an integer).
     Examples:
-        percentage_numerical_digits("This has 1 digit") -> 6.25
-        percentage_numerical_digits("1984") -> 100
+        percentage_numerical_digits(s="This has 1 digit") -> 6.25
+        percentage_numerical_digits(s="1984") -> 100
     -Parameter:
         s (str): string to be processed, which may or may not have numerical digit characters.
     -Returns:
@@ -817,8 +817,8 @@ def classify_numerical_string(s):
     of 2 and digits that are multiples of 3, each group separated by a '$'.
     If a digit is a multiple of 2 and 3 at the same time, it will show up in both sides of the '$ symbol'
     Examples:
-         classify_numerical_string("123456") -> "246$36"
-         classify_numerical_string("2222") -> "2222$"
+         classify_numerical_string(s="123456") -> "246$36"
+         classify_numerical_string(s="2222") -> "2222$"
     -Paremeter:
         s (str): numerical string that will be processed. The string will only contain numerical digits.
     -Returns:
@@ -847,8 +847,8 @@ def middle_characters(s):
     """
     Given a string, returns the 3 middle characters.
     Examples:
-        middle_characters("AbcDefGhi") -> "Def"
-        middle_characters("A   A") -> "   "
+        middle_characters(s="AbcDefGhi") -> "Def"
+        middle_characters(s="A   A") -> "   "
     -Parameter:
         s (str): string that will be processed. The string contains 5 or more characters and its length
         is an odd number.
@@ -875,8 +875,8 @@ def is_palindrome(s):
     Empty string is not considered a palindrome.
     Suggestion: avoid using slices with a negative step, as well as reversed().
     Examples:
-        is_palindrome("abba") -> True
-        is_palindrome("baéceab") -> False
+        is_palindrome(s="abba") -> True
+        is_palindrome(s="baéceab") -> False
     -Parameter:
         s (str): string to be evaluated.
     -Returns:
@@ -913,8 +913,8 @@ def contains_characters(s1, s2):
     Upper and lower case letters are considered different characters.
     If a character occurs more than once in s1, it counts as one character to find in s2.
     Examples:
-        contains_characters("super", "supermarket") -> True
-        contains_characters("fff", "foo") will return True.
+        contains_characters(s1="super", s2="supermarket") -> True
+        contains_characters(s1="fff", s2="foo") will return True.
     -Parameters:
         s1 (str): string whose characters will be evaluated in s2.
         s2 (str): string where characters from s1 will be evaluated.
@@ -941,8 +941,8 @@ def is_anagram(s1, s2):
     Case insensitive. Duplicate letters should be taken into account.
     s1 and s2 will only contain letters.
     Examples:
-        is_anagram("below", "elbow") -> True
-        is_anagram("below", "elbows") -> False
+        is_anagram(s1="below", s2="elbow") -> True
+        is_anagram(s1="below", s2="elbows") -> False
     -Parameters:
         s1 (str): string to be processed, to find out if it's an anagram of s2.
         s2 (str): string to be processed, to find out if it's an anagram of s1.
@@ -974,7 +974,7 @@ def how_many_remove_for_anagram(s1, s2):
     Case insensitive. Duplicate letters should be taken into account.
     s1 and s2 will only contain letters.
     Example:
-        how_many_remove_for_anagram("states", "tasted") ->2
+        how_many_remove_for_anagram(s1="states", s2="tasted") -> 2
     -Parameters:
         s1 (str): one of the strings to be processed.
         s2 (str): another string to be processed.
@@ -1007,7 +1007,7 @@ def reverse_words(s):
     same way as letters.
     Suggestion: avoid using split().
     Example:
-        reverse_words("This is an example sentence.") -> "sihT si na elpmaxe .ecnetnes"
+        reverse_words(s="This is an example sentence.") -> "sihT si na elpmaxe .ecnetnes"
     -Parameters:
         s (str): string with words that will be reversed.
     -Returns:
@@ -1036,8 +1036,8 @@ def length_last_word(s):
     Returns the length of the last word in a string.
     Word separator: one or more spaces.
     Examples:
-        get_length_last_word("This is an example sentence") -> 8
-        get_length_last_word("   spaces   ") -> 6
+        get_length_last_word(s="This is an example sentence") -> 8
+        get_length_last_word(s="   spaces   ") -> 6
     -Parameter:
         s (str): string containing letters and spaces only.
     -Returns:
@@ -1070,8 +1070,8 @@ def title_case(s):
     The position of symbols and digits shouldn't be altered.
     Suggestion: avoid using title().
     Examples:
-        title_case("This is an example sentence") -> "This Is An Example Sentence"
-        title_case("THIS IS AN EXAMPLE SENTENCE") -> "This Is An Example Sentence"
+        title_case(s="This is an example sentence") -> "This Is An Example Sentence"
+        title_case(s="THIS IS AN EXAMPLE SENTENCE") -> "This Is An Example Sentence"
     -Parameter:
         s (str): string to be processed.
     -Returns:
@@ -1111,8 +1111,8 @@ def caesar_cipher(s, n):
     characters unmodified.
     The number of shifts (n) will be a number between 1 and 26.
     Examples:
-        caesar_cipher("this is an example sentence", 2) -> "vjku ku co gacñrng ugovgoeg"
-        caesar_cipher("abc123 xyz987!", 4) -> "efg123 cde987!"
+        caesar_cipher(s="this is an example sentence", n=2) -> "vjku ku co gacñrng ugovgoeg"
+        caesar_cipher(s="abc123 xyz987!", n=4) -> "efg123 cde987!"
     -Parameters:
         s (str): string to be ciphered.
         n (int): the number of characters to shift the cipher alphabet.
@@ -1147,8 +1147,8 @@ def shift_n_characters(s, n):
     Characters can be letters, digits or symbols.
     n isn't necessarily limited to the length of s.
     Examples:
-        shift_n_characters("This is an example sentence", 9) -> " sentenceThis is an example"
-        shift_n_characters("word", 11) -> "ordw"
+        shift_n_characters("This is an example sentence", n=9) -> " sentenceThis is an example"
+        shift_n_characters("word", n=11) -> "ordw"
     -Parameters:
         s (str): string where characters will be shifted.
         n (int): number of positions each character will be shifted from its original position within s.
@@ -1178,8 +1178,8 @@ def encode_rle(s):
     greater than 1. For distinct characters, only the character will be stored, and no number appended to it.
     The string s may only contain letters and symbols other than digits.
     Examples:
-        encode_rle("aaabbc") -> "a3b2c"
-        encode_rle("abcde") -> "abcde"
+        encode_rle(s="aaabbc") -> "a3b2c"
+        encode_rle(s="abcde") -> "abcde"
     -Parameter:
         s (str): string to be encoded.
     -Returns:

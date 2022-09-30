@@ -7,8 +7,8 @@ def has_even_amount_chars(s1, s2):
     """
     Decides if both strings have an even amount of characters.
     Examples:
-        even_amount_chars("aaaa", "aaaa") -> True
-        even_amount_chars("aaa", "aaaa") -> False
+        even_amount_chars(s1="aaaa", s2="aaaa") -> True
+        even_amount_chars(s1="aaa", s2="aaaa") -> False
     -Parameters:
         s1 (str): one of the strings to evaluate.
         s2 (str): the other string to evaluate.
@@ -24,7 +24,7 @@ def count_occurrences(s, character):
     Finds how many times a character occurs in a given string, case sensitive.
     Suggestion: avoid using count().
     Example:
-        occurrence_count("This is an example sentence", "s") -> 3
+        occurrence_count(s="This is an example sentence", character="s") -> 3
     -Parameters:
         s (str): string where character occurrences will be evaluated.
         character: character whose occurrences will be counted.
@@ -40,7 +40,7 @@ def count_vowels(s):
     Vowels in the English language are: a, e, i, o, u.
     Suggestion: avoid using count().
     Example:
-        count_vowels("This is an Example Sentence") -> 9
+        count_vowels(s="This is an Example Sentence") -> 9
     -Parameter:
         s (str): string whose vowels will be counted.
     -Returns:
@@ -56,7 +56,7 @@ def count_unique_vowels(s):
     Each vowel must be accounted for only once, be it upper or lowe case.
     Suggestion: avoid using count().
     Example:
-        count_unique_vowels("This is an Example Sentence") -> 3
+        count_unique_vowels(s="This is an Example Sentence") -> 3
     -Parameter:
         s (str): string whose vowels will be counted.
     -Returns:
@@ -70,7 +70,7 @@ def replace_character_w_asterisk(s, character):
     Replaces every occurrence of the character with '*'.
     Suggestion: avoid using replace().
     Examples:
-        replace_character_w_asterisk("this is an example sentence", "e") -> "this is an *xampl* s*nt*nc*"
+        replace_character_w_asterisk(s="this is an example sentence", character="e") -> "this is an *xampl* s*nt*nc*"
     -Parameters:
         s (str): string where replacements will take place.
         character (str): character to be replaced with '*'.
@@ -85,7 +85,7 @@ def reverse_string(s):
     Reverses characters in a given string.
     Suggestion: avoid using slices with a negative step.
     Example:
-        reverse_string("This is an example sentence!") -> "!ecnetnes elpmaxe na si sihT"
+        reverse_string(s="This is an example sentence!") -> "!ecnetnes elpmaxe na si sihT"
     -Parameter:
         s (str): string that will be reversed.
     -Returns:
@@ -99,7 +99,7 @@ def replace_symbols(s, new_character):
     Replaces every symbol in a given string with the given character.
     Symbol: every character that is not a letter, a digit or a space.
     Example:
-        replace_symbols("--This is 1 example sentence and we'll replace the @ symbol", "@")
+        replace_symbols(s="--This is 1 example sentence and we'll replace the @ symbol", new_character="@")
         -> "@@This is 1 example sentence and we@ll replace the @ symbol"
     -Parameters:
         s (str): string where replacements will take place.
@@ -115,8 +115,8 @@ def percentage_numerical_digits(s):
     Returns the percentage of numerical digit characters over the total number of characters in a given string.
     Only the number is returned, without the % symbol and with no rounding (in case the number is not an integer).
     Examples:
-        percentage_numerical_digits("This has 1 digit") -> 6.25
-        percentage_numerical_digits("1984") -> 100
+        percentage_numerical_digits(s="This has 1 digit") -> 6.25
+        percentage_numerical_digits(s="1984") -> 100
     -Parameter:
         s (str): string to be processed, which may or may not have numerical digit characters.
     -Returns:
@@ -131,8 +131,8 @@ def classify_numerical_string(s):
     of 2 and digits that are multiples of 3, each group separated by a '$'.
     If a digit is a multiple of 2 and 3 at the same time, it will show up in both sides of the '$ symbol'
     Examples:
-         classify_numerical_string("123456") -> "246$36"
-         classify_numerical_string("2222") -> "2222$"
+         classify_numerical_string(s="123456") -> "246$36"
+         classify_numerical_string(s="2222") -> "2222$"
     -Paremeter:
         s (str): numerical string that will be processed. The string will only contain numerical digits.
     -Returns:
@@ -146,8 +146,8 @@ def middle_characters(s):
     """
     Given a string, returns the 3 middle characters.
     Examples:
-        middle_characters("AbcDefGhi") -> "Def"
-        middle_characters("A   A") -> "   "
+        middle_characters(s="AbcDefGhi") -> "Def"
+        middle_characters(s="A   A") -> "   "
     -Parameter:
         s (str): string that will be processed. The string contains 5 or more characters and its length
         is an odd number.
@@ -165,8 +165,8 @@ def is_palindrome(s):
     Empty string is not considered a palindrome.
     Suggestion: avoid using slices with a negative step, as well as reversed().
     Examples:
-        is_palindrome("abba") -> True
-        is_palindrome("baéceab") -> False
+        is_palindrome(s="abba") -> True
+        is_palindrome(s="baéceab") -> False
     -Parameter:
         s (str): string to be evaluated.
     -Returns:
@@ -182,8 +182,8 @@ def contains_characters(s1, s2):
     Upper and lower case letters are considered different characters.
     If a character occurs more than once in s1, it counts as one character to find in s2.
     Examples:
-        contains_characters("super", "supermarket") -> True
-        contains_characters("fff", "foo") will return True.
+        contains_characters(s1="super", s2="supermarket") -> True
+        contains_characters(s1="fff", s2="foo") will return True.
     -Parameters:
         s1 (str): string whose characters will be evaluated in s2.
         s2 (str): string where characters from s1 will be evaluated.
@@ -196,11 +196,11 @@ def contains_characters(s1, s2):
 def is_anagram(s1, s2):
     """
     Decides if s1 is an anagram of s2.
-    Case insensitive. Duplicate letters should be taken into account.
+    Case-insensitive. Duplicate letters should be taken into account.
     s1 and s2 will only contain letters.
     Examples:
-        is_anagram("below", "elbow") -> True
-        is_anagram("below", "elbows") -> False
+        is_anagram(s1="below", s2="elbow") -> True
+        is_anagram(s1="below", s2="elbows") -> False
     -Parameters:
         s1 (str): string to be processed, to find out if it's an anagram of s2.
         s2 (str): string to be processed, to find out if it's an anagram of s1.
@@ -213,10 +213,10 @@ def is_anagram(s1, s2):
 def how_many_remove_for_anagram(s1, s2):
     """
     Returns how many characters should be removed so that s1 and s2 are anagrams of each other.
-    Case insensitive. Duplicate letters should be taken into account.
+    Case-insensitive. Duplicate letters should be taken into account.
     s1 and s2 will only contain letters.
     Example:
-        how_many_remove_for_anagram("states", "tasted") ->2
+        how_many_remove_for_anagram(s1="states", s2="tasted") -> 2
     -Parameters:
         s1 (str): one of the strings to be processed.
         s2 (str): another string to be processed.
@@ -234,7 +234,7 @@ def reverse_words(s):
     same way as letters.
     Suggestion: avoid using split().
     Example:
-        reverse_words("This is an example sentence.") -> "sihT si na elpmaxe .ecnetnes"
+        reverse_words(s="This is an example sentence.") -> "sihT si na elpmaxe .ecnetnes"
     -Parameters:
         s (str): string with words that will be reversed.
     -Returns:
@@ -248,8 +248,8 @@ def length_last_word(s):
     Returns the length of the last word in a string.
     Word separator: one or more spaces.
     Examples:
-        get_length_last_word("This is an example sentence") -> 8
-        get_length_last_word("   spaces   ") -> 6
+        get_length_last_word(s="This is an example sentence") -> 8
+        get_length_last_word(s="   spaces   ") -> 6
     -Parameter:
         s (str): string containing letters and spaces only.
     -Returns:
@@ -265,8 +265,8 @@ def title_case(s):
     The position of symbols and digits shouldn't be altered.
     Suggestion: avoid using title().
     Examples:
-        title_case("This is an example sentence") -> "This Is An Example Sentence"
-        title_case("THIS IS AN EXAMPLE SENTENCE") -> "This Is An Example Sentence"
+        title_case(s="This is an example sentence") -> "This Is An Example Sentence"
+        title_case(s="THIS IS AN EXAMPLE SENTENCE") -> "This Is An Example Sentence"
     -Parameter:
         s (str): string to be processed.
     -Returns:
@@ -285,8 +285,8 @@ def caesar_cipher(s, n):
     characters unmodified.
     The number of shifts (n) will be a number between 1 and 26.
     Examples:
-        caesar_cipher("this is an example sentence", 2) -> "vjku ku co gacñrng ugovgoeg"
-        caesar_cipher("abc123 xyz987!", 4) -> "efg123 cde987!"
+        caesar_cipher(s="this is an example sentence", n=2) -> "vjku ku co gacñrng ugovgoeg"
+        caesar_cipher(s="abc123 xyz987!", n=4) -> "efg123 cde987!"
     -Parameters:
         s (str): string to be ciphered.
         n (int): the number of characters to shift the cipher alphabet.
@@ -304,8 +304,8 @@ def shift_n_characters(s, n):
     Characters can be letters, digits or symbols.
     n isn't necessarily limited to the length of s.
     Examples:
-        shift_n_characters("This is an example sentence", 9) -> " sentenceThis is an example"
-        shift_n_characters("word", 11) -> "ordw"
+        shift_n_characters(s="This is an example sentence", n=9) -> " sentenceThis is an example"
+        shift_n_characters(s="word", n=11) -> "ordw"
     -Parameters:
         s (str): string where characters will be shifted.
         n (int): number of positions each character will be shifted from its original position within s.
@@ -323,8 +323,8 @@ def encode_rle(s):
     greater than 1. For distinct characters, only the character will be stored, and no number appended to it.
     The string s may only contain letters and symbols other than digits.
     Examples:
-        encode_rle("aaabbc") -> "a3b2c"
-        encode_rle("abcde") -> "abcde"
+        encode_rle(s="aaabbc") -> "a3b2c"
+        encode_rle(s="abcde") -> "abcde"
     -Parameter:
         s (str): string to be encoded.
     -Returns:
