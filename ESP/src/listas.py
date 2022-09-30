@@ -226,7 +226,7 @@ def suma_cada_n(numeros, n):
     Ejemplo:
         suma_cada_n(numeros=[5, 2, 1, 6, 4, 9, 3, 7, 8], n=3) -> 18
         (Pues 1+9+8=18).
-        suma_cada_n(numeros=[1.5, 2, -3, 4], n=5) ->0
+        suma_cada_n(numeros=[1.5, 2, -3, 4], n=5) -> 0
     -Parámetros:
         numeros (list; elementos: numéricos): lista de números.
         n (int): número entero mayor que 0.
