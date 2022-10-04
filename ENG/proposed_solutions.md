@@ -1833,7 +1833,7 @@ def find_duplicates(strings1, strings2):
     Given two lists with string elements, returns which strings are included in both lists.
     Suggestion: avoid using a loop to iterate over lists.
     Examples:
-        find_duplicates(["abc", "cde", "abc", "fff"], ["cde", "aaa"]) -> {"cde"}
+        find_duplicates(strings1=["abc", "cde", "abc", "fff"], strings2=["cde", "aaa"]) -> {"cde"}
     -Parameters:
         strings1 (list; elements: str): list with strings.
         strings2 (list; elements: str): list with strings.
@@ -1858,8 +1858,8 @@ def only_one_pet_type(dogs, cats):
     dog or cat, but not both).
     Suggestion: avoid using a loop to iterate over lists.
     Example:
-        only_one_pet_type(["Lucrezia Georgia", "John Sebastian Batch", "Christopher Colum"],
-                          ["John Sebastian Batch", "Jon Jack Russo", "Anna Bologna", "Christopher Colum"])
+        only_one_pet_type(dogs=["Lucrezia Georgia", "John Sebastian Batch", "Christopher Colum"],
+                          cats=["John Sebastian Batch", "Jon Jack Russo", "Anna Bologna", "Christopher Colum"])
         -> {"Lucrezia Georgia", "Jon Jack Russo", "Anna Bologna"}
     -Parameters:
         dogs (list; elements: str): list with dog owner names.
@@ -1884,7 +1884,7 @@ def unique_elements(tuples):
     number is only included once (no duplicates).
     Suggestion: use a set to remove duplicates.
     Example:
-        unique_elements([(1, 2, 3), (2, 2, 2, 2), (3, 4, 5), (1, 3, 5, 7, 9)]) -> (1, 2, 3, 4, 5, 7, 9)
+        unique_elements(tuples=[(1, 2, 3), (2, 2, 2, 2), (3, 4, 5), (1, 3, 5, 7, 9)]) -> (1, 2, 3, 4, 5, 7, 9)
     -Parameter:
         tuples (list; elements: tuples containing int elements): list containing tuples with numbers.
     -Returns:
@@ -1910,7 +1910,7 @@ def unique_last_names(students):
     duplicates. Each student name is represented as a single string, where names are separated by a space. Also, a
     student might have more than one name but only one last name, with the following structure: "name(s) last_name".
     Example:
-        unique_last_names(["Maude Baker", "Milton Llewellyn Davis", "Leela Evans", "Keelan Davis"])
+        unique_last_names(students=["Maude Baker", "Milton Llewellyn Davis", "Leela Evans", "Keelan Davis"])
         -> {"Baker", "Davis", "Evans"}
     -Parameter:
         students (list; elements: str): list with student names.
@@ -1939,11 +1939,11 @@ def billing_addresses(sales):
     customer might have placed more than one order and on different days of the month, so their address should only
     be included once.
     Example:
-        billing_addresses([("Stephan Carey", 5, 1250.23, "355 Boulevard St."),
-                           ("Jocelyn Harris", 7, 699, "218 Main St."),
-                           ("Stephan Carey", 7, 532.90, "355 Boulevard St."),
-                           ("Frances Adams", 12, 57.99, "761 South Rd."),
-                           ("Jocelyn Harris", 15, 958, "218 Main St.")])
+        billing_addresses(sales=[("Stephan Carey", 5, 1250.23, "355 Boulevard St."),
+                                 ("Jocelyn Harris", 7, 699, "218 Main St."),
+                                 ("Stephan Carey", 7, 532.90, "355 Boulevard St."),
+                                 ("Frances Adams", 12, 57.99, "761 South Rd."),
+                                 ("Jocelyn Harris", 15, 958, "218 Main St.")])
         -> {'355 Boulevard St.', '218 Main St.', '761 South Rd.'}
     -Parameter:
         sales (list; elements: tuples containing str, int, float, str): list with tuples representing each sale during
@@ -1972,8 +1972,8 @@ def add_movie(movies, movie):
     release year. The dictionary will use the movie title as a key, and a list with the rest of the information as a
     value.
     Example:
-        add_movie({"Joker": ["Todd Phillips", 2019], "Avatar": ["James Cameron", 2009]},
-                  ("Lord of the rings: The two towers", "Peter Jackson", 2002))
+        add_movie(movies={"Joker": ["Todd Phillips", 2019], "Avatar": ["James Cameron", 2009]},
+                  movie=("Lord of the rings: The two towers", "Peter Jackson", 2002))
         -> {"Joker": ["Todd Phillips", 2019],
             "Avatar": ["James Cameron", 2009],
             "Lord of the rings: The two towers": ["Peter Jackson", 2002]}
@@ -2005,10 +2005,10 @@ def most_voted(votes, grade):
     lists containing strings with each voted student.
     If the grade ID is not found in the dictionary, returns an empty set.
     Example:
-        most_voted({1: ["john", "john", "laura", "john", "laura", "paula"],
-                    2: ["amy", "sean", "olivia", "olivia"],
-                    3: ["liam", "sophie", "liam", "sophie", "sophie", "isabella", "sophie"]},
-                   3)
+        most_voted(votes={1: ["john", "john", "laura", "john", "laura", "paula"],
+                          2: ["amy", "sean", "olivia", "olivia"],
+                          3: ["liam", "sophie", "liam", "sophie", "sophie", "isabella", "sophie"]},
+                   grade=3)
         -> {"liam", "sophie", "isabella"}
     -Parameters:
         votes (dict; key: int, value: list containing str): the votes issued in each grade.
@@ -2035,7 +2035,8 @@ def digit_occurrence(digits):
     Given a list with numbers, returns occurrences for each digit (from 0 to 9). Digits that are not in the list will
     have a 0 occurrence value.
     Example:
-        digit_occurrence([8, 9, 0, 4, 2, 2, 4, 1, 8, 2]) -> {0: 1, 1: 1, 2: 3, 3: 0, 4: 2, 5: 0, 6: 0, 7: 0, 8: 2, 9: 1}
+        digit_occurrence(digits=[8, 9, 0, 4, 2, 2, 4, 1, 8, 2]) 
+        -> {0: 1, 1: 1, 2: 3, 3: 0, 4: 2, 5: 0, 6: 0, 7: 0, 8: 2, 9: 1}
     -Parameter:
         digits (list; elements: int): list containing only integer digits (from 0 to 9).
     -Returns:
@@ -2062,10 +2063,9 @@ def count_occurrences(lists_tuple):
     Given a tuple containing lists of single characters (strings of length 1), counts the occurrences of each character
     in the overall lists.
     Example:
-        count_occurrences(
-                          (["i", "%", "u"],
-                           ["^", "%", "^", "s", "i", "i", "u"],
-                           ["a", "u"]))
+        count_occurrences(lists_tuple=(["i", "%", "u"],
+                                       ["^", "%", "^", "s", "i", "i", "u"],
+                                       ["a", "u"]))
         ->  {'i': 3, '%': 2, 'u': 3, 's': 1, '^': 2, 'a': 1}
     -Parameter:
         lists (tuple; elements: list: containing str) tuple containing lists where the elements are characters (length 1
@@ -2096,7 +2096,7 @@ def highest_value(occurrences):
     Given a dictionary with positive int values that are unique, returns the key associated to the highest value. If the
     dictionary is empty, it returns an empty string.
     Example:
-        highest_value({"a": 1, "e": 7, "i": 4, "o": 9, "u": 3}) -> "o"
+        highest_value(occurrences={"a": 1, "e": 7, "i": 4, "o": 9, "u": 3}) -> "o"
     -Parameter:
         occurrences (dict; key: str; value: int): dictionary where the keys are strings representing letters in the
         English alphabet and values represent occurrences of each letter. There is only one highest value, as values
@@ -2126,10 +2126,10 @@ def sowing_season(vegetables, month):
     Given a dictionary with sowing months of a series of vegetables, and a specific month, returns which vegetables can
     be sown in that month.
     Example:
-        sowing_season({"spinach": ["february", "march"],
-                       "garlic": ["february", "march", "april"],
-                       "eggplant": ["july", "august", "september"]},
-                      "march"),
+        sowing_season(vegetables={"spinach": ["february", "march"],
+                                  "garlic": ["february", "march", "april"],
+                                  "eggplant": ["july", "august", "september"]},
+                      month="march"),
         -> ["spinach", "garlic"]
     -Parameters:
         vegetables (dict; key: str; value: list containing str): dictionary where keys are the names of vegetables and
@@ -2159,10 +2159,10 @@ def register_payment(members, number):
     indicate that their membership fees are up to date. The keys in the dictionary represent member numbers while values
     are lists with member information: [name, phone, fee status (True if fees are up to date, False if not)].
     Example:
-        register_payment({423: ["Darlene Johnson", 4523114, True],
-                          289: ["Anna Brown", 6345112, False],
-                          657: ["Steven Lloyd", 4767992, False]},
-                         289),
+        register_payment(members={423: ["Darlene Johnson", 4523114, True],
+                                  289: ["Anna Brown", 6345112, False],
+                                  657: ["Steven Lloyd", 4767992, False]},
+                         number=289),
         -> {423: ["Darlene Johnson", 4523114, True],
            289: ["Anna Brown", 6345112, True],
            657: ["Steven Lloyd", 4767992, False]}
@@ -2193,9 +2193,9 @@ def late_payments(members):
     fee payments. The keys in the dictionary represent member numbers while values are lists with member information:
     [name, phone, fee status (True if fees are up to date, False if not)].
     Example:
-        late_payments({423: ["Darlene Johnson", 4523114, True],
-                       289: ["Anna Brown", 6345112, False],
-                       657: ["Steven Lloyd", 4767992, False]}),
+        late_payments(members={423: ["Darlene Johnson", 4523114, True],
+                               289: ["Anna Brown", 6345112, False],
+                               657: ["Steven Lloyd", 4767992, False]}),
         -> 2
     -Parameter:
         members (dict; key: int; value: list containing 3 elements: str, int, bool): dictionary with information
@@ -2225,10 +2225,10 @@ def delete_member(members, member_name):
     [name, phone, fee status (True if fees are up to date, False if not)]. If the given name does not match any member,
     the dictionary is not modified.
     Example:
-        delete_member({423: ["Darlene Johnson", 4523114, True],
-                       289: ["Anna Brown", 6345112, False],
-                       657: ["Steven Lloyd", 4767992, False]},
-                       "Anna Brown"),
+        delete_member(members={423: ["Darlene Johnson", 4523114, True],
+                               289: ["Anna Brown", 6345112, False],
+                               657: ["Steven Lloyd", 4767992, False]},
+                      member_name="Anna Brown"),
         -> {423: ["Darlene Johnson", 4523114, True],
             657: ["Steven Lloyd", 4767992, False]}
     -Parameters:
@@ -2267,7 +2267,7 @@ def roman_to_arabic(roman):
     X before L or C means to substract 10.
     C before D or M means to substract 100.
     Example:
-        roman_to_arabic("MCMLXXIV") -> 1974
+        roman_to_arabic(roman="MCMLXXIV") -> 1974
     -Parameter:
         roman (str): Roman numeral to be converted. The roman numeral will be all upper-case, will be a valid Roman
         numeral and its Arabic form will be a base-ten number between 1 and 3999.
@@ -2307,7 +2307,7 @@ def phone_number(phone):
     T, U, V = 8
     W, X, Y, Z = 10
     Example:
-        phone_number("(325)444-TEST") -> "(325)444-8378"
+        phone_number(phone="(325)444-TEST") -> "(325)444-8378"
     -Parameter:
         phone (str): a phone number that might contain upper-case letters, numbers, hyphens and parentheses.
     -Returns:
@@ -2342,7 +2342,7 @@ def isomorphic_strings(string1, string2):
     the order of characters. There can't be two different characters replaced by the same character. A character can
     replace itself. Both strings have the same length and are conformed by valid ascii characters.
     Examples:
-        isomorphic_strings("paper", "title") -> True
+        isomorphic_strings(string1="paper", string2="title") -> True
         (since we can replace: 'p'='t'; 'a'='i'; p'='t'; 'e'='l'; 'r'='e').
         isomorphic_strings("paper", "yoyos") -> False
         (Since we can replace: 'p'='y'; 'a'='o'; p'='y'; but when we try to replace 'e' with 'o' we find that 'o' was
@@ -2385,9 +2385,9 @@ def word_pattern(pattern, words):
     in the string must have a replacement letter in the pattern and each letter in the pattern must replace a word in
     the string.
     Examples:
-        word_pattern("xyyx", "home sea sea home") -> True
+        word_pattern(pattern="xyyx", words="home sea sea home") -> True
         (Since we can match 'x'='home'; 'y'='sea').
-        word_pattern("xyyx", "home sea sea hill") -> False
+        word_pattern(pattern="xyyx", words="home sea sea hill") -> False
         (Since 'x' cannot be matched both to 'home' and 'hill' at the same time).
     -Parameters:
         pattern (str): a pattern that only contains lower case letters.
