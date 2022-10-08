@@ -31,8 +31,8 @@ class TestsFuncionesNumeros(unittest.TestCase):
                 -1
             ],
             'Argumentos usados: numero1=0, numero2=0': [
-                menor(numero1=0, numero2=0),
-                0
+                menor(numero1=-5, numero2=0),
+                -5
             ]
         }
         for prueba, (a, b) in pruebas.items():
