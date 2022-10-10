@@ -14,6 +14,10 @@ class TestsFuncionesNumeros(unittest.TestCase):
                 menor(numero1=3, numero2=1),
                 1
             ],
+            'Argumentos usados: numero1=1, numero2=3': [
+                menor(numero1=3, numero2=1),
+                1
+            ],
             'Argumentos usados: numero1=3, numero2=3': [
                 menor(numero1=3, numero2=3),
                 3
