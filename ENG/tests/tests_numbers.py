@@ -35,6 +35,10 @@ class TestsNumberFunctions(unittest.TestCase):
                 -1
             ],
             'Arguments used: number1=0, number2=0': [
+                smallest(number1=0, number2=0),
+                0
+            ],
+            'Arguments used: number1=-5, number2=0': [
                 smallest(number1=-5, number2=0),
                 -5
             ]
