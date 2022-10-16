@@ -12,7 +12,7 @@ import tests.tests_diccionarios
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
 
-# Comentar las líneas correspondiente a las áreas temáticas que se desean excluir en la ejecución.
+# Comentar las líneas correspondiente a las áreas temáticas a excluir durante la ejecución.
 suite.addTests(loader.loadTestsFromModule(tests.tests_numeros))
 suite.addTests(loader.loadTestsFromModule(tests.tests_strings))
 suite.addTests(loader.loadTestsFromModule(tests.tests_listas))
@@ -20,3 +20,5 @@ suite.addTests(loader.loadTestsFromModule(tests.tests_diccionarios))
 
 runner = unittest.TextTestRunner(verbosity=2)
 result = runner.run(suite)
+
+
