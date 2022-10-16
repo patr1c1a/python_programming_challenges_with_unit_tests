@@ -39,7 +39,7 @@ cada archivo se encuentran varias funciones con el cuerpo vacío, que deberás c
 Para probar tu código, corre el archivo **ejecutar_tests.py**, el cual mostrará el resultado en consola. Es posible usar
 un IDE para ejecutarlo o bien hacerlo desde línea de comandos. Para esto último, primero cambia al directorio ("CD") a 
 la carpeta ESP del proyecto y luego corre ejecutar_tests.py usando Python (deberás usar un comando como 
-`python run_tests.py` o `python3 run_tests.py`).
+`python ejecutar_tests.py` o `python3 ejecutar_tests.py`).
 
 Inicialmente, todas las pruebas fallarán. El objetivo es escribir el cuerpo de las funciones (reemplazando la
 instrucción "pass" por tu código) para hacer que las pruebas pasen: esto se indica con el resultado "ok".
@@ -52,7 +52,8 @@ Dentro de la carpeta **ESP** también se encuentra un archivo llamado
 [**soluciones_propuestas.md**](/ESP/soluciones_propuestas.md) que muestra código con posibles resoluciones a cada uno de
 os ejercicios. De ninguna manera esto implica que sean las únicas soluciones ni tampoco las más eficientes. Es solo
 información a modo de ejemplo, que podría utilizarse como punto de partida en caso de no poder resolver alguno de los
-desafíos. El archivo está escrito con [markdown](https://es.wikipedia.org/wiki/Markdown) de manera de poder ocultar el código y dejar visible únicamente la
+desafíos. El archivo está escrito con [markdown](https://es.wikipedia.org/wiki/Markdown) de manera de poder ocultar el 
+código y dejar visible únicamente la
 consigna, para poder seleccionar cuál de las funciones se desea ver. Se recomienda visualizar este archivo en un
 programa que interprete `markdown` (por ejemplo, un navegador web).
 
