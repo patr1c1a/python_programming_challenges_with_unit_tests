@@ -2412,15 +2412,15 @@ def patron_de_palabras(patron, palabras):
         </pre>
     </summary>
     <pre>
-    pattern_matching = {}
+    equivalencias = {}
     lista_de_palabras = palabras.split()
     if len(patron) != len(lista_de_palabras) or len(patron) == 0 or len(lista_de_palabras) == 0:
         return False
     for i in range(len(patron)):
-        if patron[i] not in pattern_matching:
-            pattern_matching[patron[i]] = lista_de_palabras[i]
+        if patron[i] not in equivalencias:
+            equivalencias[patron[i]] = lista_de_palabras[i]
         else:
-            if pattern_matching[patron[i]] != lista_de_palabras[i]:
+            if equivalencias[patron[i]] != lista_de_palabras[i]:
                 return False
     return True
     </pre>
