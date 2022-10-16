@@ -20,5 +20,3 @@ suite.addTests(loader.loadTestsFromModule(tests.tests_diccionarios))
 
 runner = unittest.TextTestRunner(verbosity=2)
 result = runner.run(suite)
-
-
