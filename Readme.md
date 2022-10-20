@@ -42,30 +42,27 @@ instrucción "pass" por tu código) para hacer que las pruebas pasen: en la ejec
 "ok".
 
 Para ejecutar las pruebas, corre el archivo **ejecutar_tests.py**, el cual mostrará el resultado.
-Es posible usar un IDE para ejecutarlas o bien hacerlo desde línea de comandos. Por ejemplo, si utilizas Pycharm, será 
-suficiente con tener correctamente configurado el intérprete Python y correr el archivo **ejecutar_tests.py** (por 
-ejemplo, seleccionándolo y presionando Ctrl+Mayús+F10 o simplemente el botón "Run"). En caso de ejecutar en línea de 
-comandos, primero se deberá configurar la variable de entorno **PYTHONPATH** para que apunte temporalmente a la carpeta 
-del proyecto: cambia al directorio ("CD") de la carpeta del proyecto (ejemplo: si descargaste el proyecto en 
-C:/miusuario/proyecto será esa la carpeta donde deberás situarte) y luego ejecuta el comando:
+Es posible usar un IDE para ejecutarlo o también es posible hacerlo desde línea de comandos. Por ejemplo, si se utiliza 
+Pycharm, será suficiente con tener correctamente configurado el intérprete Python y correr el archivo 
+**ejecutar_tests.py** (por ejemplo, seleccionándolo y presionando Ctrl+Mayús+F10 o simplemente el botón "Run"). En caso 
+de ejecutar en línea de comandos, primero se deberá configurar la variable de entorno **PYTHONPATH** para que apunte 
+a la carpeta del proyecto. En caso de no querer configurarla de manera definitiva, es posible hacerlo de forma temporal,
+en cada sesión de la terminal. Para ello abre la terminal, cambia al directorio ("CD") de la carpeta del proyecto 
+(ejemplo: si el proyecto se encuentra en C:/miusuario/proyecto será esa la carpeta donde deberás situarte) y luego 
+ejecuta el siguiente comando:
 
-`export PYTHONPATH="$PWD"` para Linux/Mac, o
+`export PYTHONPATH="$PWD"` si estás en Linux/Mac, o
 
-`set PYTHONPATH=%cd%` en Windows.
+`set PYTHONPATH=%cd%` si estás en Windows.
 
 A continuación, corre ** ejecutar_tests.py** usando:
 
 `python ESP/ejecutar_tests.py` (dependiendo de cómo se haya instalado el intérprete, podría ser necesario reemplazar 
 "python" con "python3")
 
-Como la variable PYTHONPATH ha sido 
-configurada solo para la sesión actual, deberá volver a configurarse cada vez que se abra una nueva línea de comandos 
-(para que quede configurada de manera definitiva, debería agregarse PYTHONPATH como variable de entorno, apuntando a la 
-carpeta del proyecto).
-
 Si deseas obviar la ejecución de alguna categoría de pruebas, comenta (anteponiendo un #) la línea correspondiente en 
 el archivo **ejecutar_tests.py**. La línea a comentar se verá como esta: 
-`suite.addTests(loader.loadTestsFromModule(tests.archivo_a_obviar))`.
+`suite.addTests(loader.loadTestsFromModule(categoria_a_obviar))`.
 
 Dentro de la carpeta **ESP** también se encuentra un archivo llamado
 [**soluciones_propuestas.md**](/ESP/soluciones_propuestas.md) que muestra código con posibles resoluciones a cada uno de
@@ -173,28 +170,25 @@ At first, all tests are expected to fail. The goal is to fill in the function bo
 to get the tests to pass (they will show an "ok" result), one by one.
 
 To test your code, execute the **run_tests.py** file, which will output the results of the unit tests. You can use an 
-IDE to run the code or just run it from command line. For example, if you use Pycharm, you'll just need to have the 
+IDE to run the code or just run it from command line. For example, if Pycharm is used, you'll just need to have the 
 Python interpreter correctly set up and then run the **run_tests.py** (for example, by selecting it and then pressing 
-Ctrl+Shift+F10, or just the Run button). In case you'd like to use the terminal, you'll first need to temporarily set 
-the PYTHONPATH variable to the project folder: change directory ("CD") to the root project folder (e.g.: if you 
-downloaded the project into C:/myusername/project that will be the folder you'll need to CD into) and then run the following command:
+Ctrl+Shift+F10, or just using the Run button). In case you'd like to execute everyting in a command line, you'll first 
+need to set the PYTHONPATH environment variable to the project folder. If you don't want to do it permanently, it can be
+set temporarily, just for the current session, and it will need to be done each time a terminal is opened: open 
+terminal, change directory ("CD") to the root project folder (e.g.: if the project was downloaded into 
+C:/myusername/project that will be the folder you'll need to CD into) and then run the following command:
 
 `export PYTHONPATH="$PWD"` if you're on Linux/Mac, or
 
 `set PYTHONPATH=%cd%` if you're on Windows
 
-Next, run **run_tests.py** using command:
+Next, run **run_tests.py** using:
 
 `python ENG/run_tests.py` (might need to replace "python" with "python3", depending on your installation). 
 
-Since the 
-PYTHONPATH environment variable has been set as a temporary variable for the current session, you'll need to set it 
-again every time you open a new terminal (alternatively, you could set PYTHONPATH as a persistent environment variable 
-pointing to the project folder).
-
 If you want to skip a test category from executing, comment out (using a leading #) the related line in the 
 **run_tests.py** file. The line that needs to be commented will look like this: 
-`suite.addTests(loader.loadTestsFromModule(tests.file_to_skip))`.
+`suite.addTests(loader.loadTestsFromModule(category_to_skip))`.
 
 The **ENG** folder also contains a file called [**proposed_solutions.md**](/ENG/proposed_solutions.md) which includes
 code that might be a solution for each one of the exercises. This doesn't imply those are the only or even the most
