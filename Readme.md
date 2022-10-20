@@ -22,8 +22,8 @@ cuerpo de las funciones de acuerdo a la consigna de cada una, de manera que toda
 
 Al ejecutar el proyecto, se correrán las pruebas para evaluar si el resultado es el esperado.
 
-Los ejercicios están divididos en las siguientes categorías o temas: *números, strings, listas y tuplas, conjuntos* y
-*diccionarios*; lo que significa que se sugiere resolverlos utilizando estos tipos de datos con el fin de practicar las
+Los ejercicios están divididos en las siguientes categorías o temas: *números, strings, listas y tuplas, conjuntos y
+diccionarios*; lo que significa que se sugiere resolverlos utilizando estos tipos de datos con el fin de practicar las
 bases. Pero también pueden resolverse en otras formas, siempre que los tests pasen exitosamente.
 
 
@@ -34,17 +34,36 @@ Python 3 deberá estar instalado en el sistema.
 Asumiendo que usarás la versión en español, primero ingresa en la carpeta **ESP**. Ésta contiene dos carpetas: **src** y
 **tests**. La carpeta [**src**](/ESP/src) contiene archivos relacionados a cada tema (de los mencionados arriba) y en
 cada archivo se encuentran varias funciones con el cuerpo vacío, que deberás completar con tu código. La carpeta
-[**tests**](/ESP/tests) incluye las pruebas unitarias y su contenido no debe ser modificado.
-
-Para probar tu código, corre el archivo **ejecutar_tests.py**, el cual mostrará el resultado en consola. Es posible usar
-un IDE para ejecutarlo o bien hacerlo desde línea de comandos. Para esto último, primero cambia al directorio ("CD") a 
-la carpeta ESP del proyecto y luego corre ejecutar_tests.py usando Python (deberás usar un comando como 
-`python ejecutar_tests.py` o `python3 ejecutar_tests.py`).
+[**tests**](/ESP/tests) incluye las pruebas unitarias y su contenido no debe ser modificado. Al agregar el cuerpo de 
+alguna función, podrás ejecutar las pruebas unitarias para determinar si tu algoritmo es correcto.
 
 Inicialmente, todas las pruebas fallarán. El objetivo es escribir el cuerpo de las funciones (reemplazando la
-instrucción "pass" por tu código) para hacer que las pruebas pasen: esto se indica con el resultado "ok".
+instrucción "pass" por tu código) para hacer que las pruebas pasen: en la ejecución, esto se indica con el resultado 
+"ok".
 
-Es posible obviar la ejecución de alguna categoría de tests, comentando (con un # delante) la línea correspondiente en 
+Para ejecutar las pruebas, corre el archivo **ejecutar_tests.py**, el cual mostrará el resultado.
+Es posible usar un IDE para ejecutarlas o bien hacerlo desde línea de comandos. Por ejemplo, si utilizas Pycharm, será 
+suficiente con tener correctamente configurado el intérprete Python y correr el archivo **ejecutar_tests.py** (por 
+ejemplo, seleccionándolo y presionando Ctrl+Mayús+F10 o simplemente el botón "Run"). En caso de ejecutar en línea de 
+comandos, primero se deberá configurar la variable de entorno **PYTHONPATH** para que apunte temporalmente a la carpeta 
+del proyecto: cambia al directorio ("CD") de la carpeta del proyecto (ejemplo: si descargaste el proyecto en 
+C:/miusuario/proyecto será esa la carpeta donde deberás situarte) y luego ejecuta el comando:
+
+`export PYTHONPATH="$PWD"` para Linux/Mac, o
+
+`set PYTHONPATH=%cd%` en Windows.
+
+A continuación, corre ** ejecutar_tests.py** usando:
+
+`python ESP/ejecutar_tests.py` (dependiendo de cómo se haya instalado el intérprete, podría ser necesario reemplazar 
+"python" con "python3")
+
+Como la variable PYTHONPATH ha sido 
+configurada solo para la sesión actual, deberá volver a configurarse cada vez que se abra una nueva línea de comandos 
+(para que quede configurada de manera definitiva, debería agregarse PYTHONPATH como variable de entorno, apuntando a la 
+carpeta del proyecto).
+
+Si deseas obviar la ejecución de alguna categoría de pruebas, comenta (anteponiendo un #) la línea correspondiente en 
 el archivo **ejecutar_tests.py**. La línea a comentar se verá como esta: 
 `suite.addTests(loader.loadTestsFromModule(tests.archivo_a_obviar))`.
 
@@ -61,11 +80,12 @@ programa que interprete `markdown` (por ejemplo, un navegador web).
 ### Cómo escribir el código
 
 Completar el cuerpo de cada función de manera que cumpla con lo que se espera de ella, según la documentación (no
-olvides eliminar la instrucción "pass"). Esta documentación indica el objetivo de la función, qué representan y de qué
-tipo son los parámetros y qué se espera que retorne.
-
-Solo se debe agregar contenido a las funciones, sin modificar nada más (nombre, parámetros o documentación de las
-funciones) ni el resto del archivo, ni las pruebas unitarias.
+olvides eliminar la instrucción "pass") y las pruebas unitarias. La documentación de la función indica 
+cuál es su objetivo, qué representan y de qué tipo son los parámetros y qué se espera que la función retorne. También es
+recomendable usar las pruebas unitarias de la carpeta **tests** para guiarte en el proceso de escribir el código (pero 
+no se espera que modifiques estas pruebas de ninguna forma). Solo se debe agregar contenido a las funciones, sin 
+modificar nada más (nombre, parámetros o documentación de las funciones) ni el resto del archivo, ni las pruebas 
+unitarias.
 
 
 ### Orden de los temas
@@ -109,7 +129,7 @@ inglés, "Test-Driven-Development" o "TDD"), de manera que las pruebas guíen el
 
 Solo se requiere Python 3, el cual incluye la biblioteca unittests.
 
-El proyecto fue probado con Python 3.9, aunque es probable que funcione con otras versiones de Python 3.x.
+El proyecto fue probado con Python 3.9, aunque también debería funcionar con otras versiones de Python 3.x.
 
 
 ---
@@ -134,7 +154,7 @@ the function body) without modifying anything else, to get all tests to pass.
 
 When the project is executed, tests are run to evaluate if the functions return the expected result in each case.
 
-Exercises are divided into topics: *numbers, strings, lists and tuples, sets* and *dictionaries*; meaning you're 
+Exercises are divided into topics: *numbers, strings, lists and tuples, sets and dictionaries*; meaning you're 
 encouraged to solve challenges using these data types in order to practise programming fundamentals. But they can be
 solved in other ways too, as long as the tests pass successfully.
 
@@ -146,17 +166,33 @@ Python 3 needs to be installed.
 Assuming you'll be using the English version of the project, first go into the **ENG** folder. In there, there are two 
 folders: **src** and **tests**. The [**src**](/ENG/src) folder contains files related to a specific topic (from the
 topics mentioned above), with functions with a blank body (this is where you'll add your code). The
-[**tests**](/ENG/tests) folder contains unit tests and should not be modified at all.
-
-To test your code, execute the **run_tests.py** file, which will output the results to the console. You can use an IDE 
-to run the code or just run it from command line. To do the latter, first change directory to the project's ENG folder 
-and then execute run_tests.py using Python (you might need to use a command like `python run_tests.py` or 
-`python3 run_tests.py`). 
+[**tests**](/ENG/tests) folder contains unit tests and should not be modified at all. After adding a function body, 
+you'll be able to run the unit tests to check if your algorithm is correct.
 
 At first, all tests are expected to fail. The goal is to fill in the function bodies (replacing the "pass" statement) 
 to get the tests to pass (they will show an "ok" result), one by one.
 
-You can skip a test category from executing by commenting out (using a leading #) the related line in the 
+To test your code, execute the **run_tests.py** file, which will output the results of the unit tests. You can use an 
+IDE to run the code or just run it from command line. For example, if you use Pycharm, you'll just need to have the 
+Python interpreter correctly set up and then run the **run_tests.py** (for example, by selecting it and then pressing 
+Ctrl+Shift+F10, or just the Run button). In case you'd like to use the terminal, you'll first need to temporarily set 
+the PYTHONPATH variable to the project folder: change directory ("CD") to the root project folder (e.g.: if you 
+downloaded the project into C:/myusername/project that will be the folder you'll need to CD into) and then run the following command:
+
+`export PYTHONPATH="$PWD"` if you're on Linux/Mac, or
+
+`set PYTHONPATH=%cd%` if you're on Windows
+
+Next, run **run_tests.py** using command:
+
+`python ENG/run_tests.py` (might need to replace "python" with "python3", depending on your installation). 
+
+Since the 
+PYTHONPATH environment variable has been set as a temporary variable for the current session, you'll need to set it 
+again every time you open a new terminal (alternatively, you could set PYTHONPATH as a persistent environment variable 
+pointing to the project folder).
+
+If you want to skip a test category from executing, comment out (using a leading #) the related line in the 
 **run_tests.py** file. The line that needs to be commented will look like this: 
 `suite.addTests(loader.loadTestsFromModule(tests.file_to_skip))`.
 
@@ -164,19 +200,19 @@ The **ENG** folder also contains a file called [**proposed_solutions.md**](/ENG/
 code that might be a solution for each one of the exercises. This doesn't imply those are the only or even the most
 efficient solutions. It's just example code that could be useful as a starting point in case you cannot solve any of the
 challenges. The file was created with [markdown](https://en.wikipedia.org/wiki/Markdown) so that the code can be hidden
-from view, leaving only the function documentation visible, so you can select which function code you wish to see. This
-file should be opened with a program that renders `markdown` (a web browser, for example).
+from view, leaving only the function documentation visible, so you can click on the function you wish to view the code 
+for. This file should be opened with a program that renders `markdown` (a web browser, for example).
 
 
 ### How to write the code
 
 Fill in the body of each function in a way that makes it behave as the documentation states (remember to remove the 
-"pass" statement and add your code instead). Documentation is included between triple quotes (""") and designates what 
-the function goal is, what's the data type of each parameter and what they represent, and what's the expected return 
-value.
-
-Only function body needs to be added, without modifying anything else (name, parameters, documentation, etc.) in the 
-function, the overall file or the unit tests.
+"pass" statement and add your code instead), and that fulfills the unit tests for that function. Function documentation 
+is included between triple quotes (""") and designates what the function goal is, what's the data type of each parameter
+and what they represent, and what's the expected return value. You can also check the unit tests included in the 
+**tests** folder to guide your coding task (but you're not expected to modify these tests at all). Only the function 
+body needs to be added, without modifying anything else (name, parameters, documentation, etc.) in the function, the 
+overall file or the unit tests file.
 
 
 ### Topic order
@@ -217,4 +253,4 @@ tests to guide development.
 
 Only Python 3 is needed, which includes the unittests library.
 
-The project has been tested under Python 3.9, although it will probably run with other Python 3.x variants.
+The project has been tested under Python 3.9, although it should run with other Python 3.x variants.
