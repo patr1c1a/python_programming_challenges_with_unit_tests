@@ -29,7 +29,7 @@ bases. Pero también pueden resolverse en otras formas, siempre que los tests pa
 
 ## Cómo usar este proyecto
 
-Python 3 deberá estar instalado en el sistema.
+Python 3 deberá estar instalado en el sistema (la versión deberá ser superior a la 3.4).
 
 Asumiendo que usarás la versión en español, primero ingresa en la carpeta **ESP**. Ésta contiene dos carpetas: **src** y
 **tests**. La carpeta [**src**](/ESP/src) contiene archivos relacionados a cada tema (de los mencionados arriba) y en
@@ -126,7 +126,8 @@ inglés, "Test-Driven-Development" o "TDD"), de manera que las pruebas guíen el
 
 Solo se requiere Python 3, el cual incluye la biblioteca unittests.
 
-El proyecto fue probado con Python 3.9, aunque también debería funcionar con otras versiones de Python 3.x.
+El proyecto fue probado con Python 3.9, aunque también debería funcionar con otras versiones de Python 3 (superiores a 
+3.4).
 
 
 ---
@@ -158,7 +159,7 @@ solved in other ways too, as long as the tests pass successfully.
 
 ## How to use the project
 
-Python 3 needs to be installed.
+Python 3 needs to be installed (version 3.4+).
 
 Assuming you'll be using the English version of the project, first go into the **ENG** folder. In there, there are two 
 folders: **src** and **tests**. The [**src**](/ENG/src) folder contains files related to a specific topic (from the
@@ -245,6 +246,6 @@ tests to guide development.
 
 ### Requirements
 
-Only Python 3 is needed, which includes the unittests library.
+Only Python 3 is needed, which includes the unittest library.
 
-The project has been tested under Python 3.9, although it should run with other Python 3.x variants.
+The project has been tested under Python 3.9, although it should run with other Python 3 variants (3.4 or newer).
