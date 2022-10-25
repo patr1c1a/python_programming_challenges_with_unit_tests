@@ -41,15 +41,43 @@ Inicialmente, todas las pruebas fallarán. El objetivo es escribir el cuerpo de 
 instrucción "pass" por tu código) para hacer que las pruebas pasen: en la ejecución, esto se indica con el resultado 
 "ok".
 
-Para ejecutar las pruebas, corre el archivo **ejecutar_tests.py**, el cual mostrará el resultado.
+Para probar tu código y evaluar tus soluciones, es posible correr las pruebas para una sola función (esto es, un solo 
+ejercicio), para todas las funciones de una categoría (números, strings, listas & tuplas, conjuntos & diccionarios), o 
+para todas las categorías a la vez. Para esto se puede utilizar una terminal (que puede correr por sí sola o dentro de
+algún IDE), donde se deberá cambia al directorio ("CD") de la carpeta del proyecto (ejemplo: si el proyecto se encuentra
+en C:/miusuario/proyecto será esa la carpeta donde deberás situarte) y luego ejecutar el comando correspondiente.
+
+### Ejecutar las pruebas de una función/ejercicio:
+
+`python -m unittest -v ruta/al/archivo.py -k nombre_de_la_prueba`
+
+donde *ruta/al/archivo.py* debe reemplazarse con la ruta desde la carpeta raíz del proyecto hasta el archivo de 
+pruebas que contiene las pruebas que se ejecutarán (ej.: **ESP/tests/tests_numeros.py**) y *nombre_de_la_prueba* debe 
+reemplazarse con la función de pruebas a ejecutar (ej.: **test_factorial**). Por ejemplo, para ejecutar las pruebas de 
+la función del ejercicio *factorial* de la categoría *numeros*:
+
+`python -m unittest -v ESP/tests/tests_numeros.py -k test_factorial`
+
+### Ejecutar todas las pruebas de una categoría:
+
+`python -m unittest -v ruta/al/archivo.py`
+
+donde *ruta/al/archivo.py* debe reemplazarse con la ruta desde la carpeta raíz del proyecto hasta el archivo de 
+pruebas que contiene las pruebas que se ejecutarán (ej.: **ESP/tests/tests_numeros.py**). Por ejemplo, para ejecutar las
+pruebas de los ejercicios de la categoría *numeros*.
+
+`python -m unittest -v ESP/tests/tests_numeros.py`
+
+### Ejecutar todas las pruebas:
+
+Para ejecutar todas las pruebas, corre el archivo **ejecutar_tests.py**, el cual mostrará el resultado.
 Es posible usar un IDE para ejecutarlo o también es posible hacerlo desde línea de comandos. Por ejemplo, si se utiliza 
 Pycharm, será suficiente con tener correctamente configurado el intérprete Python y correr el archivo 
 **ejecutar_tests.py** (por ejemplo, seleccionándolo y presionando Ctrl+Mayús+F10 o simplemente el botón "Run"). En caso 
 de ejecutar en línea de comandos, primero se deberá configurar la variable de entorno **PYTHONPATH** para que apunte 
 a la carpeta del proyecto. En caso de no querer configurarla de manera definitiva, es posible hacerlo de forma temporal,
-en cada sesión de la terminal. Para ello abre la terminal, cambia al directorio ("CD") de la carpeta del proyecto 
-(ejemplo: si el proyecto se encuentra en C:/miusuario/proyecto será esa la carpeta donde deberás situarte) y luego 
-ejecuta el siguiente comando:
+en cada sesión de la terminal. Para ello abre la terminal, CD al directorio del proyecto y luego ejecuta el siguiente 
+comando:
 
 `export PYTHONPATH="$PWD"` si estás en Linux/Mac, o
 
@@ -170,27 +198,57 @@ you'll be able to run the unit tests to check if your algorithm is correct.
 At first, all tests are expected to fail. The goal is to fill in the function bodies (replacing the "pass" statement) 
 to get the tests to pass (they will show an "ok" result), one by one.
 
-To test your code, execute the **run_tests.py** file, which will output the results of the unit tests. You can use an 
+To test your code, you can either run tests for a single function (that is, a single challenge or exercise), all the 
+functions in a category (numbers, strings, lists & tuples, sets & dictionaries) or test all categories at once. You can 
+use a terminal for these (it could be a standalone terminal or inside an IDE), where you'll need to change directory 
+("CD") to the root project folder (e.g.: if the project was downloaded into C:/myusername/project that will be the 
+folder you'll need to CD into).
+
+### Run a test for a single function/exercise:
+
+`python -m unittest -v path/to/test/file.py -k test_name`
+
+where *path/to/test/file.py* should be replaced with the path from project root to the test file containing the function
+(e.g.: **ENG/tests/tests_numbers.py**) and *test_name* should be replaced with the test function to be executed (e.g.: 
+**test_factorial**). As an example, to run tests for challenge function *factorial* in the *numbers* category:
+
+`python -m unittest -v ENG/tests/tests_numbers.py -k test_factorial`
+
+
+### Run all tests from a topic category:
+
+python -m unittest -v path/to/test/file.py
+
+where *path/to/test/file.py* should be replaced with the path from project root to the test file containing the function
+(e.g.: **ENG/tests/tests_numbers.py**). As an example, to run tests for challenges in the *numbers* category:
+
+`python -m unittest -v ENG/tests/tests_numbers.py`
+
+
+### Run all tests using runner file:
+
+To run all tests at once, execute the **run_tests.py** file, which will output the results of the unit tests. You can use an 
 IDE to run the code or just run it from command line. For example, if Pycharm is used, you'll just need to have the 
 Python interpreter correctly set up and then run the **run_tests.py** (for example, by selecting it and then pressing 
 Ctrl+Shift+F10, or just using the Run button). In case you'd like to execute everyting in a command line, you'll first 
 need to set the PYTHONPATH environment variable to the project folder. If you don't want to do it permanently, it can be
 set temporarily, just for the current session, and it will need to be done each time a terminal is opened: open 
-terminal, change directory ("CD") to the root project folder (e.g.: if the project was downloaded into 
-C:/myusername/project that will be the folder you'll need to CD into) and then run the following command:
+terminal, "CD" into the root project folder and then run the following command:
 
 `export PYTHONPATH="$PWD"` if you're on Linux/Mac, or
 
 `set PYTHONPATH=%cd%` if you're on Windows
 
-Next, run **run_tests.py** using:
+Next, run all tests with **run_tests.py** using this command:
 
 `python ENG/run_tests.py` (might need to replace "python" with "python3", depending on your installation). 
 
-If you want to skip a test category from executing, comment out (using a leading #) the related line in the 
+It's also possible to skip a test category from executing, by commenting out (using a leading #) the related line in the 
 **run_tests.py** file. The line that needs to be commented will look like this: 
 `suite.addTests(loader.loadTestsFromModule(category_to_skip))`.
 
+
+### Solutions:
 The **ENG** folder also contains a file called [**proposed_solutions.md**](/ENG/proposed_solutions.md) which includes
 code that might be a solution for each one of the exercises. This doesn't imply those are the only or even the most
 efficient solutions. It's just example code that could be useful as a starting point in case you cannot solve any of the
