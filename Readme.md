@@ -55,7 +55,7 @@ ejecuta el siguiente comando:
 
 `set PYTHONPATH=%cd%` si estás en Windows.
 
-A continuación, corre ** ejecutar_tests.py** usando:
+A continuación, corre **ejecutar_tests.py** usando:
 
 `python ESP/ejecutar_tests.py` (dependiendo de cómo se haya instalado el intérprete, podría ser necesario reemplazar 
 "python" con "python3")
