@@ -2,7 +2,7 @@
 
 Here you can find code that might be a solution for each one of the exercises. This doesn't imply these are the only or
 even the most efficient solutions: it's just example code that could be useful as a starting point in case you're having
- trouble solving some of the challenges. Solutions for each topic are proposed in the natural order the project follows,
+ trouble solving some challenges. Solutions for each topic are proposed in the natural order the project follows,
  that means that number challenges were solved without using strings, lists, tuples, sets or dictionaries; strings 
 challenge solutions can include operations with numbers but won't use the other structures; solutions for lists and 
 tuples challenges can include numbers and strings operations but won't include sets or dictionaries; and sets and 
