@@ -8,8 +8,8 @@ from tests import tests_strings
 from tests import tests_lists
 from tests import tests_dictionaries
 
-loader = unittest.TestLoader()
 suite = unittest.TestSuite()
+loader = unittest.TestLoader()
 
 # Comment out the lines related to topics you'd like to exclude from execution.
 suite.addTests(loader.loadTestsFromModule(tests_numbers))
