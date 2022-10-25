@@ -1,8 +1,12 @@
 # Soluciones propuestas
 
 Este archivo contiene posibles soluciones para cada uno de los ejercicios. De ninguna manera esto implica que sean las
-únicas soluciones ni tampoco las más eficientes. Es solo información a modo de ejemplo, que podría utilizarse como punto
-de partida en caso de no poder resolver alguno de los desafíos.
+únicas soluciones ni tampoco las más eficientes: Es solo información a modo de ejemplo, que podría utilizarse como punto
+de partida en caso de no poder resolver alguno de los desafíos. Las soluciones de cada área temática se plantean en el 
+orden dado, de manera que los ejercicios de números se resolvieron sin utilizar strings, listas, tuplas, conjuntos ni 
+diccionarios; los ejercicios de strings pueden estar resueltos usando operaciones con números pero no con el resto de 
+las estructuras; la resoluciones de ejercicios de listas y tuplas pueden incluir números y strings pero no conjuntos y 
+diccionarios; y los ejercicios de conjuntos y diccionarios se resolvieron sin restricciones.
 
 Seleccionar la categoría del ejercicio y luego dar click sobre la función para que se muestre el código.
 
