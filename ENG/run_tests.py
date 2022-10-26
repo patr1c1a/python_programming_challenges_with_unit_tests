@@ -1,7 +1,3 @@
-#########################################
-# DO NOT MODIFY THIS FILE UNLESS NEEDED #
-#########################################
-
 import unittest
 from tests import tests_numbers
 from tests import tests_strings
