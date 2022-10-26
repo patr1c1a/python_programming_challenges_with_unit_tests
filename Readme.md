@@ -49,10 +49,10 @@ en C:/miusuario/proyecto será esa la carpeta donde deberás situarte) y luego e
 
 ### Ejecutar las pruebas de una función/ejercicio:
 
-`python -m unittest -v ruta/al/archivo.py -k nombre_de_la_prueba`
+`python -m unittest -v ruta/al/archivo.py -k funcion_de_pruebas`
 
 donde *ruta/al/archivo.py* debe reemplazarse con la ruta desde la carpeta raíz del proyecto hasta el archivo de 
-pruebas que contiene las pruebas que se ejecutarán (ej.: **ESP/tests/tests_numeros.py**) y *nombre_de_la_prueba* debe 
+pruebas que contiene las pruebas que se ejecutarán (ej.: **ESP/tests/tests_numeros.py**) y *funcion_de_pruebas* debe 
 reemplazarse con la función de pruebas a ejecutar (ej.: **test_factorial**). Por ejemplo, para ejecutar las pruebas de 
 la función del ejercicio *factorial* de la categoría *numeros*:
 
@@ -206,16 +206,16 @@ folder you'll need to CD into).
 
 ### Run a test for a single function/exercise:
 
-`python -m unittest -v path/to/test/file.py -k test_name`
+`python -m unittest -v path/to/test/file.py -k test_function_name`
 
 where *path/to/test/file.py* should be replaced with the path from project root to the test file containing the function
-(e.g.: **ENG/tests/tests_numbers.py**) and *test_name* should be replaced with the test function to be executed (e.g.: 
-**test_factorial**). As an example, to run tests for challenge function *factorial* in the *numbers* category:
+(e.g.: **ENG/tests/tests_numbers.py**) and *test_function_name* should be replaced with the test function to be executed
+(e.g.: **test_factorial**). As an example, to run tests for challenge function *factorial* in the *numbers* category:
 
 `python -m unittest -v ENG/tests/tests_numbers.py -k test_factorial`
 
 
-### Run all tests from a topic category:
+### Run all tests in a category:
 
 `python -m unittest -v path/to/test/file.py`
 
