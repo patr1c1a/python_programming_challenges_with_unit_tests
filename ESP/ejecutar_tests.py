@@ -7,7 +7,7 @@ from tests import tests_diccionarios
 suite = unittest.TestSuite()
 loader = unittest.TestLoader()
 
-# Comentar líneas 11-14 para excluir algún tema durante la ejecución.
+# Comentar las líneas relacionadas a los temas que se excluirán de la ejecución.
 suite.addTests(loader.loadTestsFromModule(tests_numeros))
 suite.addTests(loader.loadTestsFromModule(tests_strings))
 suite.addTests(loader.loadTestsFromModule(tests_listas))
