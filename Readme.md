@@ -217,7 +217,7 @@ where *path/to/test/file.py* should be replaced with the path from project root 
 
 ### Run all tests from a topic category:
 
-python -m unittest -v path/to/test/file.py
+`python -m unittest -v path/to/test/file.py`
 
 where *path/to/test/file.py* should be replaced with the path from project root to the test file containing the function
 (e.g.: **ENG/tests/tests_numbers.py**). As an example, to run tests for challenges in the *numbers* category:
