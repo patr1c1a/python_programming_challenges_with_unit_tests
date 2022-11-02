@@ -35,13 +35,15 @@ Asumiendo que usarás la versión en español, primero ingresa en la carpeta **E
 **tests**. La carpeta [**src**](/ESP/src) contiene archivos relacionados a cada tema (de los mencionados arriba) y en
 cada archivo se encuentran varias funciones con el cuerpo vacío, que deberás completar con tu código. La carpeta
 [**tests**](/ESP/tests) incluye las pruebas unitarias y su contenido no debe ser modificado. Al agregar el cuerpo de 
-alguna función, podrás ejecutar las pruebas unitarias para determinar si tu algoritmo es correcto.
+alguna función en */ESP/src*, podrás ejecutar las pruebas unitarias para determinar si tu algoritmo es correcto.
 
-Inicialmente, todas las pruebas fallarán. El objetivo es escribir el cuerpo de las funciones (reemplazando la
-instrucción "pass" por tu código) para hacer que las pruebas pasen: en la ejecución, esto se indica con el resultado 
-"ok".
+Inicialmente, todas las pruebas deberían fallar. El objetivo es escribir el cuerpo de las funciones (reemplazando la
+instrucción "pass" por tu código) para hacer que las pruebas pasen. Entonces, luego de agregar el cuerpo a una o más
+funciones, necesitarás ejecutar las pruebas para ver si pasan o fallan. Cuando las pruebas pasen, mostrarán "ok" en su
+resultado; si alguna prueba falla, mostrará qué función se ejecutó, qué argumentos se usaron para invocarla, qué retornó
+y cuál era el valor de retorno esperado.
 
-Para probar tu código y evaluar tus soluciones, es posible correr las pruebas para una sola función (esto es, un solo 
+Para probar tu código y evaluar tus algoritmos, es posible correr las pruebas para una sola función (esto es, un solo 
 ejercicio), para todas las funciones de una categoría (números, strings, listas & tuplas, conjuntos & diccionarios), o 
 para todas las categorías a la vez. Para esto se puede utilizar una terminal (que puede correr por sí sola o dentro de
 algún IDE), donde se deberá cambia al directorio ("CD") de la carpeta del proyecto (ejemplo: si el proyecto se encuentra
@@ -68,16 +70,16 @@ pruebas de los ejercicios de la categoría *numeros*.
 
 `python -m unittest -v ESP/tests/tests_numeros.py`
 
-### Ejecutar todas las pruebas:
+### Ejecutar las pruebas de más de una categoría a la vez:
 
-Para ejecutar todas las pruebas, corre el archivo **ejecutar_tests.py**, el cual mostrará el resultado.
-Es posible usar un IDE para ejecutarlo o también es posible hacerlo desde línea de comandos. Por ejemplo, si se utiliza 
-Pycharm, será suficiente con tener correctamente configurado el intérprete Python y correr el archivo 
-**ejecutar_tests.py** (por ejemplo, seleccionándolo y presionando Ctrl+Mayús+F10 o simplemente el botón "Run"). En caso 
-de ejecutar en línea de comandos, primero se deberá configurar la variable de entorno **PYTHONPATH** para que apunte 
-a la carpeta del proyecto. En caso de no querer configurarla de manera definitiva, es posible hacerlo de forma temporal,
-en cada sesión de la terminal. Para ello abre la terminal, CD al directorio del proyecto y luego ejecuta el siguiente 
-comando:
+Para ejecutar las pruebas de más de una categoría (o incluso todas las categorías al mismo tiempo), corre el archivo 
+**ejecutar_tests.py**. Es posible usar un IDE para  ejecutarlo o también puede hacerse desde línea de comandos. Por 
+ejemplo, si se utiliza Pycharm, será suficiente con tener correctamente configurado el intérprete Python y correr el 
+archivo **ejecutar_tests.py** (por ejemplo, seleccionándolo y presionando Ctrl+Mayús+F10 o simplemente el botón "Run"). 
+En caso de ejecutar mediante línea de comandos, primero se deberá configurar la variable de entorno **PYTHONPATH** para 
+que apunte a la carpeta del proyecto. Para evitar configurarla de manera definitiva, existe la opción de hacerlo de 
+forma temporal, en cada sesión de la terminal. Para ello abre la terminal, CD al directorio del proyecto y luego ejecuta
+el siguiente comando:
 
 `export PYTHONPATH="$PWD"` si estás en Linux/Mac, o
 
@@ -191,18 +193,20 @@ Python 3 needs to be installed (version 3.4+).
 
 Assuming you'll be using the English version of the project, first go into the **ENG** folder. In there, there are two 
 folders: **src** and **tests**. The [**src**](/ENG/src) folder contains files related to a specific topic (from the
-topics mentioned above), with functions with a blank body (this is where you'll add your code). The
-[**tests**](/ENG/tests) folder contains unit tests and should not be modified at all. After adding a function body, 
-you'll be able to run the unit tests to check if your algorithm is correct.
+ones mentioned above), and these files contain functions with an empty body (this is where you'll add your code).
+The [**tests**](/ENG/tests) folder contains unit tests and should not be modified at all. After adding a function body
+in one of the files in */ENG/src*, you'll be able to run its unit tests to check if your algorithm is correct.
 
-At first, all tests are expected to fail. The goal is to fill in the function bodies (replacing the "pass" statement) 
-to get the tests to pass (they will show an "ok" result), one by one.
+At first, all tests are expected to fail. The goal is to add bodies to these functions (replacing the "pass" statement 
+with your algorithms) to get the tests to pass. So after writing code for one or more functions, you'll need to run the
+tests to see if they pass or fail. When tests pass, they will show an "ok" result; if a test fails, it will show which 
+function it ran, the arguments used to call it, what it returned and what was the expected return value.
 
-To test your code, you can either run tests for a single function (that is, a single challenge or exercise), all the 
-functions in a category (numbers, strings, lists & tuples, sets & dictionaries) or test all categories at once. You can 
-use a terminal for these (it could be a standalone terminal or inside an IDE), where you'll need to change directory 
-("CD") to the root project folder (e.g.: if the project was downloaded into C:/myusername/project that will be the 
-folder you'll need to CD into).
+To test your code, you can either run tests for a single function (that is, all test cases for a single challenge or 
+exercise), for all the functions in a category (numbers, strings, lists & tuples, sets & dictionaries) or run tests for
+more than one category at once. You can use a terminal for these (it could be a standalone terminal or inside an IDE), 
+where you'll first need to change directory ("CD") to the root project folder (e.g.: if the project was downloaded into 
+C:/myusername/project that will be the folder you'll need to CD into) and then run the command.
 
 ### Run a test for a single function/exercise:
 
@@ -225,26 +229,27 @@ where *path/to/test/file.py* should be replaced with the path from project root 
 `python -m unittest -v ENG/tests/tests_numbers.py`
 
 
-### Run all tests using runner file:
+### Run tests in more than one category at the same time:
 
-To run all tests at once, execute the **run_tests.py** file, which will output the results of the unit tests. You can use an 
-IDE to run the code or just run it from command line. For example, if Pycharm is used, you'll just need to have the 
-Python interpreter correctly set up and then run the **run_tests.py** (for example, by selecting it and then pressing 
-Ctrl+Shift+F10, or just using the Run button). In case you'd like to execute everyting in a command line, you'll first 
-need to set the PYTHONPATH environment variable to the project folder. If you don't want to do it permanently, it can be
-set temporarily, just for the current session, and it will need to be done each time a terminal is opened: open 
-terminal, "CD" into the root project folder and then run the following command:
+To run more than one category at once (or even run all categories), execute the **run_tests.py** file, which will output
+the results of the unit tests. You can use an IDE to run the code or just run it from command line. For example, if 
+Pycharm is used, you'll just need to have the Python interpreter correctly set up and then run the **run_tests.py** (for
+example, by selecting it and then pressing Ctrl+Shift+F10, or just using the Run button). In case you'd like to execute 
+everyting in a command line, you'll first need to set the PYTHONPATH environment variable to the project folder. To 
+avoid setting it permanently, it's also possible to set the variable temporarily, just for the current session (it 
+will need to be done each time the terminal is closed and re-opened): open terminal, "CD" into the root project folder 
+and then run the following command:
 
 `export PYTHONPATH="$PWD"` if you're on Linux/Mac, or
 
 `set PYTHONPATH=%cd%` if you're on Windows
 
-Next, run all tests with **run_tests.py** using this command:
+Next, execute **run_tests.py** using this command:
 
 `python ENG/run_tests.py` (might need to replace "python" with "python3", depending on your installation). 
 
-It's also possible to skip a test category from executing, by commenting out (using a leading #) the related line in the 
-**run_tests.py** file. The line that needs to be commented will look like this: 
+By default, **run_tests.py** will run tests for all categories. But it's possible to skip test categories from executing 
+by commenting out (using a leading #) the related lines in the file. These lines look like this: 
 `suite.addTests(loader.loadTestsFromModule(category_to_skip))`.
 
 
