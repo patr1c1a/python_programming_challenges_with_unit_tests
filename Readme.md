@@ -43,6 +43,49 @@ funciones, necesitarás ejecutar las pruebas para ver si pasan o fallan. Cuando 
 resultado; si alguna prueba falla, mostrará qué función se ejecutó, qué argumentos se usaron para invocarla, qué retornó
 y cuál era el valor de retorno esperado.
 
+
+### Soluciones
+
+Dentro de la carpeta **ESP** también se encuentra un archivo llamado
+[**soluciones_propuestas.md**](/ESP/soluciones_propuestas.md) que muestra código con posibles resoluciones a cada uno de
+os ejercicios. De ninguna manera esto implica que sean las únicas soluciones ni tampoco las más eficientes. Es solo
+información a modo de ejemplo, que podría utilizarse como punto de partida en caso de no poder resolver alguno de los
+desafíos. El archivo está escrito con [markdown](https://es.wikipedia.org/wiki/Markdown) de manera de poder ocultar el 
+código y dejar visible únicamente la
+consigna, para poder seleccionar cuál de las funciones se desea ver. Se recomienda visualizar este archivo en un
+programa que interprete `markdown` (por ejemplo, un navegador web).
+
+
+### Cómo escribir el código
+
+Completar el cuerpo de cada función de manera que cumpla con lo que se espera de ella, según la documentación (no
+olvides eliminar la instrucción "pass") y las pruebas unitarias. La documentación de la función indica 
+cuál es su objetivo, qué representan y de qué tipo son los parámetros y qué se espera que la función retorne. También es
+recomendable usar las pruebas unitarias de la carpeta **tests** para guiarte en el proceso de escribir el código (pero 
+no se espera que modifiques estas pruebas de ninguna forma). Solo se debe agregar contenido a las funciones, sin 
+modificar nada más (nombre, parámetros o documentación de las funciones) ni el resto del archivo, ni las pruebas 
+unitarias.
+
+
+### Orden de los temas
+
+Aunque es posible comenzar por cualquiera de los temas propuestos, existe un orden que permite resolverlos con
+dificultad incremental:
+
+1. Números
+2. Strings
+3. Listas y tuplas
+4. Conjuntos y diccionarios
+
+Esto implica que los ejercicios del módulo numeros.py pueden resolverse sin utilizar strings, listas, conjuntos ni
+diccionarios. Los ejercicios del módulo strings pueden incluir manipulación de números. Los ejercicios de listas y
+tuplas pueden incluir manipulación de números y de strings. Los ejercicios de conjuntos pueden incluir listas, strings
+y números. Finalmente, los ejercicios de diccionarios pueden incluir cualquiera de los temas anteriores (conjuntos,
+listas, tuplas, strings y números).
+
+
+## Ejecutar las pruebas
+
 Para probar tu código y evaluar tus algoritmos, es posible correr las pruebas para una sola función (esto es, un solo 
 ejercicio), para todas las funciones de una categoría (números, strings, listas & tuplas, conjuntos & diccionarios), o 
 para todas las categorías a la vez. Para esto se puede utilizar una terminal (que puede correr por sí sola o dentro de
@@ -94,45 +137,8 @@ Si deseas obviar la ejecución de alguna categoría de pruebas, comenta (antepon
 el archivo **ejecutar_tests.py**. La línea a comentar se verá como esta: 
 `suite.addTests(loader.loadTestsFromModule(categoria_a_obviar))`.
 
-Dentro de la carpeta **ESP** también se encuentra un archivo llamado
-[**soluciones_propuestas.md**](/ESP/soluciones_propuestas.md) que muestra código con posibles resoluciones a cada uno de
-os ejercicios. De ninguna manera esto implica que sean las únicas soluciones ni tampoco las más eficientes. Es solo
-información a modo de ejemplo, que podría utilizarse como punto de partida en caso de no poder resolver alguno de los
-desafíos. El archivo está escrito con [markdown](https://es.wikipedia.org/wiki/Markdown) de manera de poder ocultar el 
-código y dejar visible únicamente la
-consigna, para poder seleccionar cuál de las funciones se desea ver. Se recomienda visualizar este archivo en un
-programa que interprete `markdown` (por ejemplo, un navegador web).
 
-
-### Cómo escribir el código
-
-Completar el cuerpo de cada función de manera que cumpla con lo que se espera de ella, según la documentación (no
-olvides eliminar la instrucción "pass") y las pruebas unitarias. La documentación de la función indica 
-cuál es su objetivo, qué representan y de qué tipo son los parámetros y qué se espera que la función retorne. También es
-recomendable usar las pruebas unitarias de la carpeta **tests** para guiarte en el proceso de escribir el código (pero 
-no se espera que modifiques estas pruebas de ninguna forma). Solo se debe agregar contenido a las funciones, sin 
-modificar nada más (nombre, parámetros o documentación de las funciones) ni el resto del archivo, ni las pruebas 
-unitarias.
-
-
-### Orden de los temas
-
-Aunque es posible comenzar por cualquiera de los temas propuestos, existe un orden que permite resolverlos con
-dificultad incremental:
-
-1. Números
-2. Strings
-3. Listas y tuplas
-4. Conjuntos y diccionarios
-
-Esto implica que los ejercicios del módulo numeros.py pueden resolverse sin utilizar strings, listas, conjuntos ni
-diccionarios. Los ejercicios del módulo strings pueden incluir manipulación de números. Los ejercicios de listas y
-tuplas pueden incluir manipulación de números y de strings. Los ejercicios de conjuntos pueden incluir listas, strings
-y números. Finalmente, los ejercicios de diccionarios pueden incluir cualquiera de los temas anteriores (conjuntos,
-listas, tuplas, strings y números).
-
-
-### Abordaje sugerido
+## Abordaje sugerido
 
 Al escribir código con fines profesionales es más probable que muchas de las tareas incluidas en estos ejercicios se
 resuelvan mediante herramientas predefinidas del lenguaje. Pero se recomienda que en este proyecto intentes evitar
@@ -152,7 +158,7 @@ También pueden utilizarse los casos de prueba para resolver los desafíos media
 inglés, "Test-Driven-Development" o "TDD"), de manera que las pruebas guíen el desarrollo de los algoritmos.
 
 
-### Requerimientos
+## Requerimientos
 
 Solo se requiere Python 3, el cual incluye la biblioteca unittests.
 
@@ -201,6 +207,46 @@ At first, all tests are expected to fail. The goal is to add bodies to these fun
 with your algorithms) to get the tests to pass. So after writing code for one or more functions, you'll need to run the
 tests to see if they pass or fail. When tests pass, they will show an "ok" result; if a test fails, it will show which 
 function it ran, the arguments used to call it, what it returned and what was the expected return value.
+
+
+### Solutions:
+The **ENG** folder also contains a file called [**proposed_solutions.md**](/ENG/proposed_solutions.md) which includes
+code that might be a solution for each one of the exercises. This doesn't imply those are the only or even the most
+efficient solutions. It's just example code that could be useful as a starting point in case you cannot solve any of the
+challenges. The file was created with [markdown](https://en.wikipedia.org/wiki/Markdown) so that the code can be hidden
+from view, leaving only the function documentation visible, so you can click on the function you wish to view the code 
+for. This file should be opened with a program that renders `markdown` (a web browser, for example).
+
+
+### How to write the code
+
+Fill in the body of each function in a way that makes it behave as the documentation states (remember to remove the 
+"pass" statement and add your code instead), and that fulfills the unit tests for that function. Function documentation 
+is included between triple quotes (""") and designates what the function goal is, what's the data type of each parameter
+and what they represent, and what's the expected return value. You can also check the unit tests included in the 
+**tests** folder to guide your coding task (but you're not expected to modify these tests at all). Only the function 
+body needs to be added, without modifying anything else (name, parameters, documentation, etc.) in the function, the 
+overall file or the unit tests file.
+
+
+### Topic order
+
+It's possible to start with any of the included topics (files), but there's a preferred order that allows to solve 
+challenges with increasing difficulty:
+
+1. Numbers
+2. Strings
+3. Lists and tuples
+4. Sets and dictionaries
+
+This means that exercises in the numbers.py module can be solved without using strings, lists, tuples, sets or 
+dictionaries. But the challenges in strings.py module may include number as well as string manipulation. Challenges in 
+the list and tuples module can include number and string manipulation. Then challenges with sets can include working 
+with lists, tuples, strings and numbers. Finally, the dictionary challenges can include any of the previous types 
+(numbers, strings, lists, tuples and sets).  
+
+
+## Run tests
 
 To test your code, you can either run tests for a single function (that is, all test cases for a single challenge or 
 exercise), for all the functions in a category (numbers, strings, lists & tuples, sets & dictionaries) or run tests for
@@ -253,44 +299,9 @@ by commenting out (using a leading #) the related lines in the file. These lines
 `suite.addTests(loader.loadTestsFromModule(category_to_skip))`.
 
 
-### Solutions:
-The **ENG** folder also contains a file called [**proposed_solutions.md**](/ENG/proposed_solutions.md) which includes
-code that might be a solution for each one of the exercises. This doesn't imply those are the only or even the most
-efficient solutions. It's just example code that could be useful as a starting point in case you cannot solve any of the
-challenges. The file was created with [markdown](https://en.wikipedia.org/wiki/Markdown) so that the code can be hidden
-from view, leaving only the function documentation visible, so you can click on the function you wish to view the code 
-for. This file should be opened with a program that renders `markdown` (a web browser, for example).
 
 
-### How to write the code
-
-Fill in the body of each function in a way that makes it behave as the documentation states (remember to remove the 
-"pass" statement and add your code instead), and that fulfills the unit tests for that function. Function documentation 
-is included between triple quotes (""") and designates what the function goal is, what's the data type of each parameter
-and what they represent, and what's the expected return value. You can also check the unit tests included in the 
-**tests** folder to guide your coding task (but you're not expected to modify these tests at all). Only the function 
-body needs to be added, without modifying anything else (name, parameters, documentation, etc.) in the function, the 
-overall file or the unit tests file.
-
-
-### Topic order
-
-It's possible to start with any of the included topics (files), but there's a preferred order that allows to solve 
-challenges with increasing difficulty:
-
-1. Numbers
-2. Strings
-3. Lists and tuples
-4. Sets and dictionaries
-
-This means that exercises in the numbers.py module can be solved without using strings, lists, tuples, sets or 
-dictionaries. But the challenges in strings.py module may include number as well as string manipulation. Challenges in 
-the list and tuples module can include number and string manipulation. Then challenges with sets can include working 
-with lists, tuples, strings and numbers. Finally, the dictionary challenges can include any of the previous types 
-(numbers, strings, lists, tuples and sets).  
-
-
-### Recommended approach
+## Recommended approach
 
 When writing professional code most likely many of the tasks in these challenges are solved by just using built-in 
 tools. But the recommended approach here is to avoid using them and writing our own algorithms instead, to exercise 
@@ -307,7 +318,7 @@ In addition, test cases can be used to solve the challenges in a Test-Driven-Dev
 tests to guide development.
 
 
-### Requirements
+## Requirements
 
 Only Python 3 is needed, which includes the unittest library.
 
