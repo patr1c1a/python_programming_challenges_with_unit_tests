@@ -209,7 +209,7 @@ tests to see if they pass or fail. When tests pass, they will show an "ok" resul
 function it ran, the arguments used to call it, what it returned and what was the expected return value.
 
 
-### Solutions:
+### Solutions
 The **ENG** folder also contains a file called [**proposed_solutions.md**](/ENG/proposed_solutions.md) which includes
 code that might be a solution for each one of the exercises. This doesn't imply those are the only or even the most
 efficient solutions. It's just example code that could be useful as a starting point in case you cannot solve any of the
