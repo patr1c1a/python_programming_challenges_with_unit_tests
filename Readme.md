@@ -88,11 +88,16 @@ listas, tuplas, strings y números).
 
 Para probar tu código y evaluar tus algoritmos, es posible correr las pruebas para una sola función (esto es, un solo 
 ejercicio), para todas las funciones de una categoría (números, strings, listas & tuplas, conjuntos & diccionarios), o 
-para todas las categorías a la vez. Para esto se puede utilizar una terminal (que puede correr por sí sola o dentro de
-algún IDE), donde se deberá cambia al directorio ("CD") de la carpeta del proyecto (ejemplo: si el proyecto se encuentra
-en C:/miusuario/proyecto será esa la carpeta donde deberás situarte) y luego ejecutar el comando correspondiente.
+para todas las categorías a la vez. Para esto se puede utilizar una terminal o también configurar el IDE de preferencia.
+En el caso de la terminal, se deberá cambia al directorio ("CD") de la carpeta del proyecto (ejemplo: si el proyecto se 
+encuentra en C:/miusuario/proyecto será esa la carpeta donde deberás situarte) y luego ejecutar el comando 
+correspondiente. Se debe tener en cuenta que, dependiendo de cómo se haya instalado el intérprete, podría ser necesario 
+reemplazar el comando "python" por "python3" o algún otro comando. En caso de utilizar Pycharm, las configuraciones se
+crearán desde el menú superior "Run > Edit Configurations" y luego "Add new run configuration".
 
 ### Ejecutar las pruebas de una función/ejercicio:
+
+En la terminal, ejecutar el siguiente comando:
 
 `python -m unittest -v ruta/al/archivo.py -k funcion_de_pruebas`
 
@@ -102,6 +107,13 @@ reemplazarse con la función de pruebas a ejecutar (ej.: **test_factorial**). Po
 la función del ejercicio *factorial* de la categoría *numeros*:
 
 `python -m unittest -v ESP/tests/tests_numeros.py -k test_factorial`
+
+Para hacer lo mismo utilizando una configuración de Pycharm, selecciona la opción "Module name" y luego da clic en "..." 
+para abrir un nuevo diálogo donde deberás escribir el nombre del archivo de la categoría a ejecutar (ej.: 
+**tests_numeros**) y seleccionarlo del menú desplegable. Luego, en "Additional Arguments", ingresar "-k 
+test_function_name" (reemplazando con el nombre de la función a ejecutar). Verifica que la opción "Add contents to 
+PYTHONPATH" esté tildada.
+
 
 ### Ejecutar todas las pruebas de una categoría:
 
@@ -113,16 +125,19 @@ pruebas de los ejercicios de la categoría *numeros*.
 
 `python -m unittest -v ESP/tests/tests_numeros.py`
 
+Para hacer lo mismo utilizando una configuración de Pycharm, selecciona la opción "Module name" y luego da clic en "..." 
+para abrir un nuevo diálogo donde deberás escribir el nombre del archivo de la categoría a ejecutar (ej.: 
+**tests_numeros**) y seleccionarlo del menú desplegable. Verifica que la opción "Add contents to PYTHONPATH" esté 
+tildada.
+
+
 ### Ejecutar las pruebas de más de una categoría a la vez:
 
 Para ejecutar las pruebas de más de una categoría (o incluso todas las categorías al mismo tiempo), corre el archivo 
-**ejecutar_tests.py**. Es posible usar un IDE para  ejecutarlo o también puede hacerse desde línea de comandos. Por 
-ejemplo, si se utiliza Pycharm, será suficiente con tener correctamente configurado el intérprete Python y correr el 
-archivo **ejecutar_tests.py** (por ejemplo, seleccionándolo y presionando Ctrl+Mayús+F10 o simplemente el botón "Run"). 
-En caso de ejecutar mediante línea de comandos, primero se deberá configurar la variable de entorno **PYTHONPATH** para 
-que apunte a la carpeta del proyecto. Para evitar configurarla de manera definitiva, existe la opción de hacerlo de 
-forma temporal, en cada sesión de la terminal. Para ello abre la terminal, CD al directorio del proyecto y luego ejecuta
-el siguiente comando:
+**ejecutar_tests.py**. En caso de ejecutar mediante terminal o línea de comandos, primero se deberá configurar la 
+variable de entorno **PYTHONPATH** para que apunte a la carpeta del proyecto. Para evitar configurarla de manera 
+definitiva, existe la opción de hacerlo de forma temporal, en cada sesión de la terminal. Para ello abre la terminal, CD
+al directorio del proyecto y luego ejecuta el siguiente comando:
 
 `export PYTHONPATH="$PWD"` si estás en Linux/Mac, o
 
@@ -130,8 +145,10 @@ el siguiente comando:
 
 A continuación, corre **ejecutar_tests.py** usando:
 
-`python ESP/ejecutar_tests.py` (dependiendo de cómo se haya instalado el intérprete, podría ser necesario reemplazar 
-"python" con "python3")
+`python ESP/ejecutar_tests.py`
+
+Si se utiliza Pycharm, será suficiente con correr el archivo **ejecutar_tests.py**, seleccionándolo y luego presionando 
+Ctrl+Mayús+F10 o simplemente dando clic al botón "Run".
 
 Si deseas obviar la ejecución de alguna categoría de pruebas, comenta (anteponiendo un #) la línea correspondiente en 
 el archivo **ejecutar_tests.py**. La línea a comentar se verá como esta: 
@@ -250,11 +267,16 @@ with lists, tuples, strings and numbers. Finally, the dictionary challenges can 
 
 To test your code, you can either run tests for a single function (that is, all test cases for a single challenge or 
 exercise), for all the functions in a category (numbers, strings, lists & tuples, sets & dictionaries) or run tests for
-more than one category at once. You can use a terminal for these (it could be a standalone terminal or inside an IDE), 
-where you'll first need to change directory ("CD") to the root project folder (e.g.: if the project was downloaded into 
-C:/myusername/project that will be the folder you'll need to CD into) and then run the command.
+more than one category at once. You can use a terminal for these or create a configuration in an IDE. In case it's done
+in a terminal, you'll first need to change directory ("CD") to the root project folder (e.g.: if the project was 
+downloaded into C:/myusername/project that will be the folder you'll need to CD into) and then run the command. Keep in 
+mind that command "python" might need to be replaced with "python3" or something else, depending on how Python is 
+installed. In case of using Pycharm, configurations can be created from top menu "Run > Edit Configurations" and then 
+"Add new run configuration".
 
 ### Run a test for a single function/exercise:
+
+In terminal, enter the following command:
 
 `python -m unittest -v path/to/test/file.py -k test_function_name`
 
@@ -264,8 +286,15 @@ where *path/to/test/file.py* should be replaced with the path from project root 
 
 `python -m unittest -v ENG/tests/tests_numbers.py -k test_factorial`
 
+To do the same using a Pycharm cofiguration, select option "Module name" and then click on "..." to open a new dialog 
+where you'll need to type the name of the category file (e.g.: **tests_numbers**) and select from dropdown. Then, in 
+"Additional Arguments", enter "-k test_function_name" (replacing with the actual function name). Verify "Add contents to
+PYTHONPATH" option is checked.
+
 
 ### Run all tests in a category:
+
+In terminal, enter the following command: 
 
 `python -m unittest -v path/to/test/file.py`
 
@@ -274,17 +303,18 @@ where *path/to/test/file.py* should be replaced with the path from project root 
 
 `python -m unittest -v ENG/tests/tests_numbers.py`
 
+To do the same using a Pycharm cofiguration, select option "Module name" and then click on "..." to open a new dialog 
+where you'll need to type the name of the category file (e.g.: **tests_numbers**) and select from dropdown. Verify "Add 
+contents to PYTHONPATH" option is checked.
+
 
 ### Run tests in more than one category at the same time:
 
 To run more than one category at once (or even run all categories), execute the **run_tests.py** file, which will output
-the results of the unit tests. You can use an IDE to run the code or just run it from command line. For example, if 
-Pycharm is used, you'll just need to have the Python interpreter correctly set up and then run the **run_tests.py** (for
-example, by selecting it and then pressing Ctrl+Shift+F10, or just using the Run button). In case you'd like to execute 
-everyting in a command line, you'll first need to set the PYTHONPATH environment variable to the project folder. To 
-avoid setting it permanently, it's also possible to set the variable temporarily, just for the current session (it 
-will need to be done each time the terminal is closed and re-opened): open terminal, "CD" into the root project folder 
-and then run the following command:
+the results of the unit tests. In case you'd like to usa a terminal, you'll first need to set the PYTHONPATH environment 
+variable to the project folder. To avoid setting it permanently, it's also possible to set the variable temporarily, 
+just for the current session (it will need to be done each time the terminal is closed and re-opened): open terminal, 
+"CD" into the root project folder and then run the following command:
 
 `export PYTHONPATH="$PWD"` if you're on Linux/Mac, or
 
@@ -292,13 +322,14 @@ and then run the following command:
 
 Next, execute **run_tests.py** using this command:
 
-`python ENG/run_tests.py` (might need to replace "python" with "python3", depending on your installation). 
+`python ENG/run_tests.py` 
+
+If Pycharm is used, you'll just need to run the **run_tests.py** (for example, by selecting it and then pressing 
+Ctrl+Shift+F10 or just clicking on the "Run" button).
 
 By default, **run_tests.py** will run tests for all categories. But it's possible to skip test categories from executing 
 by commenting out (using a leading #) the related lines in the file. These lines look like this: 
 `suite.addTests(loader.loadTestsFromModule(category_to_skip))`.
-
-
 
 
 ## Recommended approach
